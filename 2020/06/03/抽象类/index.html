@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>个人博客</title>
+  <title>抽象类 | 个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="个人博客">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="抽象类语法1.如何定义抽象类： class关键字前加 abstract 2.抽象类无法被实例化 3.抽象类也有构造方法，该构造方法给子类创建对象用的 4.抽象方法的语法：在方法的修饰符列表中添加 abstract 关键字，并且以“；”结束，不带有“{}” 5.抽象类中不一定有抽象方法，但抽象方法必须出现在抽象类中 6.一个非抽象类继承抽象类，必须把抽象类中的抽象方法覆盖，实现，重写。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="抽象类">
+<meta property="og:url" content="http://yoursite.com/2020/06/03/%E6%8A%BD%E8%B1%A1%E7%B1%BB/index.html">
 <meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="抽象类语法1.如何定义抽象类： class关键字前加 abstract 2.抽象类无法被实例化 3.抽象类也有构造方法，该构造方法给子类创建对象用的 4.抽象方法的语法：在方法的修饰符列表中添加 abstract 关键字，并且以“；”结束，不带有“{}” 5.抽象类中不一定有抽象方法，但抽象方法必须出现在抽象类中 6.一个非抽象类继承抽象类，必须把抽象类中的抽象方法覆盖，实现，重写。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-06-03T15:28:49.000Z">
+<meta property="article:modified_time" content="2020-06-03T15:31:28.271Z">
 <meta property="article:author" content="Tianyi Liu">
 <meta name="twitter:card" content="summary">
   
@@ -146,36 +150,69 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-this关键字" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-抽象类" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/27/this%E5%85%B3%E9%94%AE%E5%AD%97/">this关键字</a>
+    <h1 class="article-title" itemprop="name">
+      抽象类
     </h1>
   
 
         
         
-<a href="/2020/05/27/this%E5%85%B3%E9%94%AE%E5%AD%97/" class="archive-article-date">
-  	<time datetime="2020-05-27T15:13:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-27</time>
+<a href="/2020/06/03/%E6%8A%BD%E8%B1%A1%E7%B1%BB/" class="archive-article-date">
+  	<time datetime="2020-06-03T15:28:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-03</time>
 </a>
         
         
+	    <span class="archive-article-date">
+			阅读量 <span id="busuanzi_value_page_pv"></span>
+	     </span>
+	
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h2><p>1.this是一个引用，this是一个变量，this变量保存了内存地址并指向自身。<br>2.this出现在实例方法中代表当前执行这个方法的对象。</p>
-        
-          <a class="article-more-a" href="/2020/05/27/this%E5%85%B3%E9%94%AE%E5%AD%97/#more">more >></a>
-        
+        <h2 id="抽象类语法"><a href="#抽象类语法" class="headerlink" title="抽象类语法"></a>抽象类语法</h2><p>1.如何定义抽象类：</p>
+<p>class关键字前加 abstract</p>
+<p>2.抽象类无法被实例化</p>
+<p>3.抽象类也有构造方法，该构造方法给子类创建对象用的</p>
+<p>4.抽象方法的语法：在方法的修饰符列表中添加 abstract 关键字，并且以“；”结束，不带有“{}”</p>
+<p>5.抽象类中不一定有抽象方法，但抽象方法必须出现在抽象类中</p>
+<p>6.一个非抽象类继承抽象类，必须把抽象类中的抽象方法覆盖，实现，重写。</p>
+<a id="more"></a>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 1.如何定义抽象类：</span></span><br><span class="line"><span class="comment"> *    class关键字前加 abstract</span></span><br><span class="line"><span class="comment"> * 2.抽象类无法被实例化</span></span><br><span class="line"><span class="comment"> * 3.抽象类也有构造方法，该构造方法给子类创建对象用的</span></span><br><span class="line"><span class="comment"> * 4.抽象方法的语法：在方法的修饰符列表中添加 abstract 关键字，并且以“；”结束，不带有“&#123;&#125;”</span></span><br><span class="line"><span class="comment"> * 5.抽象类中不一定有抽象方法，但抽象方法必须出现在抽象类中</span></span><br><span class="line"><span class="comment"> * 6.一个非抽象类继承抽象类，必须把抽象类中的抽象方法覆盖，实现，重写。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Abstract</span> </span>&#123;</span><br><span class="line">    Abstract()&#123;</span><br><span class="line">        System.out.println(<span class="string">"A....."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//抽象方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">m1</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//入口</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//抽象类无法创建对象</span></span><br><span class="line">        <span class="comment">//Abstract a = new Abstract();</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//多态</span></span><br><span class="line">        Abstract a = <span class="keyword">new</span> B();</span><br><span class="line">        a.m1();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> <span class="keyword">extends</span> <span class="title">Abstract</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">m1</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"m1方法执行"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    B()&#123;</span><br><span class="line">        <span class="keyword">super</span>();<span class="comment">//父类构造方法虽然调用了，但并没有创建父类对象</span></span><br><span class="line">        System.out.println(<span class="string">"B....."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            <span id="busuanzi_container_page_pv">
+   		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+             </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -195,16 +232,75 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/27/this%E5%85%B3%E9%94%AE%E5%AD%97/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/03/%E6%8A%BD%E8%B1%A1%E7%B1%BB/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/06/03/%E5%86%85%E9%83%A8%E7%B1%BB/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">内部类</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -224,570 +320,14 @@
 
 
 
-
-  
-    <article id="post-个人博客live2d的搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/27/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2live2d%E7%9A%84%E6%90%AD%E5%BB%BA/">个人博客live2d的搭建</a>
-    </h1>
-  
-
-        
-        
-<a href="/2020/05/27/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2live2d%E7%9A%84%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2020-05-27T09:11:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-27</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="首先，安装npm包："><a href="#首先，安装npm包：" class="headerlink" title="首先，安装npm包："></a>首先，安装npm包：</h2><p>npm install –save hexo-helper-live2d</p>
-        
-          <a class="article-more-a" href="/2020/05/27/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2live2d%E7%9A%84%E6%90%AD%E5%BB%BA/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/hexo博客搭建//" class="article-tag-list-link color4">hexo博客搭建</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/27/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2live2d%E7%9A%84%E6%90%AD%E5%BB%BA/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-微分方程绝对值的问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/27/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%BB%9D%E5%AF%B9%E5%80%BC%E7%9A%84%E9%97%AE%E9%A2%98/">微分方程绝对值的问题</a>
-    </h1>
-  
-
-        
-        
-<a href="/2020/05/27/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%BB%9D%E5%AF%B9%E5%80%BC%E7%9A%84%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2020-05-27T01:43:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-27</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><img src="/images/%E9%AB%98%E6%95%B0/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%BB%9D%E5%AF%B9%E5%80%BC%E7%9A%84%E9%97%AE%E9%A2%981.png" alt></p>
-        
-          <a class="article-more-a" href="/2020/05/27/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%BB%9D%E5%AF%B9%E5%80%BC%E7%9A%84%E9%97%AE%E9%A2%98/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/高数//" class="article-tag-list-link color3">高数</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/高数/微分方程//" class="article-tag-list-link color5">微分方程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/27/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%BB%9D%E5%AF%B9%E5%80%BC%E7%9A%84%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-关于三角函数定积分的思考" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/27/%E5%85%B3%E4%BA%8E%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E5%AE%9A%E7%A7%AF%E5%88%86%E7%9A%84%E6%80%9D%E8%80%83/">关于三角函数定积分的思考</a>
-    </h1>
-  
-
-        
-        
-<a href="/2020/05/27/%E5%85%B3%E4%BA%8E%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E5%AE%9A%E7%A7%AF%E5%88%86%E7%9A%84%E6%80%9D%E8%80%83/" class="archive-article-date">
-  	<time datetime="2020-05-26T23:51:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-27</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在三角函数定积分时，我们常常认为积分区间[0,π]是[0,π/2]的2倍，[0,2π]是[0,π/2]的4倍，<br>目的就是想使用华里士公式来简便运算，但其实在很多时候这是不等的。</p>
-        
-          <a class="article-more-a" href="/2020/05/27/%E5%85%B3%E4%BA%8E%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E5%AE%9A%E7%A7%AF%E5%88%86%E7%9A%84%E6%80%9D%E8%80%83/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/高数//" class="article-tag-list-link color3">高数</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/高数/定积分//" class="article-tag-list-link color4">定积分</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/27/%E5%85%B3%E4%BA%8E%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E5%AE%9A%E7%A7%AF%E5%88%86%E7%9A%84%E6%80%9D%E8%80%83/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-变量的作用域" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/26/%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F/">变量的作用域</a>
-    </h1>
-  
-
-        
-        
-<a href="/2020/05/26/%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F/" class="archive-article-date">
-  	<time datetime="2020-05-26T14:11:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-26</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="块级变量"><a href="#块级变量" class="headerlink" title="块级变量"></a>块级变量</h2><p>1.块级变量就是定义在一个块内部的变量，变量的生存周期就是这个块，出了这个块就消失了。</p>
-        
-          <a class="article-more-a" href="/2020/05/26/%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/26/%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-final关键字" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/26/final%E5%85%B3%E9%94%AE%E5%AD%97/">final关键字</a>
-    </h1>
-  
-
-        
-        
-<a href="/2020/05/26/final%E5%85%B3%E9%94%AE%E5%AD%97/" class="archive-article-date">
-  	<time datetime="2020-05-26T13:46:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-26</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="变量在声明后无法更该"><a href="#变量在声明后无法更该" class="headerlink" title="变量在声明后无法更该"></a>变量在声明后无法更该</h2>
-        
-          <a class="article-more-a" href="/2020/05/26/final%E5%85%B3%E9%94%AE%E5%AD%97/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/26/final%E5%85%B3%E9%94%AE%E5%AD%97/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-关于格林公式的一些思考" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/26/%E5%85%B3%E4%BA%8E%E6%A0%BC%E6%9E%97%E5%85%AC%E5%BC%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/">关于格林公式的一些思考</a>
-    </h1>
-  
-
-        
-        
-<a href="/2020/05/26/%E5%85%B3%E4%BA%8E%E6%A0%BC%E6%9E%97%E5%85%AC%E5%BC%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/" class="archive-article-date">
-  	<time datetime="2020-05-26T05:56:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-26</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>格林公式其实是牛顿-莱布尼兹公式的一种推广，牛顿莱布尼兹公式是拿一个原函数F(x)在端点的值来表示积分值。<br>而格林公式是用二重积分值来表示第二类曲线积分的值，其实是区域积分和边界积分的一种关系。</p>
-        
-          <a class="article-more-a" href="/2020/05/26/%E5%85%B3%E4%BA%8E%E6%A0%BC%E6%9E%97%E5%85%AC%E5%BC%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/高数//" class="article-tag-list-link color3">高数</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/高数/曲线积分//" class="article-tag-list-link color5">曲线积分</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/26/%E5%85%B3%E4%BA%8E%E6%A0%BC%E6%9E%97%E5%85%AC%E5%BC%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-关于反函数类型题的求解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/26/%E5%85%B3%E4%BA%8E%E5%8F%8D%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B%E9%A2%98%E7%9A%84%E6%B1%82%E8%A7%A3/">关于反函数类型题的求解</a>
-    </h1>
-  
-
-        
-        
-<a href="/2020/05/26/%E5%85%B3%E4%BA%8E%E5%8F%8D%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B%E9%A2%98%E7%9A%84%E6%B1%82%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2020-05-26T04:56:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-26</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>求反函数的本质其实都是由y(x)表达式来求出x(y)表达式,最后再将x,y互换位置。<br>基本都需要依靠代数运算求得，个别题目可以依靠配凑，三角换元简便运算。</p>
-        
-          <a class="article-more-a" href="/2020/05/26/%E5%85%B3%E4%BA%8E%E5%8F%8D%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B%E9%A2%98%E7%9A%84%E6%B1%82%E8%A7%A3/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/高数//" class="article-tag-list-link color3">高数</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/26/%E5%85%B3%E4%BA%8E%E5%8F%8D%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B%E9%A2%98%E7%9A%84%E6%B1%82%E8%A7%A3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -822,8 +362,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

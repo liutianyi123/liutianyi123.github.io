@@ -148,6 +148,168 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-抽象类" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/03/%E6%8A%BD%E8%B1%A1%E7%B1%BB/">抽象类</a>
+    </h1>
+  
+
+        
+        
+<a href="/2020/06/03/%E6%8A%BD%E8%B1%A1%E7%B1%BB/" class="archive-article-date">
+  	<time datetime="2020-06-03T15:28:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-03</time>
+</a>
+        
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="抽象类语法"><a href="#抽象类语法" class="headerlink" title="抽象类语法"></a>抽象类语法</h2><p>1.如何定义抽象类：</p>
+<p>class关键字前加 abstract</p>
+<p>2.抽象类无法被实例化</p>
+<p>3.抽象类也有构造方法，该构造方法给子类创建对象用的</p>
+<p>4.抽象方法的语法：在方法的修饰符列表中添加 abstract 关键字，并且以“；”结束，不带有“{}”</p>
+<p>5.抽象类中不一定有抽象方法，但抽象方法必须出现在抽象类中</p>
+<p>6.一个非抽象类继承抽象类，必须把抽象类中的抽象方法覆盖，实现，重写。</p>
+        
+          <a class="article-more-a" href="/2020/06/03/%E6%8A%BD%E8%B1%A1%E7%B1%BB/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/06/03/%E6%8A%BD%E8%B1%A1%E7%B1%BB/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-内部类" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/03/%E5%86%85%E9%83%A8%E7%B1%BB/">内部类</a>
+    </h1>
+  
+
+        
+        
+<a href="/2020/06/03/%E5%86%85%E9%83%A8%E7%B1%BB/" class="archive-article-date">
+  	<time datetime="2020-06-03T12:13:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-03</time>
+</a>
+        
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *  关于静态内部类</span></span><br><span class="line"><span class="comment"> *  1.静态内部类可以等同看做静态变量</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *  内部类的作用：可以访问外部类中的私有数据</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *  2.静态内部类可以直接访问外部类的静态数据，无法直接访问成员（变量，方法）</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo01</span> </span>&#123;</span><br><span class="line">    <span class="comment">//静态变量</span></span><br><span class="line">    <span class="keyword">static</span> String s1 = <span class="string">"A"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//成员变量</span></span><br><span class="line">    <span class="keyword">private</span> String s2 = <span class="string">"B"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//静态方法</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">m1</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"静态的m1方法执行！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//成员方法</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">m2</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"成员方法m2执行！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//静态内部类</span></span><br><span class="line">    <span class="comment">//可以用访问控制权限的修饰符修饰</span></span><br><span class="line">    <span class="comment">//public,protected,private,缺省</span></span><br><span class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">InnerClass</span></span>&#123;</span><br><span class="line">        <span class="comment">//定义静态方法</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">m3</span><span class="params">()</span></span>&#123;</span><br><span class="line">            System.out.println(s1);</span><br><span class="line">            <span class="comment">//System.out.println(s2);</span></span><br><span class="line">            m1();</span><br><span class="line">            <span class="comment">//m2();</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//成员方法</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">m4</span><span class="params">()</span></span>&#123;</span><br><span class="line">            System.out.println(s1);</span><br><span class="line">            <span class="comment">//System.out.println(s2);</span></span><br><span class="line">            m1();</span><br><span class="line">            <span class="comment">//m2();</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//执行m3</span></span><br><span class="line">        demo01.InnerClass.m3();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//执行m4</span></span><br><span class="line">        InnerClass inner = <span class="keyword">new</span> demo01.InnerClass();</span><br><span class="line">        inner.m4();</span><br><span class="line">        <span class="comment">//运行结果：</span></span><br><span class="line">        <span class="comment">//A</span></span><br><span class="line">        <span class="comment">//静态的m1方法执行！</span></span><br><span class="line">        <span class="comment">//A</span></span><br><span class="line">        <span class="comment">//静态的m1方法执行！</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/06/03/%E5%86%85%E9%83%A8%E7%B1%BB/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/06/03/%E5%86%85%E9%83%A8%E7%B1%BB/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-方法覆盖" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -170,7 +332,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>回顾java语言中的方法重载：<br>    1.方法重载又称Overload<br>    2.方法重载什么时候使用？<br>        -在同一个类当中，方法完成的功能是类似的<br>    3.什么条件满足构造方法重载？<br>        -在同一个类当中<br>        -方法名相同<br>        -参数列表不同（类型，顺序，个数）</p>
+        <p>回顾java语言中的方法重载：<br>    1.方法重载又称Overload<br>    2.方法重载什么时候使用？<br>        -在同一个类当中，方法完成的功能是类似的<br>    3.什么条件满足构造方法重载？<br>        -在同一个类当中<br>        -方法名相同<br>        -参数列表不同（类型，顺序，个数）<br>    4.方法重载和什么无关？<br>​        -和方法的返回值无关<br>​        -和方法的修饰符列表无关</p>
         
           <a class="article-more-a" href="/2020/06/02/%E6%96%B9%E6%B3%95%E8%A6%86%E7%9B%96/#more">more >></a>
         
@@ -748,162 +910,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/05/28/%E9%9D%9E%E9%9B%B6%E5%9B%A0%E5%AD%90%E4%BB%A3%E5%85%A5%E7%9A%84%E6%80%9D%E8%80%83/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-this关键字" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/27/this%E5%85%B3%E9%94%AE%E5%AD%97/">this关键字</a>
-    </h1>
-  
-
-        
-        
-<a href="/2020/05/27/this%E5%85%B3%E9%94%AE%E5%AD%97/" class="archive-article-date">
-  	<time datetime="2020-05-27T15:13:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-27</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h2><p>1.this是一个引用，this是一个变量，this变量保存了内存地址并指向自身。<br>2.this出现在实例方法中代表当前执行这个方法的对象。</p>
-        
-          <a class="article-more-a" href="/2020/05/27/this%E5%85%B3%E9%94%AE%E5%AD%97/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/27/this%E5%85%B3%E9%94%AE%E5%AD%97/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-个人博客live2d的搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/27/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2live2d%E7%9A%84%E6%90%AD%E5%BB%BA/">个人博客live2d的搭建</a>
-    </h1>
-  
-
-        
-        
-<a href="/2020/05/27/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2live2d%E7%9A%84%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2020-05-27T09:11:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-27</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="首先，安装npm包："><a href="#首先，安装npm包：" class="headerlink" title="首先，安装npm包："></a>首先，安装npm包：</h2><p>npm install –save hexo-helper-live2d</p>
-        
-          <a class="article-more-a" href="/2020/05/27/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2live2d%E7%9A%84%E6%90%AD%E5%BB%BA/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/hexo博客搭建//" class="article-tag-list-link color4">hexo博客搭建</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/27/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2live2d%E7%9A%84%E6%90%AD%E5%BB%BA/">展开全文 >></a>
         </p>
       
 
