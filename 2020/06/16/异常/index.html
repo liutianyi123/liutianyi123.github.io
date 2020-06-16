@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 个人博客</title>
+  <title>异常 | 个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="个人博客">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="1.异常是什么第一，异常模拟的是真实世界中“不正常的事件”。 第二，java采用类去模拟异常。 第三，类是可以创建对象的。 eg.NullPointerException e &#x3D; 0x1234 e是一个引用类型 e中保存的内存地址指向NullPointerException类型对象 NullPointerException是一类异常，这个对象是一个异常事件 抢劫是一个异常，而张三被抢劫就是一个异常">
+<meta property="og:type" content="article">
+<meta property="og:title" content="异常">
+<meta property="og:url" content="http://yoursite.com/2020/06/16/%E5%BC%82%E5%B8%B8/index.html">
 <meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="1.异常是什么第一，异常模拟的是真实世界中“不正常的事件”。 第二，java采用类去模拟异常。 第三，类是可以创建对象的。 eg.NullPointerException e &#x3D; 0x1234 e是一个引用类型 e中保存的内存地址指向NullPointerException类型对象 NullPointerException是一类异常，这个对象是一个异常事件 抢劫是一个异常，而张三被抢劫就是一个异常">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-06-16T00:24:39.000Z">
+<meta property="article:modified_time" content="2020-06-16T02:45:44.570Z">
 <meta property="article:author" content="Tianyi Liu">
 <meta name="twitter:card" content="summary">
   
@@ -146,38 +150,124 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-异常" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      异常
+    </h1>
+  
+
+        
+        
+<a href="/2020/06/16/%E5%BC%82%E5%B8%B8/" class="archive-article-date">
+  	<time datetime="2020-06-16T00:24:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-16</time>
+</a>
+        
+        
+	    <span class="archive-article-date">
+			阅读量 <span id="busuanzi_value_page_pv"></span>
+	     </span>
+	
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-异常是什么"><a href="#1-异常是什么" class="headerlink" title="1.异常是什么"></a>1.异常是什么</h2><p>第一，异常模拟的是真实世界中“不正常的事件”。</p>
+<p>第二，java采用类去模拟异常。</p>
+<p>第三，类是可以创建对象的。</p>
+<p>eg.NullPointerException e = 0x1234</p>
+<p>e是一个引用类型</p>
+<p>e中保存的内存地址指向NullPointerException类型对象</p>
+<p>NullPointerException是一类异常，这个对象是一个异常事件</p>
+<p>抢劫是一个异常，而张三被抢劫就是一个异常事件</p>
+<a id="more"></a> 
+
+<h2 id="异常的作用"><a href="#异常的作用" class="headerlink" title="异常的作用"></a>异常的作用</h2><p>程序发生异常事件后，为我们提供详细的信息，使程序更加健壮</p>
+<h2 id="异常的继承结构"><a href="#异常的继承结构" class="headerlink" title="异常的继承结构"></a>异常的继承结构</h2><p>Object</p>
+<blockquote>
+<p>Throwable (所有的异常都可抛出)</p>
+<blockquote>
+<p>Error (没办法处理，只能退出JVM)</p>
+<p>Exception （可处理，若不处理会退出JVM）</p>
+<blockquote>
+<p>RunTimeException (所有RunTimeException的直接子类都是运行时异常)</p>
+<p>编译时异常（所有Exception的直接子类）</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="throws关键字处理异常"><a href="#throws关键字处理异常" class="headerlink" title="throws关键字处理异常"></a>throws关键字处理异常</h2><p>在方法声明的位置使用throws关键字向上抛出异常</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//创建文件输入流，读取文件</span></span><br><span class="line">        FileInputStream fils = <span class="keyword">new</span> FileInputStream(<span class="string">"c:/ab.txt"</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">未报告的异常错误java.io.FileNotFoundException; 必须对其进行捕获或声明以便抛出</span><br><span class="line"><span class="comment">//这是编译时异常</span></span><br></pre></td></tr></table></figure>
+
+<p>使用throws关键字</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//public static void main(String[] args) throws IOException</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> FileNotFoundException </span>&#123;</span><br><span class="line">        <span class="comment">//创建文件输入流，读取文件</span></span><br><span class="line">        FileInputStream fils = <span class="keyword">new</span> FileInputStream(<span class="string">"c:/ab.txt"</span>);</span><br><span class="line">        System.out.println(<span class="string">"Hello World"</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用throws处理异常不是真正的处理异常而是推卸责任，谁调用抛给谁</p>
+<p>运行结果</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Exception in thread <span class="string">"main"</span> java.io.FileNotFoundException: c:\ab.txt (系统找不到指定的文件。)</span><br><span class="line">	at java.io.FileInputStream.open0(Native Method)</span><br><span class="line">	at java.io.FileInputStream.open(FileInputStream.java:<span class="number">195</span>)</span><br><span class="line">	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:<span class="number">138</span>)</span><br><span class="line">	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:<span class="number">93</span>)</span><br><span class="line">	at ExceptionTest01.main(ExceptionTest01.java:<span class="number">8</span>)</span><br></pre></td></tr></table></figure>
+
+<p>后续代码不执行因为JVM遇到这个异常后会退出JVM</p>
+<h2 id="try…catch…关键字处理异常"><a href="#try…catch…关键字处理异常" class="headerlink" title="try…catch…关键字处理异常"></a>try…catch…关键字处理异常</h2><p>语法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">       <span class="comment">//可能出现异常的代码</span></span><br><span class="line">   &#125;<span class="keyword">catch</span>(<span class="comment">//异常类型1 变量)&#123;</span></span><br><span class="line">       <span class="comment">//处理异常的代码&#125;</span></span><br><span class="line">   &#125;<span class="keyword">catch</span>(<span class="comment">//异常类型2 变量)&#123;</span></span><br><span class="line">       <span class="comment">//处理异常的代码&#125;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            FileInputStream fils = <span class="keyword">new</span> FileInputStream(<span class="string">"c:/ab.txt"</span>);</span><br><span class="line">            fils.read();</span><br><span class="line">        &#125;<span class="keyword">catch</span>(FileNotFoundException e)&#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"><span class="comment">//编译无法通过</span></span><br><span class="line"><span class="comment">//未报告的异常错误java.io.IOException; 必须对其进行捕获或声明以便抛出</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            FileInputStream fils = <span class="keyword">new</span> FileInputStream(<span class="string">"c:/ab.txt"</span>);</span><br><span class="line">            fils.read();</span><br><span class="line">        &#125;<span class="keyword">catch</span>(FileNotFoundException e)&#123;</span><br><span class="line"></span><br><span class="line">        &#125;<span class="keyword">catch</span>(IOException e)&#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line"><span class="comment">//编译通过</span></span><br></pre></td></tr></table></figure>
+
+<p>catch可以写多个但必须从上到下，从小类型到大类型异常捕捉</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            FileInputStream fils = <span class="keyword">new</span> FileInputStream(<span class="string">"c:/ab.txt"</span>);</span><br><span class="line">            fils.read();</span><br><span class="line">        &#125;<span class="keyword">catch</span>(IOException e)&#123;<span class="comment">//大类型</span></span><br><span class="line"></span><br><span class="line">        &#125;<span class="keyword">catch</span>(FileNotFoundException e)&#123;<span class="comment">//小类型</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"><span class="comment">//已捕获到异常错误java.io.FileNotFoundException</span></span><br></pre></td></tr></table></figure>
+
+<p>try…catch只要捕捉到一个异常，处理之后就结束了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">try</span>&#123;</span><br><span class="line">           FileInputStream fils = <span class="keyword">new</span> FileInputStream(<span class="string">"c:/ab.txt"</span>);</span><br><span class="line">           fils.read();</span><br><span class="line">       &#125;<span class="keyword">catch</span>(FileNotFoundException e)&#123;</span><br><span class="line">           System.out.println(<span class="string">"读取文件不存在"</span>);</span><br><span class="line">       &#125;<span class="keyword">catch</span>(IOException e)&#123;</span><br><span class="line">           System.out.println(<span class="string">"其他IO异常"</span>);</span><br><span class="line">       &#125;</span><br><span class="line">       System.out.println(<span class="string">"Hello World"</span>);</span><br><span class="line"><span class="comment">//读取文件不存在</span></span><br><span class="line"><span class="comment">//Hello World</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="finally语句快"><a href="#finally语句快" class="headerlink" title="finally语句快"></a>finally语句快</h2><p>finally语句块可以和try…catch…语句块连用</p>
+<p>finally语句块重的代码一定会执行</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> FileNotFoundException </span>&#123;</span><br><span class="line">     <span class="keyword">try</span>&#123;</span><br><span class="line">         FileInputStream fils = <span class="keyword">new</span> FileInputStream(<span class="string">"c:/ab.txt"</span>);</span><br><span class="line">         <span class="comment">//不会执行</span></span><br><span class="line">         System.out.println((<span class="string">"TTT"</span>));</span><br><span class="line">     &#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">         <span class="comment">//执行</span></span><br><span class="line">         System.out.println((<span class="string">"AAA"</span>));</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+
+<p>只要在finally语句块之前退出JVM，则finally语句块不会执行</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">       <span class="keyword">try</span>&#123;</span><br><span class="line">          <span class="comment">//退出JVM</span></span><br><span class="line">          System.exit(<span class="number">0</span>);</span><br><span class="line">       &#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">           <span class="comment">//不执行</span></span><br><span class="line">           System.out.println((<span class="string">"AAA"</span>));</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+
+<p>一般在finally语句块中释放资源</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       FileInputStream fils = <span class="keyword">null</span>;</span><br><span class="line">       <span class="keyword">try</span>&#123;</span><br><span class="line">           fils = <span class="keyword">new</span> FileInputStream(<span class="string">"c:/ab.txt"</span>);</span><br><span class="line">       &#125;<span class="keyword">catch</span>(FileNotFoundException e)&#123;</span><br><span class="line">          e.printStackTrace();</span><br><span class="line">       &#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">           <span class="keyword">if</span> (fils!=<span class="keyword">null</span>)</span><br><span class="line">           <span class="keyword">try</span>&#123;</span><br><span class="line">               fils.close();</span><br><span class="line">           &#125;<span class="keyword">catch</span>(IOException e )&#123;</span><br><span class="line">               e.printStackTrace();</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            <span id="busuanzi_container_page_pv">
+   		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+             </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/06/02/%E7%BB%A7%E6%89%BF/" class="archive-article-date">
-  	<time datetime="2020-06-01T22:31:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/02/%E7%BB%A7%E6%89%BF/">继承</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -190,383 +280,112 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/16/%E5%BC%82%E5%B8%B8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/06/01/%E6%8E%A5%E5%8F%A3/" class="archive-article-date">
-  	<time datetime="2020-06-01T11:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-01</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/06/16/String%E5%B8%B8%E7%94%A8%E7%B1%BB/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          String常用类
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/06/15/%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">一维数组</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/01/%E6%8E%A5%E5%8F%A3/">接口</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/30/%E5%BF%85%E9%A1%BB%E8%AE%A1%E7%AE%97%E5%B7%A6%E5%8F%B3%E6%9E%81%E9%99%90%E7%9A%84%E7%B1%BB%E5%9E%8B%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2020-05-30T12:17:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-30</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/30/%E5%BF%85%E9%A1%BB%E8%AE%A1%E7%AE%97%E5%B7%A6%E5%8F%B3%E6%9E%81%E9%99%90%E7%9A%84%E7%B1%BB%E5%9E%8B%E9%A2%98/">必须计算左右极限的类型题</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/高数//" class="article-tag-list-link color3">高数</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/高数/极限//" class="article-tag-list-link color3">极限</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/30/markdown%E8%AF%AD%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-05-30T06:07:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/30/markdown%E8%AF%AD%E6%B3%95/">markdown语法</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/markdown语法//" class="article-tag-list-link color1">markdown语法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/29/static%E5%85%B3%E9%94%AE%E5%AD%97/" class="archive-article-date">
-  	<time datetime="2020-05-29T13:46:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/29/static%E5%85%B3%E9%94%AE%E5%AD%97/">static关键字</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/28/java%E5%AE%9E%E9%AA%8C%E9%A2%982/" class="archive-article-date">
-  	<time datetime="2020-05-28T12:51:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/28/java%E5%AE%9E%E9%AA%8C%E9%A2%982/">java实验题2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/28/%E9%9D%9E%E9%9B%B6%E5%9B%A0%E5%AD%90%E4%BB%A3%E5%85%A5%E7%9A%84%E6%80%9D%E8%80%83/" class="archive-article-date">
-  	<time datetime="2020-05-28T03:23:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/28/%E9%9D%9E%E9%9B%B6%E5%9B%A0%E5%AD%90%E4%BB%A3%E5%85%A5%E7%9A%84%E6%80%9D%E8%80%83/">非零因子代入的思考</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/高数//" class="article-tag-list-link color3">高数</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/高数/极限//" class="article-tag-list-link color3">极限</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/27/this%E5%85%B3%E9%94%AE%E5%AD%97/" class="archive-article-date">
-  	<time datetime="2020-05-27T15:13:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/27/this%E5%85%B3%E9%94%AE%E5%AD%97/">this关键字</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/27/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2live2d%E7%9A%84%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2020-05-27T09:11:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/27/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2live2d%E7%9A%84%E6%90%AD%E5%BB%BA/">个人博客live2d的搭建</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/hexo博客搭建//" class="article-tag-list-link color4">hexo博客搭建</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/27/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%BB%9D%E5%AF%B9%E5%80%BC%E7%9A%84%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2020-05-27T01:43:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/27/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%BB%9D%E5%AF%B9%E5%80%BC%E7%9A%84%E9%97%AE%E9%A2%98/">微分方程绝对值的问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/高数//" class="article-tag-list-link color3">高数</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/高数/微分方程//" class="article-tag-list-link color5">微分方程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&amp;laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/3/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -602,8 +421,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
