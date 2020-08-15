@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="static关键字, 个人博客">
+    <meta name="keywords" content="英语长难句, 个人博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>static关键字 | 个人博客</title>
+    <title>英语长难句 | 个人博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">static关键字</h1>
+                    <h1 class="description center-align post-title">英语长难句</h1>
                 </div>
             </div>
         </div>
@@ -430,12 +430,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
-                                <span class="chip bg-color">基础语法</span>
+                            <a href="/tags/%E8%8B%B1%E8%AF%AD/">
+                                <span class="chip bg-color">英语</span>
                             </a>
                         
-                            <a href="/tags/java/">
-                                <span class="chip bg-color">java</span>
+                            <a href="/tags/%E9%95%BF%E9%9A%BE%E5%8F%A5/">
+                                <span class="chip bg-color">长难句</span>
                             </a>
                         
                     </div>
@@ -446,8 +446,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/java/" class="post-category">
-                                java
+                            <a href="/categories/%E8%8B%B1%E8%AF%AD/" class="post-category">
+                                英语
                             </a>
                         
                     </div>
@@ -459,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-29
+                    2020-08-15
                 </div>
                 
 
@@ -468,14 +468,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    327
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -490,56 +490,97 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h2><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Chinese</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//每一个对象的都不同</span>
-    <span class="token keyword">private</span> String ID<span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">//每一个对象的都不同</span>
-    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">//每一个对象的都相同</span>
-    <span class="token comment" spellcheck="true">//声明为实例对象太浪费空间</span>
-    <span class="token comment" spellcheck="true">//用static关键词转化为静态变量</span>
-    <span class="token comment" spellcheck="true">//静态变量在类加载的时候初始化，不需要创建对象</span>
-    <span class="token comment" spellcheck="true">//用类名.静态变量名来访问</span>
-    <span class="token comment" spellcheck="true">//所有static修饰的元素都是类级别特征，用类名.静态变量名来访问</span>
-    <span class="token keyword">static</span> String country <span class="token operator">=</span> <span class="token string">"中国"</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<h2 id="第二部分"><a href="#第二部分" class="headerlink" title="第二部分"></a>第二部分</h2><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">/*1. 静态代码块
-     * static{
-     *  java语句；
-     * }
-     * 2.在类加载时执行，并且只加载一次
-     * 3.静态代码块在一个类中可以编写多个，并遵循自上而下顺序执行
-     */</span>
-    <span class="token keyword">static</span><span class="token punctuation">{</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"类加载"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"main加载"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token comment" spellcheck="true">//运行结果:</span>
-    <span class="token comment" spellcheck="true">//类加载</span>
-    <span class="token comment" spellcheck="true">//main加载</span>
-<span class="token punctuation">}</span></code></pre>
-<h2 id="第三部分"><a href="#第三部分" class="headerlink" title="第三部分"></a>第三部分</h2><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Testanother</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">/**
-     * 方法什么时候定义为静态？
-     * （不属于某一个对象的动作了，不同的对象执行这
-     * 个动作结果是一样的，可以提升为类级别的动作）
-     *
-     * 静态方法中无法直接访问实例变量和实例方法
-     */</span>
-    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">dosome</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">//System.out.println(i);//无法执行</span>
-        Testanother t <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Testanother</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>t<span class="token punctuation">.</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//可以访问</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-
+                <h2 id="简单句"><a href="#简单句" class="headerlink" title="简单句"></a>简单句</h2><h3 id="1-什么是英语的句子："><a href="#1-什么是英语的句子：" class="headerlink" title="1.什么是英语的句子："></a>1.什么是英语的句子：</h3><p>英语句子必须具备主谓结构，主语一定是谓语动作的发出者，如果有宾语，宾语一定是谓语动作的承受者。</p>
+<h3 id="2-英语句子的基本结构："><a href="#2-英语句子的基本结构：" class="headerlink" title="2.英语句子的基本结构："></a>2.英语句子的基本结构：</h3><p>① 主谓</p>
+<p>② 主谓宾</p>
+<p>谓语：实义动词</p>
+<p>③ 主谓表（主系表）</p>
+<ul>
+<li><p>谓语：系动词</p>
+</li>
+<li><p>be</p>
+</li>
+<li><p>感官动词：look(=seem=appear),smell(n.气味),taste(n.喜爱，喜好),sound(n.声音,adj.甜美),feel</p>
+</li>
+<li><p>变化：become,get,turn(turn yelllow),grow,fall</p>
+</li>
+<li><p>保持：keep,stay,remain,stand</p>
+</li>
+</ul>
+<p>④ 主谓双宾</p>
+<p>⑤ 主谓宾宾补</p>
+<p>两者区别：在两宾语之间加入be动词，读起来意思是对就是主谓宾宾补，不对就是双宾</p>
+<h3 id="3-句子的成分（词性问题）："><a href="#3-句子的成分（词性问题）：" class="headerlink" title="3.句子的成分（词性问题）："></a>3.句子的成分（词性问题）：</h3><h4 id="①-谓语："><a href="#①-谓语：" class="headerlink" title="① 谓语："></a>① 谓语：</h4><ul>
+<li><p>谓语的成分：有时态的实义动词或系动词充当谓语</p>
+</li>
+<li><p>动词能不能多？</p>
+</li>
+</ul>
+<p>绝对不能，只能有一个动词并充当谓语，多余的动词全部变成非谓语动词。</p>
+<p>谓语只能是动词</p>
+<p>动词只能做谓语</p>
+<p>把所有不做谓语的动词变成不是动词即（非\谓语动词）(主动:ving,被动:ved,目的:to do)</p>
+<p>练习：</p>
+<p>长江流经不同的生态体系，是众多濒危物种的栖息地，灌溉了中国1/5的土地</p>
+<p>翻译：Yangzi River flowing through diverse ecological systems, keeps the home of a sea of endangered species, irrigating Chinese 1/5 land.</p>
+<p>我爱你，你爱我</p>
+<p>翻译：I loving you,you love me.</p>
+<p>冬天来了，春天就不远了</p>
+<p>翻译：Winter approaching, Spring will be around the corner.（独立主格，两个不同主语）</p>
+<p>我是一个老师，我喜欢唱歌</p>
+<p>翻译：Being a teacher, I have passion for singing songs.</p>
+<ul>
+<li><p>一句话动词能不能少：不能，当一句话需要动词而又没有动词时加be动词，并且它没有意思</p>
+</li>
+<li><p>谓语的总结：一句话当中有且只有一个有时态的实义动词或系动词的存在并且充当谓语。</p>
+</li>
+</ul>
+<h4 id="②-主语"><a href="#②-主语" class="headerlink" title="② 主语"></a>② 主语</h4><ul>
+<li><p>主语的成分：名词，代词，非谓语动词，从句（引导词+句子）</p>
+</li>
+<li><p>一句话中主语能不能少：不能。</p>
+</li>
+<li><p>一句话没有主语怎么办？ </p>
+</li>
+</ul>
+<p>1）加it：必须与天气，温度，时间有关</p>
+<p>It feels exceedingly hot in the cabin.</p>
+<p>2）There be句型，听到“有”的时候使用</p>
+<p>There exist/seem/remain a host of undergraduates being fascinated with me</p>
+<p>3) 被动：当听到一句话没有主语或人称代词做主语都可以考虑被动</p>
+<p>Eg.Persistence must be pointed out outstandingly crucial.</p>
+<p>Eg.Overfishing is claimed more than fearful by an increasing amount of professors</p>
+<p>无被动：动词后有介词无被动，系动词无被动，have表达“有”的意思时无被动</p>
+<p>4) 人称代词做主语：l you we,最好不要用</p>
+<p>Eg.如果有梦想，就应该会成功</p>
+<p>​    If there exists a dream, glories are supposed to be achieved. </p>
+<h4 id="③-宾语"><a href="#③-宾语" class="headerlink" title="③ 宾语"></a>③ 宾语</h4><ul>
+<li>名词，代词，非谓语动词，从句可以充当宾语</li>
+</ul>
+<h4 id="④表语"><a href="#④表语" class="headerlink" title="④表语"></a>④表语</h4><ul>
+<li>名词，代词，非谓语动词，从句，形容词，介词短语可以充当表语</li>
+</ul>
+<p>例子：我喜欢在重庆</p>
+<p>I like being in ChongQing.</p>
+<p>l like ChongQing</p>
+<h3 id="4-简单句的考点分析"><a href="#4-简单句的考点分析" class="headerlink" title="4.简单句的考点分析"></a>4.简单句的考点分析</h3><ul>
+<li><h4 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h4></li>
+</ul>
+<p>① 所有写不来的长难句都先写成简单句，一定要保证语法正确</p>
+<p>② 写不来的单词都写成自己会的词汇</p>
+<ul>
+<li><h4 id="长难句分析"><a href="#长难句分析" class="headerlink" title="长难句分析"></a>长难句分析</h4></li>
+</ul>
+<p>第一步就是找动词（即谓语），从而找到主谓宾。如果一句话找到了多个动词，就确定主句的谓语动词（前面没有引导词的动词就是主句的谓语动词）</p>
+<h3 id="各种思考和踩坑"><a href="#各种思考和踩坑" class="headerlink" title="各种思考和踩坑"></a>各种思考和踩坑</h3><p>① He has to finish his homework.</p>
+<p>这句话中has to是情态动词,has并非为句子的谓语</p>
+<p>② His smile is like a flower</p>
+<p>这句话中like是介词</p>
+<p>③ 哥哥的头上有一朵花</p>
+<p>这句话其实并没有主语 ’on the head the brother’ 是介词短语不能作主语，作主语的只有名词，代词，非谓语动词，从句。</p>
+<p>④ 被动语态和时态</p>
+<p>时态是表明动作发生的时间，语态表示的主语和谓语之间的关系，二者相互独立，被动语态也有时态。</p>
+<h2 id="并列句"><a href="#并列句" class="headerlink" title="并列句"></a>并列句</h2>
             </div>
             <hr/>
 
@@ -564,7 +605,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://liutianyi123.github.io/2020/05/29/static%E5%85%B3%E9%94%AE%E5%AD%97/">http://liutianyi123.github.io/2020/05/29/static%E5%85%B3%E9%94%AE%E5%AD%97/</a>
+                    <a href="http://liutianyi123.github.io/2020/08/15/%E8%8B%B1%E8%AF%AD%E9%95%BF%E9%9A%BE%E5%8F%A5/">http://liutianyi123.github.io/2020/08/15/%E8%8B%B1%E8%AF%AD%E9%95%BF%E9%9A%BE%E5%8F%A5/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -602,12 +643,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
-                                    <span class="chip bg-color">基础语法</span>
+                                <a href="/tags/%E8%8B%B1%E8%AF%AD/">
+                                    <span class="chip bg-color">英语</span>
                                 </a>
                             
-                                <a href="/tags/java/">
-                                    <span class="chip bg-color">java</span>
+                                <a href="/tags/%E9%95%BF%E9%9A%BE%E5%8F%A5/">
+                                    <span class="chip bg-color">长难句</span>
                                 </a>
                             
                         </div>
@@ -1038,50 +1079,52 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/05/30/markdown%E8%AF%AD%E6%B3%95/">
+                <a href="/2020/08/15/%E8%8B%B1%E8%AF%AD%E9%95%BF%E9%9A%BE%E5%8F%A5/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="markdown语法">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="英语长难句">
                         
-                        <span class="card-title">markdown语法</span>
+                        <span class="card-title">英语长难句</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            关于markdownn语法的说明
+                            关于英语中语法和长难句的讲解
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/markdown/" class="post-category">
-                                    markdown
+                            <a href="/categories/%E8%8B%B1%E8%AF%AD/" class="post-category">
+                                    英语
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
-                        <span class="chip bg-color">基础语法</span>
+                    <a href="/tags/%E8%8B%B1%E8%AF%AD/">
+                        <span class="chip bg-color">英语</span>
                     </a>
                     
-                    <a href="/tags/markddown/">
-                        <span class="chip bg-color">markddown</span>
+                    <a href="/tags/%E9%95%BF%E9%9A%BE%E5%8F%A5/">
+                        <span class="chip bg-color">长难句</span>
                     </a>
                     
                 </div>
@@ -1095,31 +1138,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/27/this%E5%85%B3%E9%94%AE%E5%AD%97/">
+                <a href="/2020/08/14/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96%E5%8F%8A%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="this关键字">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="博客美化及常见问题">
                         
-                        <span class="card-title">this关键字</span>
+                        <span class="card-title">博客美化及常见问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            关于this关键字的简介
+                            关于hexo博客的美化和个别问题的解决
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-14
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/java/" class="post-category">
-                                    java
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
+                                    博客搭建
                                 </a>
                             
                             
@@ -1129,12 +1172,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
-                        <span class="chip bg-color">基础语法</span>
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                        <span class="chip bg-color">博客搭建</span>
                     </a>
                     
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
                     </a>
                     
                 </div>
