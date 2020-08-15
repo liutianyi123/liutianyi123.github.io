@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>HTML5入门</title>
+      <link href="/2020/08/15/HTML5%E5%85%A5%E9%97%A8/"/>
+      <url>/2020/08/15/HTML5%E5%85%A5%E9%97%A8/</url>
+      
+        <content type="html"><![CDATA[<h2 id="HTML简介导读"><a href="#HTML简介导读" class="headerlink" title="HTML简介导读"></a>HTML简介导读</h2><h3 id="1-网页"><a href="#1-网页" class="headerlink" title="1.网页"></a>1.网页</h3><h4 id="1-1什么是网页"><a href="#1-1什么是网页" class="headerlink" title="1.1什么是网页"></a>1.1什么是网页</h4><p>网页是构成网站的基本元素，通常是HTML文件。</p><h4 id="1-2什么是HTML"><a href="#1-2什么是HTML" class="headerlink" title="1.2什么是HTML"></a>1.2什么是HTML</h4><p>HTML指的是超文本标记语言</p><ul><li><p>可以加入图片，视频等（超越了文本限制）</p></li><li><p>可以从一个文件跳转至另一个文件（超级链接文本）</p></li></ul><h3 id="2-常用浏览器"><a href="#2-常用浏览器" class="headerlink" title="2.常用浏览器"></a>2.常用浏览器</h3><h4 id="2-1浏览器内核"><a href="#2-1浏览器内核" class="headerlink" title="2.1浏览器内核"></a>2.1浏览器内核</h4><p>浏览器内核负责读取网页内容，整理讯息，显示页面</p><h3 id="3-Web标准"><a href="#3-Web标准" class="headerlink" title="3.Web标准"></a>3.Web标准</h3><h4 id="3-1Web标准的构成"><a href="#3-1Web标准的构成" class="headerlink" title="3.1Web标准的构成"></a>3.1Web标准的构成</h4><p>主要包括结构，表现，行为</p><ul><li>结构：网页元素的整理分类（HTML）</li><li>表现：设置网页的外观样式（CSS）</li><li>行为：网页交互（Javascript)</li></ul><h2 id="HTML标签导读"><a href="#HTML标签导读" class="headerlink" title="HTML标签导读"></a>HTML标签导读</h2><h3 id="1-HTML语法规范"><a href="#1-HTML语法规范" class="headerlink" title="1.HTML语法规范"></a>1.HTML语法规范</h3><h4 id="1-1基本语法规范"><a href="#1-1基本语法规范" class="headerlink" title="1.1基本语法规范"></a>1.1基本语法规范</h4><ol><li><p>HTML标签由尖括号包围关键词，例如<html></html></p></li><li><p>HTML标签通常成对出现，例如<html>和</html>,我们称为双标签</p></li><li><p>极少情况下会出现单个标签，例如<br>,我们称为单标签</p></li></ol><h4 id="1-2标签关系"><a href="#1-2标签关系" class="headerlink" title="1.2标签关系"></a>1.2标签关系</h4><p>双标签关系可以分为两类：包含关系和并列关系</p><p>包含关系：</p><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span></code></pre><p>并列关系：</p><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></code></pre><h3 id="2-基本结构标签"><a href="#2-基本结构标签" class="headerlink" title="2.基本结构标签"></a>2.基本结构标签</h3><h4 id="2-1第一个HTML"><a href="#2-1第一个HTML" class="headerlink" title="2.1第一个HTML"></a>2.1第一个HTML</h4><table><thead><tr><th>定义</th><th>说明</th></tr></thead><tbody><tr><td>HTML标签</td><td>页面中最大的标签也叫根标签</td></tr><tr><td>文档的头部</td><td>必须在其中设置title标签</td></tr><tr><td>文档的标题</td><td>让页面拥有网页标题</td></tr><tr><td>文档的主体</td><td>页面内容基本都放在其中</td></tr></tbody></table><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>第一个页面<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>       你好！！！！   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> HtML5 </tag>
+            
+            <tag> Web开发 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>英语长难句</title>
       <link href="/2020/08/15/%E8%8B%B1%E8%AF%AD%E9%95%BF%E9%9A%BE%E5%8F%A5/"/>
       <url>/2020/08/15/%E8%8B%B1%E8%AF%AD%E9%95%BF%E9%9A%BE%E5%8F%A5/</url>
