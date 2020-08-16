@@ -472,14 +472,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    391
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -528,23 +528,28 @@
 <h3 id="2-基本结构标签"><a href="#2-基本结构标签" class="headerlink" title="2.基本结构标签"></a>2.基本结构标签</h3><h4 id="2-1第一个HTML"><a href="#2-1第一个HTML" class="headerlink" title="2.1第一个HTML"></a>2.1第一个HTML</h4><table>
 <thead>
 <tr>
+<th>内容</th>
 <th>定义</th>
 <th>说明</th>
 </tr>
 </thead>
 <tbody><tr>
+<td>&lt; html &gt; &lt; /html &gt;</td>
 <td>HTML标签</td>
 <td>页面中最大的标签也叫根标签</td>
 </tr>
 <tr>
+<td>&lt; head &gt; &lt; /head &gt;</td>
 <td>文档的头部</td>
 <td>必须在其中设置title标签</td>
 </tr>
 <tr>
+<td>&lt; title &gt; &lt; /title &gt;</td>
 <td>文档的标题</td>
 <td>让页面拥有网页标题</td>
 </tr>
 <tr>
+<td>&lt; body &gt; &lt; /body &gt;</td>
 <td>文档的主体</td>
 <td>页面内容基本都放在其中</td>
 </tr>
@@ -557,7 +562,123 @@
        你好！！！！
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
-<p> 9</p>
+<h3 id="3-网页开发工具"><a href="#3-网页开发工具" class="headerlink" title="3.网页开发工具"></a>3.网页开发工具</h3><h4 id="3-1文档类型声明标签"><a href="#3-1文档类型声明标签" class="headerlink" title="3.1文档类型声明标签"></a>3.1文档类型声明标签</h4><p><strong>&lt;!DOCTYPE&gt;</strong> 文档类型声明，告诉浏览器用哪种HTML版本来显示网页。</p>
+<h4 id="3-2lang语言种类"><a href="#3-2lang语言种类" class="headerlink" title="3.2lang语言种类"></a>3.2lang语言种类</h4><p>①en为英语</p>
+<p>②zh-CN为中文</p>
+<h4 id="3-3字符集"><a href="#3-3字符集" class="headerlink" title="3.3字符集"></a>3.3字符集</h4><p>在<strong><head><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><meta name="generator" content="Hexo 4.2.1"></head></strong>标签内，通过<strong><meta></strong>标签的<strong>charset</strong>属性规定使用哪种编码</p>
+<h4 id="3-4总结"><a href="#3-4总结" class="headerlink" title="3.4总结"></a>3.4总结</h4><pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>        <span class="token comment" spellcheck="true">&lt;!--采用HTML5版本显示网页--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>        <span class="token comment" spellcheck="true">&lt;!--这是一个中文网页--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>        <span class="token comment" spellcheck="true">&lt;!--UTF-8也被称作万国码，用其保存文字--></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>利用vscode创建的第一个页面<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    我很快乐！！！
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<h3 id="4HTML常用标签"><a href="#4HTML常用标签" class="headerlink" title="4HTML常用标签"></a>4HTML常用标签</h3><h4 id="4-1标签语义"><a href="#4-1标签语义" class="headerlink" title="4.1标签语义"></a>4.1标签语义</h4><p>指的是标签的含义，即这个标签是用来干嘛的</p>
+<h4 id="4-2标题标签-lt-h1-gt-lt-h6-gt"><a href="#4-2标题标签-lt-h1-gt-lt-h6-gt" class="headerlink" title="4.2标题标签&lt; h1 &gt; - &lt; h6 &gt;"></a>4.2标题标签&lt; h1 &gt; - &lt; h6 &gt;</h4><p>标签语义：作为标题使用，重要性递减</p>
+<p>特点：</p>
+<ul>
+<li><p>文字加粗，字号变大</p>
+</li>
+<li><p>一个标题独占一行</p>
+</li>
+</ul>
+<h4 id="4-3段落和换行标签"><a href="#4-3段落和换行标签" class="headerlink" title="4.3段落和换行标签"></a>4.3段落和换行标签</h4><p><strong>&lt; p &gt;</strong>标签用于定义段落</p>
+<p>特点：</p>
+<ul>
+<li><p>文本在一个段落中会根据浏览器窗口大小自动换行</p>
+</li>
+<li><p>段落之间有空隙</p>
+</li>
+</ul>
+<p><strong>&lt; br/ &gt;</strong>用于强制换行显示<br>特点：</p>
+<ul>
+<li>单标签</li>
+<li>只是开始新的一行，不像段落会插入一些垂直间距</li>
+</ul>
+<h4 id="4-4文本格式化标签"><a href="#4-4文本格式化标签" class="headerlink" title="4.4文本格式化标签"></a>4.4文本格式化标签</h4><p>①加粗<strong>&lt; strong &gt;&lt; /strong &gt;或&lt; b &gt;&lt; /b &gt;</strong></p>
+<p>②倾斜<strong>&lt; em &gt;&lt; /em &gt;或&lt; i &gt;&lt; /i &gt;</strong></p>
+<p>③删除线<strong>&lt; del &gt;&lt; /del &gt;或&lt; s &gt;&lt; /s &gt;</strong></p>
+<p>④下划线<strong>&lt; ins &gt;&lt; /ins &gt;或&lt; u &gt;&lt; /u &gt;</strong></p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    我是<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">></span></span>加粗<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">></span></span>的标签
+    我是<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>加粗<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span>的标签
+    我是<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">></span></span>倾斜<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">></span></span>的标签
+    我是<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span><span class="token punctuation">></span></span>倾斜<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>的标签
+    我是<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>del</span><span class="token punctuation">></span></span>删除线<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>del</span><span class="token punctuation">></span></span>的标签
+    我是<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>s</span><span class="token punctuation">></span></span>删除线<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>s</span><span class="token punctuation">></span></span>的标签
+    我是<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ins</span><span class="token punctuation">></span></span>下划线<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ins</span><span class="token punctuation">></span></span>的标签
+    我是<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>u</span><span class="token punctuation">></span></span>下划线<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>u</span><span class="token punctuation">></span></span>的标签
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></code></pre>
+<h4 id="4-5-lt-div-gt-和-lt-span-gt-标签"><a href="#4-5-lt-div-gt-和-lt-span-gt-标签" class="headerlink" title="4.5&lt; div &gt;和&lt; span &gt;标签"></a>4.5&lt; div &gt;和&lt; span &gt;标签</h4><p>并没有语义就是一个盒子用来装内容</p>
+<p>特点：</p>
+<ul>
+<li>&lt; div &gt;标签用来布局，一个只占一行</li>
+<li>&lt; span &gt;标签用来布局，一行可以多个&lt; span &gt;</li>
+</ul>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>我是一个div标签单独占一行<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>我是一个div标签单独占一行<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>百度<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>搜狐<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>新浪<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></code></pre>
+<h4 id="4-6图像标签和路径"><a href="#4-6图像标签和路径" class="headerlink" title="4.6图像标签和路径"></a>4.6图像标签和路径</h4><h5 id="1-图像标签"><a href="#1-图像标签" class="headerlink" title="1.图像标签"></a>1.图像标签</h5><p>&lt; img &gt;标签用于定义HTML页面中的图像</p>
+<pre class=" language-html"><code class="language-html">&lt; img src="图像URL"/></code></pre>
+<p>src 是 &lt; img &gt;标签的必须属性，用于指定图像文件的路径和文件名</p>
+<p>图像标签其他属性</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span><span class="token punctuation">></span></span>图像标签的使用：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1.jpg<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span><span class="token punctuation">></span></span>alt 替换文本 图像显示不出来用文本代替：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>11.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>图片加载失败<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span><span class="token punctuation">></span></span>title 提示文本 鼠标放到图像上提示的文字：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>图片加载失败<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>这是一张图片<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span><span class="token punctuation">></span></span>width 给图像设置宽度：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>图片加载失败<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>这是一张图片<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>256<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span><span class="token punctuation">></span></span>width 给图像设置高度：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>图片加载失败<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>这是一张图片<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>144<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>   
+    <span class="token comment" spellcheck="true">&lt;!--一般width和height只修改一个之后让它自己等比例缩放就行了--></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span><span class="token punctuation">></span></span>border 给图像设置边框：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>图片加载失败<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>这是一张图片<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>144<span class="token punctuation">"</span></span> <span class="token attr-name">border</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>15<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>   
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></code></pre>
+<p>图像标签的注意点：</p>
+<p>①图像标签可以拥有多个属性，必须写在标签后面</p>
+<p>②属性之间不分先后顺序，属性之间用空格分开</p>
+<p>③属性采用键值对的格式</p>
+<p>④src属性必须要写</p>
+<p>⑤alt是替换，title是提示</p>
+<h4 id="2-路径"><a href="#2-路径" class="headerlink" title="2.路径"></a>2.路径</h4><p>路径可分为：</p>
+<p>1.相对路径</p>
+<p>图片相对于HTML页面的位置</p>
+<table>
+<thead>
+<tr>
+<th>相对路径分类</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>2.绝对路径</p>
 
             </div>
             <hr/>
@@ -1314,7 +1435,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;</i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">9.3k</span>&nbsp;字
+                class="white-color">10.5k</span>&nbsp;字
             
             
             
