@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="列表简介, 个人博客">
+    <meta name="keywords" content="Python入门, 个人博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>列表简介 | 个人博客</title>
+    <title>Python入门 | 个人博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">列表简介</h1>
+                    <h1 class="description center-align post-title">Python入门</h1>
                 </div>
             </div>
         </div>
@@ -468,14 +468,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    456
+                    639
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -490,7 +490,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="语法规则"><a href="#语法规则" class="headerlink" title="语法规则"></a>语法规则</h2><p>ListName = [成员1，成员2，成员3]</p>
+                <h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="语法规则"><a href="#语法规则" class="headerlink" title="语法规则"></a>语法规则</h3><p>ListName = [成员1，成员2，成员3]</p>
 <pre class=" language-python"><code class="language-python">Name <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'A'</span><span class="token punctuation">,</span><span class="token string">'B'</span><span class="token punctuation">,</span><span class="token string">'C'</span><span class="token punctuation">]</span>
 num <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
 <span class="token comment" spellcheck="true">#遍历列表</span>
@@ -518,9 +518,7 @@ Name<span class="token punctuation">.</span>pop<span class="token punctuation">(
 <span class="token comment" spellcheck="true">#根据内容删除元素</span>
 Name<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">'A'</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>Name<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#结果：['C', 'D']</span></code></pre>
-<a id="more"></a>
-
-<h2 id="组织列表"><a href="#组织列表" class="headerlink" title="组织列表"></a>组织列表</h2><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#永久排序</span>
+<h3 id="组织列表"><a href="#组织列表" class="headerlink" title="组织列表"></a>组织列表</h3><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#永久排序</span>
 Name <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'D'</span><span class="token punctuation">,</span><span class="token string">'C'</span><span class="token punctuation">,</span><span class="token string">'B'</span><span class="token punctuation">,</span><span class="token string">'A'</span><span class="token punctuation">]</span>
 Name<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>Name<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#结果：['A', 'B', 'C', 'D']</span>
@@ -538,7 +536,7 @@ Color<span class="token punctuation">.</span>reverse<span class="token punctuati
 <span class="token comment" spellcheck="true">#计算列表长度</span>
 number <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>len<span class="token punctuation">(</span>number<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#结果：9</span></code></pre>
-<h2 id="创建数值列表"><a href="#创建数值列表" class="headerlink" title="创建数值列表"></a>创建数值列表</h2><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#创建数字列表</span>
+<h3 id="创建数值列表"><a href="#创建数值列表" class="headerlink" title="创建数值列表"></a>创建数值列表</h3><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#创建数字列表</span>
 numbers <span class="token operator">=</span> list<span class="token punctuation">(</span>range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#结果：[1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
 
@@ -555,7 +553,7 @@ Num <span class="token operator">=</span> <span class="token punctuation">[</spa
 <span class="token comment" spellcheck="true">#列表解析</span>
 squares <span class="token operator">=</span> <span class="token punctuation">[</span>value<span class="token operator">**</span><span class="token number">2</span> <span class="token keyword">for</span> value <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>squares<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#结果： [1, 4, 9, 16, 25, 36, 49, 64, 81]</span></code></pre>
-<h2 id="使用部分列表"><a href="#使用部分列表" class="headerlink" title="使用部分列表"></a>使用部分列表</h2><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#切片</span>
+<h3 id="使用部分列表"><a href="#使用部分列表" class="headerlink" title="使用部分列表"></a>使用部分列表</h3><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#切片</span>
 Num <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>Num<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 结果：[1, 2, 3]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>Num<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 结果：[1, 2, 3]</span>
@@ -581,6 +579,65 @@ dimensions<span class="token punctuation">[</span><span class="token number">0</
 <span class="token comment" spellcheck="true">#结果：    </span>
 <span class="token comment" spellcheck="true">#200</span>
 <span class="token comment" spellcheck="true">#50</span></code></pre>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><h3 id="使用字典"><a href="#使用字典" class="headerlink" title="使用字典"></a>使用字典</h3><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 访问字典</span>
+alien01 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'color'</span><span class="token punctuation">:</span><span class="token string">'green'</span><span class="token punctuation">,</span><span class="token string">'points'</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">}</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>alien01<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># {'color': 'green', 'points': 5}</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>alien01<span class="token punctuation">[</span><span class="token string">'color'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># green</span>
+
+<span class="token comment" spellcheck="true"># 添加键值对应</span>
+alien01<span class="token punctuation">[</span><span class="token string">'x_position'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>
+alien01<span class="token punctuation">[</span><span class="token string">'y_position'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">25</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>alien01<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># {'color': 'green', 'points': 5, 'x_position': 0, 'y_position': 25}</span>
+
+<span class="token comment" spellcheck="true"># 创建空字典</span>
+alien02 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+alien02<span class="token punctuation">[</span><span class="token string">'color'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'red'</span>
+alien02<span class="token punctuation">[</span><span class="token string">'points'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">10</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>alien02<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># {'color': 'red', 'points': 10}</span>
+
+<span class="token comment" spellcheck="true"># 修改字典中的值</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>alien02<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># {'color': 'red', 'points': 10}</span>
+alien02<span class="token punctuation">[</span><span class="token string">'color'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'blue'</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>alien02<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># {'color': 'blue', 'points': 10}</span>
+
+<span class="token comment" spellcheck="true"># 删除键值对应</span>
+<span class="token keyword">del</span> alien02<span class="token punctuation">[</span><span class="token string">'points'</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>alien02<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># {'color': 'blue'}</span>
+
+<span class="token comment" spellcheck="true"># 遍历字典</span>
+user01 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span><span class="token string">'LTY'</span><span class="token punctuation">,</span>
+          <span class="token string">'first'</span><span class="token punctuation">:</span><span class="token string">'L'</span><span class="token punctuation">,</span>
+          <span class="token string">'last'</span><span class="token punctuation">:</span><span class="token string">'TY'</span><span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true"># 遍历所有键值对应</span>
+<span class="token keyword">for</span> a<span class="token punctuation">,</span>b <span class="token keyword">in</span> user01<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\nKey:"</span><span class="token operator">+</span> a<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Value:"</span> <span class="token operator">+</span> b<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># Key:name</span>
+<span class="token comment" spellcheck="true"># Value:LTY</span>
+<span class="token comment" spellcheck="true">#</span>
+<span class="token comment" spellcheck="true"># Key:first</span>
+<span class="token comment" spellcheck="true"># Value:L</span>
+<span class="token comment" spellcheck="true">#</span>
+<span class="token comment" spellcheck="true"># Key:last</span>
+<span class="token comment" spellcheck="true"># Value:TY</span>
+
+<span class="token comment" spellcheck="true"># 遍历所有键</span>
+<span class="token keyword">for</span> c <span class="token keyword">in</span> user01<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\nKey:"</span> <span class="token operator">+</span> c<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># Key:name</span>
+<span class="token comment" spellcheck="true">#</span>
+<span class="token comment" spellcheck="true"># Key:first</span>
+<span class="token comment" spellcheck="true">#</span>
+<span class="token comment" spellcheck="true"># Key:last</span>
+
+<span class="token comment" spellcheck="true"># 遍历所有值</span>
+<span class="token keyword">for</span> d <span class="token keyword">in</span> user01<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\nValue:"</span> <span class="token operator">+</span> d<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># Value:LTY</span>
+<span class="token comment" spellcheck="true">#</span>
+<span class="token comment" spellcheck="true"># Value:L</span>
+<span class="token comment" spellcheck="true">#</span>
+<span class="token comment" spellcheck="true"># Value:TY</span></code></pre>
 
             </div>
             <hr/>
@@ -1084,19 +1141,19 @@ dimensions<span class="token punctuation">[</span><span class="token number">0</
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/07/08/%E5%AD%97%E5%85%B8/">
+                <a href="/2020/07/08/urllib%E8%A1%A5%E5%85%85/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="字典">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="urllib补充">
                         
-                        <span class="card-title">字典</span>
+                        <span class="card-title">urllib补充</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            关于python字典的简介
+                            关于urllib包的简单介绍
                         
                     </div>
                     <div class="publish-info">
@@ -1107,8 +1164,8 @@ dimensions<span class="token punctuation">[</span><span class="token number">0</
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/java/" class="post-category">
-                                    java
+                            <a href="/categories/python/" class="post-category">
+                                    python
                                 </a>
                             
                             
@@ -1118,12 +1175,12 @@ dimensions<span class="token punctuation">[</span><span class="token number">0</
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
-                        <span class="chip bg-color">基础语法</span>
-                    </a>
-                    
                     <a href="/tags/python/">
                         <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%88%AC%E8%99%AB/">
+                        <span class="chip bg-color">爬虫</span>
                     </a>
                     
                 </div>
@@ -1137,31 +1194,31 @@ dimensions<span class="token punctuation">[</span><span class="token number">0</
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/06/16/String%E5%B8%B8%E7%94%A8%E7%B1%BB/">
+                <a href="/2020/06/15/%E8%A7%A3%E5%86%B3%E7%AB%AF%E5%8F%A3%E8%A2%AB%E5%8D%A0%E7%94%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="String常用类">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="解决端口被占用">
                         
-                        <span class="card-title">String常用类</span>
+                        <span class="card-title">解决端口被占用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            关于java字符串的简介
+                            端口被占用的处理办法
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/java/" class="post-category">
-                                    java
+                            <a href="/categories/windows/" class="post-category">
+                                    windows
                                 </a>
                             
                             
@@ -1171,12 +1228,8 @@ dimensions<span class="token punctuation">[</span><span class="token number">0</
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
-                        <span class="chip bg-color">基础语法</span>
-                    </a>
-                    
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
+                    <a href="/tags/windows/">
+                        <span class="chip bg-color">windows</span>
                     </a>
                     
                 </div>
@@ -1327,7 +1380,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;</i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">9.5k</span>&nbsp;字
+                class="white-color">9.4k</span>&nbsp;字
             
             
             
