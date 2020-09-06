@@ -464,14 +464,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    674
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -546,7 +546,46 @@ mysql - -version
     单行注释：#注释文字
     单行注释：-- 注释文字
     多行注释：/*注释文字*/</code></pre><h2 id="DQL语言学习"><a href="#DQL语言学习" class="headerlink" title="DQL语言学习"></a>DQL语言学习</h2><p>关于数据库如何导入现有的文件请看这篇文章：<a href="https://blog.csdn.net/u010801439/article/details/78762387" target="_blank" rel="noopener">传送门</a></p>
-<h3 id="基础查询"><a href="#基础查询" class="headerlink" title="基础查询"></a>基础查询</h3><h3 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h3><h3 id="排序查询"><a href="#排序查询" class="headerlink" title="排序查询"></a>排序查询</h3><h3 id="常见函数"><a href="#常见函数" class="headerlink" title="常见函数"></a>常见函数</h3><h3 id="分组函数"><a href="#分组函数" class="headerlink" title="分组函数"></a>分组函数</h3><h3 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h3><h3 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h3><h3 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h3><h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><h3 id="union联合查询"><a href="#union联合查询" class="headerlink" title="union联合查询"></a>union联合查询</h3><h2 id="DML语言学习"><a href="#DML语言学习" class="headerlink" title="DML语言学习"></a>DML语言学习</h2><h3 id="插入语句"><a href="#插入语句" class="headerlink" title="插入语句"></a>插入语句</h3><h3 id="修改语句"><a href="#修改语句" class="headerlink" title="修改语句"></a>修改语句</h3><h3 id="删除语句"><a href="#删除语句" class="headerlink" title="删除语句"></a>删除语句</h3><h2 id="DDL语言学习"><a href="#DDL语言学习" class="headerlink" title="DDL语言学习"></a>DDL语言学习</h2><h3 id="库和表的管理"><a href="#库和表的管理" class="headerlink" title="库和表的管理"></a>库和表的管理</h3><h3 id="常见数据类型介绍"><a href="#常见数据类型介绍" class="headerlink" title="常见数据类型介绍"></a>常见数据类型介绍</h3><h3 id="常见约束"><a href="#常见约束" class="headerlink" title="常见约束"></a>常见约束</h3><h2 id="TCL语言学习"><a href="#TCL语言学习" class="headerlink" title="TCL语言学习"></a>TCL语言学习</h2><h3 id="事务和事务处理"><a href="#事务和事务处理" class="headerlink" title="事务和事务处理"></a>事务和事务处理</h3>
+<h3 id="基础查询"><a href="#基础查询" class="headerlink" title="基础查询"></a>基础查询</h3><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><pre class=" language-mysql"><code class="language-mysql">select 查询列表 from 表名</code></pre>
+<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><pre class=" language-mysql"><code class="language-mysql">1.查询列表可以是：表中的字段，常量值，表达式，函数
+2.查询的结果是一个虚拟表格</code></pre>
+<h4 id="1-查询表中的单个字段"><a href="#1-查询表中的单个字段" class="headerlink" title="1.查询表中的单个字段"></a>1.查询表中的单个字段</h4><pre class=" language-mysql"><code class="language-mysql">select last_name from employees;</code></pre>
+<h4 id="2-查询表中的多个字段"><a href="#2-查询表中的多个字段" class="headerlink" title="2.查询表中的多个字段"></a>2.查询表中的多个字段</h4><pre class=" language-mysql"><code class="language-mysql">select last_name,salary,email from employees;</code></pre>
+<h4 id="3-查询表中的所有字段"><a href="#3-查询表中的所有字段" class="headerlink" title="3.查询表中的所有字段"></a>3.查询表中的所有字段</h4><pre class=" language-mysql"><code class="language-mysql">select employee_id,first_name,last_name,email,phone_number,job_id,salary,commission_pct,manager_id,department_id,hiredate
+from employees;</code></pre>
+<pre class=" language-mysql"><code class="language-mysql">select * from employees;</code></pre>
+<h4 id="4-查询常量值"><a href="#4-查询常量值" class="headerlink" title="4.查询常量值"></a>4.查询常量值</h4><pre class=" language-mysql"><code class="language-mysql">select 100;
+select 'john';</code></pre>
+<h4 id="5-查询表达式"><a href="#5-查询表达式" class="headerlink" title="5.查询表达式"></a>5.查询表达式</h4><pre class=" language-mysql"><code class="language-mysql">select 100*98;
+select 100%98;</code></pre>
+<h4 id="6-查询函数"><a href="#6-查询函数" class="headerlink" title="6.查询函数"></a>6.查询函数</h4><pre class=" language-mysql"><code class="language-mysql">select version();</code></pre>
+<h4 id="7-起别名"><a href="#7-起别名" class="headerlink" title="7.起别名"></a>7.起别名</h4><pre class=" language-mysql"><code class="language-mysql">/*
+①便于理解
+②如果查询字段有重名的情况，使用别名可以区分开来
+*/
+#方式一：
+select 100%98 AS 结果;
+select last_name As 姓,first_name AS 名 from employees; 
+#方式二：
+select last_name 姓,first_name 名 from employees; </code></pre>
+<h4 id="8-去重"><a href="#8-去重" class="headerlink" title="8.去重"></a>8.去重</h4><pre class=" language-mysql"><code class="language-mysql">#案例：查询员工列表中涉及的所有部门的编号
+select distinct department_id from employees;</code></pre>
+<h4 id="9-号的作用"><a href="#9-号的作用" class="headerlink" title="9.+号的作用"></a>9.+号的作用</h4><pre class=" language-mysql"><code class="language-mysql">/*
+只有一个功能：运算符
+select 100+90; 两个操作数都为数值型，则做加法运算
+select '123'+90;只要其中一方为字符型，试图将字符型数值转换成数值型
+                如果转换成功，则继续做加法运算
+select 'john'+90;    如果转换失败，则将字符型数值转换成0
+
+select null+10; 只要其中一方为null，则结果肯定为null
+*/
+
+#案例：查询员工的姓和名连接成一个字段，并显示为姓名
+select concat('a','b','c') AS 结果;
+select concat(last_name,first_name) AS 姓名 from employees;</code></pre>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><pre class=" language-mysql"><code class="language-mysql">#在查询前最好先打开指定的库
+USE 库名；</code></pre>
+<h3 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h3><h3 id="排序查询"><a href="#排序查询" class="headerlink" title="排序查询"></a>排序查询</h3><h3 id="常见函数"><a href="#常见函数" class="headerlink" title="常见函数"></a>常见函数</h3><h3 id="分组函数"><a href="#分组函数" class="headerlink" title="分组函数"></a>分组函数</h3><h3 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h3><h3 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h3><h3 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h3><h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><h3 id="union联合查询"><a href="#union联合查询" class="headerlink" title="union联合查询"></a>union联合查询</h3><h2 id="DML语言学习"><a href="#DML语言学习" class="headerlink" title="DML语言学习"></a>DML语言学习</h2><h3 id="插入语句"><a href="#插入语句" class="headerlink" title="插入语句"></a>插入语句</h3><h3 id="修改语句"><a href="#修改语句" class="headerlink" title="修改语句"></a>修改语句</h3><h3 id="删除语句"><a href="#删除语句" class="headerlink" title="删除语句"></a>删除语句</h3><h2 id="DDL语言学习"><a href="#DDL语言学习" class="headerlink" title="DDL语言学习"></a>DDL语言学习</h2><h3 id="库和表的管理"><a href="#库和表的管理" class="headerlink" title="库和表的管理"></a>库和表的管理</h3><h3 id="常见数据类型介绍"><a href="#常见数据类型介绍" class="headerlink" title="常见数据类型介绍"></a>常见数据类型介绍</h3><h3 id="常见约束"><a href="#常见约束" class="headerlink" title="常见约束"></a>常见约束</h3><h2 id="TCL语言学习"><a href="#TCL语言学习" class="headerlink" title="TCL语言学习"></a>TCL语言学习</h2><h3 id="事务和事务处理"><a href="#事务和事务处理" class="headerlink" title="事务和事务处理"></a>事务和事务处理</h3>
             </div>
             <hr/>
 
@@ -1280,7 +1319,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;</i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">22.4k</span>&nbsp;字
+                class="white-color">22.8k</span>&nbsp;字
             
             
             
