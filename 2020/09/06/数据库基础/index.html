@@ -464,14 +464,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3k
+                    6.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    13 分
+                    26 分
                 </div>
                 
 
@@ -700,6 +700,333 @@
 <p>lengthy development times<br>difficulty of getting quick answers<br>complex system administration<br>lack of security and limited data sharing<br>extensive programming</p>
 <p><strong>16.Explain why the cost of ownership may be lower with a cloud database than with a traditional, company database.</strong></p>
 <p>Because you are outsourcing your data to a entity with large database assets, thus lowering costs. Also you eliminate costs in hardware and software required to maintain your own database.（因为您正在将您的数据外包给具有大型数据库资产的实体，从而降低成本。此外，您还消除了维护您自己的数据库所需的硬件和软件成本）</p>
+<h2 id="Chapter-2-Data-models"><a href="#Chapter-2-Data-models" class="headerlink" title="Chapter 2 Data models"></a>Chapter 2 Data models</h2><h3 id="数据建模和数据模型"><a href="#数据建模和数据模型" class="headerlink" title="数据建模和数据模型"></a>数据建模和数据模型</h3><p>数据建模(Data modeling)：为问题域(Problem domain)创建特定数据模型(specific data model)的过程(process)</p>
+<ul>
+<li>问题域(Problem domain)：在现实世界环境中明确定义的区域,有确定的范围(scope)和边界(boundaries)</li>
+<li>模型(Model)：对现实世界中更复杂的对象(complex object)或事件的抽象(abstraction)</li>
+<li>数据模型(Data model)：复杂现实世界数据结构(data structures)的简单表示</li>
+<li>模型的目的(Aim of a model)：帮助您了解现实环境的复杂性(complexities)</li>
+</ul>
+<h3 id="数据模型的重要性"><a href="#数据模型的重要性" class="headerlink" title="数据模型的重要性"></a>数据模型的重要性</h3><p>数据建模的重要性不可夸大(overstate)</p>
+<ul>
+<li><p>促进沟通(Facilitates communication)</p>
+</li>
+<li><p>提供数据库的各种视图(views)</p>
+</li>
+<li><p>为各种用户组织数据(Organizes data)</p>
+</li>
+<li><p>为创建良好的数据库提供了一个抽象</p>
+</li>
+</ul>
+<h3 id="数据模型基本构建块"><a href="#数据模型基本构建块" class="headerlink" title="数据模型基本构建块"></a>数据模型基本构建块</h3><p>实体(Entity)：将收集和存储数据的人物、地点、事物或事件</p>
+<ul>
+<li><p>属性(Attribute)：实体的特征</p>
+</li>
+<li><p>关系(Relationship)：实体之间的关联(association)</p>
+<ul>
+<li><p>One-to-many (1:M OR 1..*)</p>
+</li>
+<li><p>Many-to-many (M:N or <em>..</em>)</p>
+</li>
+<li><p>One-to-one (1:1 OR 1..1)</p>
+</li>
+</ul>
+</li>
+<li><p>约束(Constraint:)：对数据的限制</p>
+<ul>
+<li>确保数据完整性</li>
+</ul>
+</li>
+</ul>
+<h3 id="商业规则"><a href="#商业规则" class="headerlink" title="商业规则"></a>商业规则</h3><p>对政策，程序或原则的简短，准确且明确的描述</p>
+<h3 id="发现业务规则"><a href="#发现业务规则" class="headerlink" title="发现业务规则"></a>发现业务规则</h3><p>业务规则的来源:</p>
+<ul>
+<li>公司经理 (Company managers)</li>
+<li>政策制定者 (Policy makers)</li>
+<li>部门经理 (Department managers)</li>
+<li>书面文件 (Written documentation)</li>
+<li>直接采访最终用户(必须验证)(Direct interviews with end users)</li>
+</ul>
+<p>识别和记录业务规则的原因:</p>
+<ul>
+<li>组织运作的整体观点</li>
+<li>规范公司的数据视图</li>
+<li>促进用户和设计人员之间的交流工具</li>
+<li>协助设计师</li>
+</ul>
+<h3 id="将业务规则转换为数据模型组件"><a href="#将业务规则转换为数据模型组件" class="headerlink" title="将业务规则转换为数据模型组件"></a>将业务规则转换为数据模型组件</h3><p>业务规则为正确标识实体、属性、关系和约束奠定了基础</p>
+<ul>
+<li>名词(Nouns)转化为实体(entities)</li>
+<li>动词(Verbs)转化为实体之间的关系</li>
+</ul>
+<p>关系是双向的(bidirectional)</p>
+<ul>
+<li><p>识别关系类型的问题,例如：</p>
+<p>B的多少个实例与A的一个实例相关？</p>
+<p>A的多少实例与B的一个实例相关？</p>
+</li>
+</ul>
+<h3 id="命名约定-Conventions"><a href="#命名约定-Conventions" class="headerlink" title="命名约定(Conventions)"></a>命名约定(Conventions)</h3><p>实体名称要求:</p>
+<ul>
+<li>描述业务环境(business environment)中的对象</li>
+<li>使用用户熟悉的术语(terminology)</li>
+</ul>
+<p>属性名：必须描述属性所代表的数据</p>
+<ul>
+<li>最佳做法：包括实体前缀</li>
+</ul>
+<p>正确命名：</p>
+<ul>
+<li>促进双方之间的沟通</li>
+<li>促进自我解释(self-documentation)</li>
+</ul>
+<h3 id="层次模型和网状模型-Hierarchical-and-Network-Models"><a href="#层次模型和网状模型-Hierarchical-and-Network-Models" class="headerlink" title="层次模型和网状模型(Hierarchical and Network Models)"></a>层次模型和网状模型(Hierarchical and Network Models)</h3><p>层次模型(Hierarchical models):为管理复杂制造项目(complex manufacturing projects)的大量数据(large amounts of data)而开发</p>
+<ul>
+<li>就像登月计划一样</li>
+<li>由包含段(segments)的倒立树(upside-down tree)表示<ul>
+<li>段相当于文件系统的记录类型(file system’s record type)</li>
+</ul>
+</li>
+<li>描述一组一对多（1：M）关系<ul>
+<li>父母可以有很多孩子，但是一个孩子只有一个父母</li>
+</ul>
+</li>
+</ul>
+<p>网状模型：创建以有效表示复杂的数据关系(complex data relationships)</p>
+<ul>
+<li>改进了数据库性能(performance)并强加了数据库标准</li>
+<li>允许一个记录有一个以上的父对象（尽管被视为1：M）</li>
+</ul>
+<p>随着网状模型而出现的标准数据库概念仍然被现代数据模型所使用</p>
+<ul>
+<li><p>模式(Schema)和子模式(subschema)</p>
+<ul>
+<li>模式是数据库管理员(database administrator)所看到的整个数据库的概念组织(conceptual organization)。</li>
+<li>子模式定义了应用程序“可见”的数据库部分 这些程序实际上可以从数据库中的数据中产生所需的信息。</li>
+</ul>
+</li>
+<li><p>数据操作语言(Data manipulation language (DML))</p>
+<ul>
+<li>定义可以管理数据的环境，并用于处理数据库中的数据。</li>
+</ul>
+</li>
+<li><p>数据定义语言(Data definition language (DDL))</p>
+<ul>
+<li>使数据库管理员可以定义架构组件(schema components.)。</li>
+</ul>
+</li>
+</ul>
+<h3 id="关系模型-The-Relational-Model-（重点）"><a href="#关系模型-The-Relational-Model-（重点）" class="headerlink" title="关系模型(The Relational Model)（重点）"></a>关系模型(The Relational Model)（重点）</h3><ul>
+<li>关系型模型是IBM的Edgar Frank Codd在1970年引入的。<ul>
+<li>关系模型的基础是一个被称为关系的数学概念。</li>
+</ul>
+</li>
+<li>您可以将关系（也称为表(table)）视为由相交的行和列组成的二维结构 。<ul>
+<li>关系中的每一行(row)称为元组(tuple)。</li>
+<li>每列代(column)表一个属性(attribute)。</li>
+<li>关系模型还基于高级数学概念描述了一组精确的数据操作构造。</li>
+</ul>
+</li>
+<li>产生了一个自动传输数据库(automatic transmission database)，取代了标准传输数据库(standard transmission databases)</li>
+<li>关系数据库管理系统(Relational database management system (RDBMS))<ul>
+<li>执行由层次和网络DBMS系统提供的基本功能</li>
+<li>使关系数据模型更易于理解和实施</li>
+<li>向用户隐藏关系模型的复杂性</li>
+</ul>
+</li>
+<li>关系数据库结构类似于文件，但它是纯粹的逻辑结构(logical structure)<ul>
+<li>生完整的数据和结构独立性</li>
+</ul>
+</li>
+<li>基于SQL的关系数据库应用程序<ul>
+<li>最终用户界面(End-user interface)<ul>
+<li>允许最终用户与数据进行交互</li>
+</ul>
+</li>
+<li>存储在数据库中的表的集合<ul>
+<li>每张表是独立的</li>
+<li>不同表中的行基于公共属性中的公共值关联</li>
+</ul>
+</li>
+<li>SQL引擎<ul>
+<li>执行所有查询</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="实体关系模型-The-Entity-Relationship-Model"><a href="#实体关系模型-The-Entity-Relationship-Model" class="headerlink" title="实体关系模型(The Entity Relationship Model)"></a>实体关系模型(The Entity Relationship Model)</h3><p>数据库结构中实体及其关系的图形表示(Graphical representation)</p>
+<ul>
+<li>实体关系图(Entity relationship diagram)(ERD):使用图形表示为数据库组件建模</li>
+<li>实体实例或实体出现：关系表中的行</li>
+<li>属性：描述特定特征</li>
+<li>连接性：用于标记关系类型的术语</li>
+</ul>
+<h3 id="面向对象的数据模型-The-Object-Oriented-Data-Model"><a href="#面向对象的数据模型-The-Object-Oriented-Data-Model" class="headerlink" title="面向对象的数据模型(The Object-Oriented Data Model)"></a>面向对象的数据模型(The Object-Oriented Data Model)</h3><ul>
+<li>面向对象的数据模型（OODM）<ul>
+<li>数据及其关系都包含在一个称为对象的单一结构中</li>
+<li>面向对象的数据库管理系统（OODBMS）：基于OODM</li>
+</ul>
+</li>
+<li>对象:包含数据及其与在数据上执行的操作的关系<ul>
+<li>自治结构(autonomous structures)的基本构建块</li>
+<li>现实世界实体的抽象</li>
+</ul>
+</li>
+<li>属性：描述对象的属性</li>
+<li>类：具有共享结构和行为的类似对象的集合</li>
+<li>类层次(hierarchy)：类似于上下颠倒的树，其中每个类都只有一个 一位父母</li>
+<li>继承：对象继承其上方类的方法和属性</li>
+<li>统一建模语言(Unified Modeling Language)(UML)：描述图和符号集，以 图形化地对系统建模</li>
+</ul>
+<h3 id="扩展关系数据模型-Extended-relational-data-model-ERDM"><a href="#扩展关系数据模型-Extended-relational-data-model-ERDM" class="headerlink" title="扩展关系数据模型(Extended relational data model)((ERDM))"></a>扩展关系数据模型(Extended relational data model)((ERDM))</h3><p>支持面向对象(OO)特性、基于类的可扩展数据类型和继承</p>
+<p>可扩展标记语言(Extensible Markup Language (XML)):管理非结构化数据，以便有效地交换结构化、半结构化和非结构化数据</p>
+<h3 id="新兴数据模型-Emerging-Data-Models-：大数据和NoSQL"><a href="#新兴数据模型-Emerging-Data-Models-：大数据和NoSQL" class="headerlink" title="新兴数据模型(Emerging Data Models:)：大数据和NoSQL"></a>新兴数据模型(Emerging Data Models:)：大数据和NoSQL</h3><p>大数据目标</p>
+<ul>
+<li>寻找新的更好的方法来管理大量的网络和传感器生成的数据(web and sensor-generated<br>data</li>
+<li>以合理的价格提供高性能</li>
+</ul>
+<p>大数据的特征</p>
+<ul>
+<li>体量大(数量)</li>
+<li>速度快(生成和处理的速度)</li>
+<li>多样性(不同的数据格式)</li>
+<li>准确性(数据质量)</li>
+<li>价值(数据为业务创造价值)</li>
+</ul>
+<p>大数据的挑战</p>
+<ul>
+<li>不允许使用常规结构 </li>
+<li>价格昂贵 </li>
+<li>OLAP工具被证明在处理非结构化数据时不一致</li>
+</ul>
+<p>大数据新技术</p>
+<p>Hadoop, MapReduce, NoSQL</p>
+<p>NoSQL数据库</p>
+<ul>
+<li><p>不基于关系模型</p>
+</li>
+<li><p>支持分布式数据库架构</p>
+</li>
+<li><p>提供高可伸缩性、高可用性和容错</p>
+</li>
+<li><p>支持大量的稀疏数据(数据和属性,但实际你数据实例的数量很低)</p>
+</li>
+<li><p>优化性能，而不是事务一致性</p>
+</li>
+<li><p>为数据存储和操作提供了广泛的保护伞</p>
+</li>
+</ul>
+<h3 id="抽象层次"><a href="#抽象层次" class="headerlink" title="抽象层次"></a>抽象层次</h3><table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Degree of Abstraction</th>
+<th>Focus</th>
+<th>Independent of</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>External</td>
+<td>High</td>
+<td>End-user views</td>
+<td>Hardware and software</td>
+</tr>
+<tr>
+<td>Conceptual</td>
+<td>Medium-high</td>
+<td>Global view of data</td>
+<td>Hardware and software</td>
+</tr>
+<tr>
+<td>Internal</td>
+<td>Medium-low</td>
+<td>Specific database model</td>
+<td>Hardware</td>
+</tr>
+<tr>
+<td>Physical</td>
+<td>Low</td>
+<td>Storage and access methods</td>
+<td>Neither hardware nor software</td>
+</tr>
+</tbody></table>
+<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>数据模型是对复杂的真实数据环境的抽象</li>
+<li>有许多类型的数据模型(例如，分层的、网络的、关系的、面向对象的、扩展的关系数据模型等)。</li>
+<li>数据建模需求是不同数据视图(全局视图与局部视图)和数据抽象级别的功能</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Advantages</th>
+<th>Disadvantages</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Hierarchical Model</td>
+<td>数据共享,概念简单,数据完整,数据库安全由DBMS提供,高效地处理1:M关系</td>
+<td>需要物理数据存储特性的知识,层次路径知识,结构的变化需要所有应用程序的变化,实现的局限性,没有数据定义,缺乏标准</td>
+</tr>
+<tr>
+<td>Network Model</td>
+<td>概念简单，处理更多的关系类型，数据访问灵活，数据完整性，符合标准</td>
+<td>效率低，结构的改变需要改变所有的应用程序</td>
+</tr>
+<tr>
+<td>Relational Model</td>
+<td>较强独立性,概念简单,特别查询功能基于SQL,将终端用户与物理级别的细节隔离,提高实施和管理的简洁性</td>
+<td>开销大，可能导致信息问题</td>
+</tr>
+<tr>
+<td>Entity Relationship Model</td>
+<td>概念简单，视觉表达使其成为有效的沟通工具，与占主导地位的关系模型集成</td>
+<td>有限约束表示，有限关系表示，没有数据操作语言，信息内容会丢失</td>
+</tr>
+<tr>
+<td>Object-Oriented Model</td>
+<td>添加了语义内容，视觉表示包含语义内容，继承促进数据完整性</td>
+<td>开发缓慢，导航系统复杂，学习难度大，事务处理速度慢</td>
+</tr>
+<tr>
+<td>NoSQL</td>
+<td>容错性大，成本低，支持大数据，提高了存储效率</td>
+<td>复杂的编程，没有关系支持，没有事务完整性支持</td>
+</tr>
+</tbody></table>
+<h3 id="Review-Questions-L02"><a href="#Review-Questions-L02" class="headerlink" title="Review Questions -L02"></a>Review Questions -L02</h3><p>答案来源于：<a href="https://quizlet.com/87068980/database-systems-ch2-review-flash-cards/" target="_blank" rel="noopener">传送门</a></p>
+<p><strong>1.Discuss the importance of data modeling.</strong></p>
+<p>A well-developed data model can even foster improved understanding of the organization for which the database design is developed.</p>
+<p><strong>2.What is a business rule, and what is its purpose in data modeling?</strong></p>
+<p>A business rule is a brief, precise, and unambiguous description of a policy, procedure, or principle within a specific organization.</p>
+<p><strong>3.How do you translate business rules into data model components?</strong></p>
+<p>A noun in a business rule will translate into an entity in the model, and a verb (active or passive) that associates the nouns will translate into a relationship among the entities.</p>
+<p><strong>4.Describe the basic features of the relational data model and discuss their importance to the end user and the designer.</strong></p>
+<p>A relation (sometimes called a table) as a matrix composed of intersecting rows and columns. Each row in relation is called a tuple. Each column represents as attribute. It also describes a precise set of data manipulation constructs based on advanced mathematical concepts.</p>
+<p>relational model as produced an “automatic transmission” database to replace the “standard transmission” databases that preceded it. Its conceptual simplicity set the stage for a genuine database revolution for both end user and designer.</p>
+<p><strong>5.Explain how the entity relationship (ER) model helped produce a more structured relational database design environment.</strong></p>
+<p>The entity relationship model is easier to examine structures graphically than to describe them in text, database designers prefer to use a graphical tool in which entities and their relationships are pictured.</p>
+<p><strong>6.Consider the scenario described by the statement “A customer can make many payments, but each payment is made by only one customer” as the basis for an entity relationship diagram (ERD) representation.</strong></p>
+<p>The statement shows that there is a one to many relationship between customer and payment.</p>
+<p><strong>7.Why is an object said to have greater semantic content than an entity?</strong></p>
+<p>An object-oriented data model (OODM) reflects a very different way to define and use entities. It is described by its factual content and unlike an entity, an object includes information about relationships between the facts within the object, as well as information about its relationships with other objects. Therefore, the facts within the object are given greater meaning. The OODM is said to be a semantic data model because semantic indicates meaning.</p>
+<p><strong>8.What is the difference between an object and a class in the object oriented data model (OODM)?</strong></p>
+<p>Object:<br>Object is an entity that can be manipulated by the commands of a programming language such as values, variables , functions or data structure.<br>Class:<br>Class is a construct that is used as a blueprint to create a instance of itself - referred to as a objects.</p>
+<p><strong>9.How would you model Question 6 with an OODM?</strong></p>
+<p>Object:<br>Each customer kanC that makes a payment is an object.<br>Class:<br>Because all customers have a Shared structure and behavior, a collection of similar objects like customers can be thought of as classes.<br>Attributes:<br>Including name, ID, password, amount of withdrawal.</p>
+<p><strong>10.What is a relationship, and what three types of relationships exist?</strong></p>
+<p>one to one, one to many, many to many</p>
+<p><strong>11.Give an example of each of the three types of relationships.</strong></p>
+<p>(1:M)：a painter can paint many paintings; each painting is painted by one painter.</p>
+<p>(M:N)：an emplyee can learn many skills; each skills can learned by many employees</p>
+<p>(1:1)：an employee manages one store; each store is managed by one employee.</p>
+<p><strong>12.What is a table, and what role does it play in the relational model?</strong></p>
+<p>A matrix composed of intersecting rows (entities) and columns (attributes) that represents an entity set in the relational model.</p>
+<p><strong>13.What is a relational diagram? Give an example.</strong></p>
+<p>A graphical representation of a relational database’s entities, the attributes within those entities, the relationships among the entities.</p>
+<p><strong>14.What is connectivity? (Use a Crow’s Foot ERD to illustrate connectivity.)</strong></p>
+<p>The ER model uses the term connectivity to label the relationship types. The name of the relationship is usually an active or passive verb.</p>
 
             </div>
             <hr/>
@@ -1436,7 +1763,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;</i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">23.4k</span>&nbsp;字
+                class="white-color">26.5k</span>&nbsp;字
             
             
             
@@ -1621,10 +1948,10 @@ if (windowWidth > 768) {
 <script src="/js/cursor.js"></script>
 <script src="/js/rainbow.js"></script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":250},"mobile":{"show":false},"log":false});</script><script>
+<script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":250},"mobile":{"show":false},"log":false});</script></body>
 </html>
