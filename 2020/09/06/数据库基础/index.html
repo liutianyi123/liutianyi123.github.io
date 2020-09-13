@@ -464,14 +464,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.1k
+                    7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    26 分
+                    30 分
                 </div>
                 
 
@@ -1027,6 +1027,40 @@
 <p>A graphical representation of a relational database’s entities, the attributes within those entities, the relationships among the entities.</p>
 <p><strong>14.What is connectivity? (Use a Crow’s Foot ERD to illustrate connectivity.)</strong></p>
 <p>The ER model uses the term connectivity to label the relationship types. The name of the relationship is usually an active or passive verb.</p>
+<h2 id="Chapter-3-The-Relational-Database-Model"><a href="#Chapter-3-The-Relational-Database-Model" class="headerlink" title="Chapter 3 The Relational Database Model"></a>Chapter 3 The Relational Database Model</h2><h3 id="关系数据库的结构"><a href="#关系数据库的结构" class="headerlink" title="关系数据库的结构"></a>关系数据库的结构</h3><p>关系数据库由表(table)构成，每个表有唯一的名字</p>
+<p>关系(relation)用来指代表，元祖(tuple)用来指代行，属性(attribute)用来指代列，用关系实例(relation instance)表示一组特定的行</p>
+<p>属性的取值集合被称作域(domain)。如果域中的元素被看作是不可再分的单元，则称域是原子的(atomic)</p>
+<p>空(null)值表示值未知或不存在</p>
+<h3 id="数据库模式"><a href="#数据库模式" class="headerlink" title="数据库模式"></a>数据库模式</h3><p>数据库模式(database schema)是数据库的逻辑设计</p>
+<p>数据库实例(database instance)是给定时刻数据库中数据的一个快照</p>
+<p>关系模式(relation schema)类似于程序设计语言中类型定义，比如一个名叫department的表中有 dept_name,building,budget 三列那么它的关系模式为：department（dept_name, building, budget）</p>
+<h3 id="码"><a href="#码" class="headerlink" title="码"></a>码</h3><p>超码(superkey)是一个或多个属性的集合，通过这些属性的组合可以使我们唯一标识一个元组。</p>
+<p>候选码(candidate key)是最小超码。</p>
+<p>主码(primary key)是被设计者选中的候选码。</p>
+<p>辅键码(secondary key)是用于数据检索目的的属性或属性组合。</p>
+<p>一个关系模式(r1)包含另一个关系模式(r2)的主码，那么这个属性在r1中被称作外码(foreign key),  关系r1称作外码依赖的参照关系(referencing relation), 关系r2叫做外码的被参照关系(referenced relation)。</p>
+<p>参照完整性约束(referential integrity constraint)指的是在参照关系中任意元组在特定属性上的取值必然等于被参照关系中某个元组在特定属性上的取值。</p>
+<h3 id="模式图"><a href="#模式图" class="headerlink" title="模式图"></a>模式图</h3><p>一个含有主码和外码依赖的数据库模式可以用模式图(schema diagram)来表示。</p>
+<p>每一个关系用一个矩形来表示，关系的名字写在矩形上方，矩形内列出各属性。主码用下划线标注</p>
+<h3 id="Review-Questions-L03"><a href="#Review-Questions-L03" class="headerlink" title="Review Questions -L03"></a>Review Questions -L03</h3><p>答案来源于：[传送门](<a href="https://quizlet.com/94932725/chapter-3-flash-cards/）" target="_blank" rel="noopener">https://quizlet.com/94932725/chapter-3-flash-cards/）</a></p>
+<p><strong>1.What is the difference between a database and a table?</strong></p>
+<p>A table is a two-dimensional structure composed of rows and columns. It is a persistent representation of a logical relationship whose contents can be saved permanently for future use. It contains a group of related entity occurrences. A database is where these tables are stored.</p>
+<p><strong>2.What does it mean to say that a database displays both entity integrity and referential integrity?</strong></p>
+<p>Means when data is displaying all the fields</p>
+<p><strong>3.Why are entity integrity and referential integrity important in a database?</strong></p>
+<p>Entity integrity and referential integrity are two forms of data integrity that are particularly important in relational databases. Relational databases break the storage of data down into elements that usually have to be joined back together again in order to produce meaningful results. Without guarantees of these two types of integrity, data would get dropped or duplicated.</p>
+<p><strong>4.What are the requirements that two relations must satisfy in order to be considered union compatible?</strong></p>
+<p>Both must have the same number of attributes (columns) and corresponding attributes (columns) must have the same (or compatible) domains (data types).</p>
+<p><strong>5.Which relational algebra operators can be applied to a pair of tables that are not union-compatible?</strong></p>
+<p>SELECT, PROJECT, DIVIDE, PRODUCT, and JOIN</p>
+<p><strong>6.Explain why the data dictionary is sometimes called “the database designer’s database.”</strong></p>
+<p>because it records the design decisions about tables and their structures</p>
+<p><strong>7.A database user manual notes that, “The file contains two hundred records, each record containing nine fields.” Use appropriate relational database terminology to “translate” that statement.</strong></p>
+<p>The relation has 9 tributes and 200 Tuples in the relation table</p>
+<p><strong>8.Using the STUDENT and PROFESSOR tables shown in Figure Q3.8, explain and illustrate the difference between a natural join, an equijoin, and an outer join</strong></p>
+<p>The equiJOIN’s results depend on the specified condition. </p>
+<p>The natural JOIN process begins with the PRODUCT of the two tables.</p>
+<p>In the Outer JOIN, the unmatched pairs would be retained and the values that do not have a match in the other table would be left null.</p>
 
             </div>
             <hr/>
@@ -1761,7 +1795,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;</i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">29.5k</span>&nbsp;字
+                class="white-color">30.4k</span>&nbsp;字
             
             
             
