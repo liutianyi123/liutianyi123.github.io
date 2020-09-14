@@ -464,14 +464,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7k
+                    4.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    30 分
+                    18 分
                 </div>
                 
 
@@ -627,79 +627,6 @@
 <li><p>数据库从手工和计算机化的文件系统演变而来，因为文件系统数据管理有一些限制所以开发了DBMS</p>
 </li>
 </ul>
-<h3 id="Review-Questions-L01"><a href="#Review-Questions-L01" class="headerlink" title="Review Questions -L01"></a>Review Questions -L01</h3><p>答案来源于：<a href="https://quizlet.com/157640751/database-systems-design-implementation-and-management-chapter-1-review-questions-flash-cards/" target="_blank" rel="noopener">传送门</a></p>
-<p><strong>1.Define each of the following terms:data,field,record,file</strong></p>
-<p>Data: raw facts<br>Field: an attribute, same data type<br>Record: related data that describes an entity(描述一个实体的相关数据)<br>File: a collection of related records.(相关记录的集合)</p>
-<p><strong>2.What is data redundancy, and which characteristics of the file system can lead to it?</strong></p>
-<p>Data redundancy occurs when the same data are stored in multiple places unnecessarily.The use of tables in different parts of the organization can cause it.</p>
-<p><strong>3.What is data independence, and why is it lacking in file systems?</strong></p>
-<p>Data independence exists when you can change the data storage characteristics without impeding the program’s ability to access the data.</p>
-<p>Any program that accesses system’s file must tell the computer not only what to do, but how to do it. Consequently, each program must contain lines that specify the opening of a specific type of file, its record specification, and its field definitions. Data dependence makes the file system extremely cumbersome(繁琐) from the point of view of a programmer and database manager.</p>
-<p><strong>4.What is a DBMS, and what are its functions?</strong></p>
-<p>DBMS = Database Management System</p>
-<p>a collection of programs that manages the database structure and controls access to the data stored in the database. </p>
-<p>functions of a DBMS:</p>
-<p>data dictionary management<br>data storage management<br>data transformation and presentation<br>security management<br>multiuser access control<br>backup and recovery management<br>data integrity management<br>database access languages and application programming interfaces.<br>database communication interfaces.</p>
-<p><strong>5.What is structual independence, and why is it important?</strong></p>
-<p>When it is possible to make changes in the file structure without affecting the application program’s ability to access the data.</p>
-<p><strong>6.Explain the differences between data, information, and a database</strong></p>
-<p>Data are raw facts that have not been processed. </p>
-<p>Information is data that has been processed. </p>
-<p>Databases help to facilitate the manipulation of data to create information by providing an organizational structure that makes relationships and connections between data explicit.（数据库通过提供使数据之间的关系和连接明确化的组织结构，有助于促进数据创建信息的操作。）</p>
-<p><strong>7.What is the role of a DBMS, and what are its advantages?</strong></p>
-<p>The intermediary between the user and the database.</p>
-<p>advantages:</p>
-<p>improved data sharing<br>improved data security<br>better data integration<br>minimized data inconsistency<br>improved data access<br>improved decision making<br>increased end-user productivity</p>
-<p>disadvantages:</p>
-<p>increased costs<br>management complexity<br>maintaining currency<br>vendor dependence<br>frequent upgrade/replacement cycles</p>
-<p><strong>8.List and describe the different types of databases.</strong></p>
-<ul>
-<li><p>single user database: supports only one user at a time.</p>
-</li>
-<li><p>desktop database: a single user database that runs on a personal computer</p>
-</li>
-<li><p>multi-user database: supports multiple users at one time.</p>
-</li>
-<li><p>work-group database: a multi-user database that supports a small number of users </p>
-</li>
-<li><p>enterprise database: a multi-user database that supports a large number of users</p>
-</li>
-<li><p>centralized database: supports data located at a single site.</p>
-</li>
-<li><p>distributed database: supports data distributed across several different sites</p>
-</li>
-<li><p>operational/transactional/production database: for day-to-day operations</p>
-</li>
-<li><p>data warehouse: stores data used to generate info required to make tactical or strategic decisions</p>
-</li>
-</ul>
-<p><strong>9.What are the main components of a database system?</strong></p>
-<p>hardware,software,people,procedures,data</p>
-<p><strong>10.What is metadata(元数据)?</strong></p>
-<p>Can integrate and manage end user data.</p>
-<p><strong>11.Explain why database design is important.</strong></p>
-<p>a poorly designed database may produce difficult to trace errors that result in bad decision making – and bad decision making can lead to the failure of an organization.</p>
-<p><strong>12.What are the potential costs of implementing a database system?</strong></p>
-<ul>
-<li><p>sophisticated hardware and software, trained personnel</p>
-</li>
-<li><p>training, licensingm and regulation compliance costs</p>
-</li>
-<li><p>vendor dependence - vendors are less likely to offer pricing point advantages to existing customers</p>
-</li>
-<li><p>updating of hardware and software</p>
-</li>
-</ul>
-<p><strong>13.Use examples to compare and contrast unstructured and structured data. Which type is more prevalent in a typical business environment?</strong></p>
-<p>examples of both types would include:</p>
-<p>An invoice. If one were to take an invoice and simply scan it into a graphic, it would be unstructured data. In contrast, if it were processed and put into a database (subsequently becoming structured data), employees could eventually find the monthly averages, amount owed, etc. from various invoices.</p>
-<p>While both are prevalent, I would think semi-structured data would be the most common in a typical business. Some data is stored but not processed (unstructured data such as memos), and some others are stored in databases (such as invoices) but most data are only processed to a certain extent that is displayed in a prearranged format but not able to yield all of the information contained within.</p>
-<p><strong>14.What are some basic database functions that a spreadsheet cannot perform.</strong></p>
-<p>support for self-documentation through metadata enforcement of data types or domains to ensure consistency of data within a column, defined relationships among tables, or contraints to ensure consistency of data across related tables.( 通过强制执行数据类型或域的元数据来支持自文档化，以确保列内数据的一致性，表之间已定义的关系或约束以确保跨相关表的数据一致性)</p>
-<p><strong>15.What common problems do a collection of spreadsheets created by end users share with the typical file system?</strong></p>
-<p>lengthy development times<br>difficulty of getting quick answers<br>complex system administration<br>lack of security and limited data sharing<br>extensive programming</p>
-<p><strong>16.Explain why the cost of ownership may be lower with a cloud database than with a traditional, company database.</strong></p>
-<p>Because you are outsourcing your data to a entity with large database assets, thus lowering costs. Also you eliminate costs in hardware and software required to maintain your own database.（因为您正在将您的数据外包给具有大型数据库资产的实体，从而降低成本。此外，您还消除了维护您自己的数据库所需的硬件和软件成本）</p>
 <h2 id="Chapter-2-Data-models"><a href="#Chapter-2-Data-models" class="headerlink" title="Chapter 2 Data models"></a>Chapter 2 Data models</h2><h3 id="数据建模和数据模型"><a href="#数据建模和数据模型" class="headerlink" title="数据建模和数据模型"></a>数据建模和数据模型</h3><p>数据建模(Data modeling)：为问题域(Problem domain)创建特定数据模型(specific data model)的过程(process)</p>
 <ul>
 <li>问题域(Problem domain)：在现实世界环境中明确定义的区域,有确定的范围(scope)和边界(boundaries)</li>
@@ -995,38 +922,6 @@
 <td>复杂的编程，没有关系支持，没有事务完整性支持</td>
 </tr>
 </tbody></table>
-<h3 id="Review-Questions-L02"><a href="#Review-Questions-L02" class="headerlink" title="Review Questions -L02"></a>Review Questions -L02</h3><p>答案来源于：<a href="https://quizlet.com/87068980/database-systems-ch2-review-flash-cards/" target="_blank" rel="noopener">传送门</a></p>
-<p><strong>1.Discuss the importance of data modeling.</strong></p>
-<p>A well-developed data model can even foster improved understanding of the organization for which the database design is developed.</p>
-<p><strong>2.What is a business rule, and what is its purpose in data modeling?</strong></p>
-<p>A business rule is a brief, precise, and unambiguous description of a policy, procedure, or principle within a specific organization.</p>
-<p><strong>3.How do you translate business rules into data model components?</strong></p>
-<p>A noun in a business rule will translate into an entity in the model, and a verb (active or passive) that associates the nouns will translate into a relationship among the entities.</p>
-<p><strong>4.Describe the basic features of the relational data model and discuss their importance to the end user and the designer.</strong></p>
-<p>A relation (sometimes called a table) as a matrix composed of intersecting rows and columns. Each row in relation is called a tuple. Each column represents as attribute. It also describes a precise set of data manipulation constructs based on advanced mathematical concepts.</p>
-<p>relational model as produced an “automatic transmission” database to replace the “standard transmission” databases that preceded it. Its conceptual simplicity set the stage for a genuine database revolution for both end user and designer.</p>
-<p><strong>5.Explain how the entity relationship (ER) model helped produce a more structured relational database design environment.</strong></p>
-<p>The entity relationship model is easier to examine structures graphically than to describe them in text, database designers prefer to use a graphical tool in which entities and their relationships are pictured.</p>
-<p><strong>6.Consider the scenario described by the statement “A customer can make many payments, but each payment is made by only one customer” as the basis for an entity relationship diagram (ERD) representation.</strong></p>
-<p>The statement shows that there is a one to many relationship between customer and payment.</p>
-<p><strong>7.Why is an object said to have greater semantic content than an entity?</strong></p>
-<p>An object-oriented data model (OODM) reflects a very different way to define and use entities. It is described by its factual content and unlike an entity, an object includes information about relationships between the facts within the object, as well as information about its relationships with other objects. Therefore, the facts within the object are given greater meaning. The OODM is said to be a semantic data model because semantic indicates meaning.</p>
-<p><strong>8.What is the difference between an object and a class in the object oriented data model (OODM)?</strong></p>
-<p>Object:<br>Object is an entity that can be manipulated by the commands of a programming language such as values, variables , functions or data structure.<br>Class:<br>Class is a construct that is used as a blueprint to create a instance of itself - referred to as a objects.</p>
-<p><strong>9.How would you model Question 6 with an OODM?</strong></p>
-<p>Object:<br>Each customer that makes a payment is an object.<br>Class:<br>Because all customers have a Shared structure and behavior, a collection of similar objects like customers can be thought of as classes.<br>Attributes:<br>Including name, ID, password, amount of withdrawal.</p>
-<p><strong>10.What is a relationship, and what three types of relationships exist?</strong></p>
-<p>one to one, one to many, many to many</p>
-<p><strong>11.Give an example of each of the three types of relationships.</strong></p>
-<p>(1:M)：a painter can paint many paintings; each painting is painted by one painter.</p>
-<p>(M:N)：an emplyee can learn many skills; each skills can learned by many employees</p>
-<p>(1:1)：an employee manages one store; each store is managed by one employee.</p>
-<p><strong>12.What is a table, and what role does it play in the relational model?</strong></p>
-<p>A matrix composed of intersecting rows (entities) and columns (attributes) that represents an entity set in the relational model.</p>
-<p><strong>13.What is a relational diagram? Give an example.</strong></p>
-<p>A graphical representation of a relational database’s entities, the attributes within those entities, the relationships among the entities.</p>
-<p><strong>14.What is connectivity? (Use a Crow’s Foot ERD to illustrate connectivity.)</strong></p>
-<p>The ER model uses the term connectivity to label the relationship types. The name of the relationship is usually an active or passive verb.</p>
 <h2 id="Chapter-3-The-Relational-Database-Model"><a href="#Chapter-3-The-Relational-Database-Model" class="headerlink" title="Chapter 3 The Relational Database Model"></a>Chapter 3 The Relational Database Model</h2><h3 id="关系数据库的结构"><a href="#关系数据库的结构" class="headerlink" title="关系数据库的结构"></a>关系数据库的结构</h3><p>关系数据库由表(table)构成，每个表有唯一的名字</p>
 <p>关系(relation)用来指代表，元祖(tuple)用来指代行，属性(attribute)用来指代列，用关系实例(relation instance)表示一组特定的行</p>
 <p>属性的取值集合被称作域(domain)。如果域中的元素被看作是不可再分的单元，则称域是原子的(atomic)</p>
@@ -1042,25 +937,6 @@
 <p>参照完整性约束(referential integrity constraint)指的是在参照关系中任意元组在特定属性上的取值必然等于被参照关系中某个元组在特定属性上的取值。</p>
 <h3 id="模式图"><a href="#模式图" class="headerlink" title="模式图"></a>模式图</h3><p>一个含有主码和外码依赖的数据库模式可以用模式图(schema diagram)来表示。</p>
 <p>每一个关系用一个矩形来表示，关系的名字写在矩形上方，矩形内列出各属性。主码用下划线标注</p>
-<h3 id="Review-Questions-L03"><a href="#Review-Questions-L03" class="headerlink" title="Review Questions -L03"></a>Review Questions -L03</h3><p>答案来源于：[传送门](<a href="https://quizlet.com/94932725/chapter-3-flash-cards/）" target="_blank" rel="noopener">https://quizlet.com/94932725/chapter-3-flash-cards/）</a></p>
-<p><strong>1.What is the difference between a database and a table?</strong></p>
-<p>A table is a two-dimensional structure composed of rows and columns. It is a persistent representation of a logical relationship whose contents can be saved permanently for future use. It contains a group of related entity occurrences. A database is where these tables are stored.</p>
-<p><strong>2.What does it mean to say that a database displays both entity integrity and referential integrity?</strong></p>
-<p>Means when data is displaying all the fields</p>
-<p><strong>3.Why are entity integrity and referential integrity important in a database?</strong></p>
-<p>Entity integrity and referential integrity are two forms of data integrity that are particularly important in relational databases. Relational databases break the storage of data down into elements that usually have to be joined back together again in order to produce meaningful results. Without guarantees of these two types of integrity, data would get dropped or duplicated.</p>
-<p><strong>4.What are the requirements that two relations must satisfy in order to be considered union compatible?</strong></p>
-<p>Both must have the same number of attributes (columns) and corresponding attributes (columns) must have the same (or compatible) domains (data types).</p>
-<p><strong>5.Which relational algebra operators can be applied to a pair of tables that are not union-compatible?</strong></p>
-<p>SELECT, PROJECT, DIVIDE, PRODUCT, and JOIN</p>
-<p><strong>6.Explain why the data dictionary is sometimes called “the database designer’s database.”</strong></p>
-<p>because it records the design decisions about tables and their structures</p>
-<p><strong>7.A database user manual notes that, “The file contains two hundred records, each record containing nine fields.” Use appropriate relational database terminology to “translate” that statement.</strong></p>
-<p>The relation has 9 tributes and 200 Tuples in the relation table</p>
-<p><strong>8.Using the STUDENT and PROFESSOR tables shown in Figure Q3.8, explain and illustrate the difference between a natural join, an equijoin, and an outer join</strong></p>
-<p>The equiJOIN’s results depend on the specified condition. </p>
-<p>The natural JOIN process begins with the PRODUCT of the two tables.</p>
-<p>In the Outer JOIN, the unmatched pairs would be retained and the values that do not have a match in the other table would be left null.</p>
 
             </div>
             <hr/>
@@ -1795,7 +1671,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;</i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">30.4k</span>&nbsp;字
+                class="white-color">28.3k</span>&nbsp;字
             
             
             
