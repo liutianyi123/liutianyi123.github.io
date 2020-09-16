@@ -464,14 +464,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.9k
+                    5.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    18 分
+                    19 分
                 </div>
                 
 
@@ -935,8 +935,29 @@
 <p>辅键码(secondary key)是用于数据检索目的的属性或属性组合。</p>
 <p>一个关系模式(r1)包含另一个关系模式(r2)的主码，那么这个属性在r1中被称作外码(foreign key),  关系r1称作外码依赖的参照关系(referencing relation), 关系r2叫做外码的被参照关系(referenced relation)。</p>
 <p>参照完整性约束(referential integrity constraint)指的是在参照关系中任意元组在特定属性上的取值必然等于被参照关系中某个元组在特定属性上的取值。</p>
+<p>实体完整性(entity integrity)：每一个主键值是唯一的，不能有NULL值。</p>
+<p>referential integrity(参照完整性)：外键的值(可以为NULL)能和参考表单中的值一 一对应。</p>
 <h3 id="模式图"><a href="#模式图" class="headerlink" title="模式图"></a>模式图</h3><p>一个含有主码和外码依赖的数据库模式可以用模式图(schema diagram)来表示。</p>
 <p>每一个关系用一个矩形来表示，关系的名字写在矩形上方，矩形内列出各属性。主码用下划线标注</p>
+<h2 id="Chapter-4-The-entity-relationship-model"><a href="#Chapter-4-The-entity-relationship-model" class="headerlink" title="Chapter 4 The entity relationship model"></a>Chapter 4 The entity relationship model</h2><h3 id="主要组成部分"><a href="#主要组成部分" class="headerlink" title="主要组成部分"></a>主要组成部分</h3><h4 id="实体"><a href="#实体" class="headerlink" title="实体"></a>实体</h4><ul>
+<li>实体集：具有相同属性实体的集合</li>
+</ul>
+<h4 id="联系"><a href="#联系" class="headerlink" title="联系"></a>联系</h4><ul>
+<li>联系集：相同类型联系的集合</li>
+</ul>
+<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><p>必需属性(Required attribute)：必须有一个值，并且不能为空</p>
+<p>可选属性(Optional attribute)：不需要值，可以为空</p>
+<p>域(Domain)：属性的一组可能值</p>
+<p>标识符(Identifier)：能唯一标识每个实体实例的一个或多个属性</p>
+<p>复合标识符(Composite identifier)：由多个属性组成的主键</p>
+<p>复合属性(Composite attribute)：可细分以产生附加属性的属性</p>
+<p>简单属性(Simple attribute)：不能再细分的属性</p>
+<p>单值属性(Single-valued attribute)：只有一个值的属性(eg.ID)</p>
+<p>多值属性(Multivalued attributes)：有多个值的属性(eg.一个人可以有多个电话号码)</p>
+<p>派生属性(Derived attribute)：从别的相关属性派生出来(eg.可以由出生日期data_birth属性得到年龄age属性)</p>
+<h3 id="关系强度"><a href="#关系强度" class="headerlink" title="关系强度"></a>关系强度</h3><p>弱联系：相关实体的主键不包含父实体的主键组件(父实体的主键可能作为子实体的外键出现)，在图上用虚线表示</p>
+<p>强联系：相关实体的主键包含父实体的主键组件，在图上用实线表示</p>
+<h3 id="参与的关系"><a href="#参与的关系" class="headerlink" title="参与的关系"></a>参与的关系</h3><p>![]/images/0.png)</p>
 
             </div>
             <hr/>
@@ -1671,7 +1692,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;</i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">28.3k</span>&nbsp;字
+                class="white-color">28.6k</span>&nbsp;字
             
             
             
