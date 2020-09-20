@@ -507,7 +507,7 @@
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">18</a></span>
+    <span class="count"><a href="/">19</a></span>
     <span class="name">文章</span>
 </div>
 
@@ -537,7 +537,7 @@
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">18</a></span>
+    <span class="count"><a href="/">19</a></span>
     <span class="name">文章</span>
 </div>
 
@@ -695,7 +695,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,2,1,2,2,11],
+                data: [0,0,0,0,0,0,0,0,2,1,2,2,12],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -737,7 +737,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"前端","value":1},{"name":"python","value":2},{"name":"数据库","value":3},{"name":"博客搭建","value":6},{"name":"java","value":1},{"name":"信息安全","value":1},{"name":"英语","value":2},{"name":"markdown","value":1},{"name":"windows","value":1}],
+                data: [{"name":"python","value":2},{"name":"数据库","value":3},{"name":"java","value":1},{"name":"博客搭建","value":6},{"name":"前端","value":1},{"name":"markdown","value":1},{"name":"信息安全","value":1},{"name":"英语","value":3},{"name":"windows","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -761,7 +761,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["博客搭建","hexo","基础语法","数据库","python","英语","前端","HTML5","Web开发","java"]
+                data: ["博客搭建","hexo","基础语法","数据库","英语","python","java","前端","HTML5","Web开发"]
             }
         ],
         yAxis: [
@@ -774,7 +774,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [6,6,3,3,2,2,1,1,1,1],
+                data: [6,6,3,3,3,2,1,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -944,20 +944,6 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                <span class="chip center-align waves-effect waves-light chip-default">前端</span>
-            </a>
-            
-            
-            
-            
-            
-            <a href="/tags/Web%E5%BC%80%E5%8F%91/">
-                <span class="chip center-align waves-effect waves-light chip-default">Web开发</span>
-            </a>
-            
-            
-            
             <a href="/tags/python/">
                 <span class="chip center-align waves-effect waves-light chip-default">python</span>
             </a>
@@ -976,6 +962,12 @@
             
             
             
+            <a href="/tags/java/">
+                <span class="chip center-align waves-effect waves-light chip-default">java</span>
+            </a>
+            
+            
+            
             <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
                 <span class="chip center-align waves-effect waves-light chip-default">博客搭建</span>
             </a>
@@ -988,8 +980,22 @@
             
             
             
-            <a href="/tags/java/">
-                <span class="chip center-align waves-effect waves-light chip-default">java</span>
+            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                <span class="chip center-align waves-effect waves-light chip-default">前端</span>
+            </a>
+            
+            
+            
+            
+            
+            <a href="/tags/Web%E5%BC%80%E5%8F%91/">
+                <span class="chip center-align waves-effect waves-light chip-default">Web开发</span>
+            </a>
+            
+            
+            
+            <a href="/tags/markddown/">
+                <span class="chip center-align waves-effect waves-light chip-default">markddown</span>
             </a>
             
             
@@ -1006,18 +1012,6 @@
             
             
             
-            <a href="/tags/markddown/">
-                <span class="chip center-align waves-effect waves-light chip-default">markddown</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E7%88%AC%E8%99%AB/">
-                <span class="chip center-align waves-effect waves-light chip-default">爬虫</span>
-            </a>
-            
-            
-            
             <a href="/tags/windows/">
                 <span class="chip center-align waves-effect waves-light chip-default">windows</span>
             </a>
@@ -1026,6 +1020,12 @@
             
             <a href="/tags/%E9%95%BF%E9%9A%BE%E5%8F%A5/">
                 <span class="chip center-align waves-effect waves-light chip-default">长难句</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E7%88%AC%E8%99%AB/">
+                <span class="chip center-align waves-effect waves-light chip-default">爬虫</span>
             </a>
             
             
@@ -1310,10 +1310,10 @@ if (windowWidth > 768) {
 <script src="/js/cursor.js"></script>
 <script src="/js/rainbow.js"></script>
 
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":250},"mobile":{"show":false},"log":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":250},"mobile":{"show":false},"log":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>
