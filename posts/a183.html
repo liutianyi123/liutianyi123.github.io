@@ -609,14 +609,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.2k
+                    3.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    19 分
+                    11 分
                 </div>
                 
 
@@ -631,148 +631,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Chapter-1-Database-System"><a href="#Chapter-1-Database-System" class="headerlink" title="Chapter 1 Database System"></a>Chapter 1 Database System</h2><h3 id="为什么要选择数据库"><a href="#为什么要选择数据库" class="headerlink" title="为什么要选择数据库"></a>为什么要选择数据库</h3><p>一方面：当今世界数据无处不在(ubiquitous)具有普遍性(pervasive)</p>
-<p>另一方面：数据库存储数据具有安全性(in a secure way)</p>
-<h3 id="数据和信息的关系"><a href="#数据和信息的关系" class="headerlink" title="数据和信息的关系"></a>数据和信息的关系</h3><p>① 数据由原始的信息(raw facts)构成</p>
-<p>② 信息来源于对原始数据(raw data)的处理</p>
-<h3 id="数据库简介"><a href="#数据库简介" class="headerlink" title="数据库简介"></a>数据库简介</h3><p>数据库是一种存储数据(stores data)的计算机结构(computer structure)具有共享性(Shared)和集成性(integrated)</p>
-<p>数据库管理系统DBMS(Database management system)是一种管理数据库的结构(Manages the database structure)，并控制数据的访问(Controls access to data)还是一种程序的收集(Collection of programs)</p>
-<h3 id="数据库管理系统的作用和优势"><a href="#数据库管理系统的作用和优势" class="headerlink" title="数据库管理系统的作用和优势"></a>数据库管理系统的作用和优势</h3><p>数据库管理系统是用户于数据库之间的桥梁(intermediary)</p>
-<p>① 实现数据的共享(sharing)</p>
-<p>② 高效的管理数据(effective data management)</p>
-<p>③ 向用户展现数据视图(view of data)</p>
-<p>④ 改进共享、安全、集成、访问(access)、决策制定(decision-making)、生产力(productivity)等。</p>
-<h3 id="数据库种类"><a href="#数据库种类" class="headerlink" title="数据库种类"></a>数据库种类</h3><p>① <strong>通过支持用户(user)数量划分</strong></p>
-<ul>
-<li>一次支持一个用户：单用户数据库(Single-user database)</li>
-</ul>
-<p>​    eg.桌面数据库(Desktop database):个人计算机上的单用户数据库</p>
-<ul>
-<li>一次支持多个用户：多用户数据库(Multiuser database)</li>
-</ul>
-<p>​    eg.工作组数据库(Workgroup databases):支持少数用户或特定部门</p>
-<p>​         企业数据库(Enterprise database):支持多个部门的多个用户</p>
-<p>② <strong>通过位置(locaction)分类</strong></p>
-<ul>
-<li><p>集中式数据库(Centralized database):数据位于单一站点(a single site)</p>
-</li>
-<li><p>分布式数据库(Distributed database):数据分布在不同的站点(different sites)</p>
-</li>
-<li><p>云数据库(Cloud database):使用云数据服务(cloud data services)创建和维护</p>
-</li>
-</ul>
-<p>③ <strong>通过数据类型(data type)分类</strong></p>
-<ul>
-<li><p>通用数据库(General-purpose database):包含在多个学科(multiple disciplines)中使用的各种数据</p>
-</li>
-<li><p>特定学科数据库(Discipline-specific database):包含特定学科领域(specific subject areas)的数据</p>
-</li>
-<li><p>运营数据库(Operational database):用于支持公司的日常运营(day-to-day operations)</p>
-</li>
-</ul>
-<p>​    eg.事务数据库(Transactional database)</p>
-<ul>
-<li>分析数据库( Analytical database):存储专门用于战术(tactical)或战略决策制定(trategic decision making)的历史数据(historical data)和业务指标(business metrics)</li>
-</ul>
-<p>​    eg.数据仓库(Data warehouse):以用于决策支持的优化格式(a format  optimized for decision support)存储数据</p>
-<p>​         联机分析处理(Online analytical processing (OLAP)):数据仓库检索(retrieving)、处理(processing)和建模(modeling)数据的工具</p>
-<p>​         商业智能(商业智能):捕获和处理(captures and processes)商业数据，以生成支持决策制定的信息</p>
-<p>④ <strong>通过结构化程度(Degree of structure)</strong></p>
-<ul>
-<li><p>非结构化数据:以其原始状态(original state)存在</p>
-</li>
-<li><p>结构化数据:源于格式化(formatting)</p>
-</li>
-<li><p>半结构化数据:在一定程度上经过处理(process)</p>
-</li>
-</ul>
-<p>注意：NoSQL(不仅仅是SQL)主要处理非结构化数据</p>
-<h3 id="为什么数据库设计很重要"><a href="#为什么数据库设计很重要" class="headerlink" title="为什么数据库设计很重要"></a>为什么数据库设计很重要</h3><p>良好的数据库:便于数据管理(data management)，生成准确和有价值的信息</p>
-<p>不良的数据库:导致错误和糟糕的决策(poor decision making)</p>
-<h3 id="文件系统数据处理的发展"><a href="#文件系统数据处理的发展" class="headerlink" title="文件系统数据处理的发展"></a>文件系统数据处理的发展</h3><p>手册的文件系统(Manual file systems):通过文件夹(file folders)<br>和文件柜(filing cabinets)系统管理的数据</p>
-<p>计算机化的文件系统(Computerized file systems):基于计算机的系统( computerbased system)来跟踪数据(track data)并生成所需的报告</p>
-<p>文件系统再现(File system redux):现代终端用户生产力工具,包括电子表格程序，如Excel</p>
-<h3 id="文件系统数据-File-System-Data-处理问题"><a href="#文件系统数据-File-System-Data-处理问题" class="headerlink" title="文件系统数据(File System Data)处理问题"></a>文件系统数据(File System Data)处理问题</h3><p>开发时间长(Lengthy development times)</p>
-<p>难以快速得到答案</p>
-<p>复杂的系统管理(Complex system administration)</p>
-<p>缺乏安全性(Lack of security)，数据共享(data sharing)受限</p>
-<h3 id="结构依赖"><a href="#结构依赖" class="headerlink" title="结构依赖"></a>结构依赖</h3><p>① 对文件的访问取决于它自身的结构(own structure)</p>
-<p>② 所有文件系统程序都被修改以符合新的文件结构(conform to a new file structure)</p>
-<h3 id="结构独立"><a href="#结构独立" class="headerlink" title="结构独立"></a>结构独立</h3><p>① 在不影响应用程序访问数据(the application’s ability to access the data)的情况下更改文件结构</p>
-<p>② 结构独立性很重要，因为它大大减少了编程工作(programming effort )和程序维护成本(program maintenance costs)。</p>
-<h3 id="数据依赖"><a href="#数据依赖" class="headerlink" title="数据依赖"></a>数据依赖</h3><p>当数据存储特性(data storage characteristics)发生变化时，数据访问(Data access)也发生变化</p>
-<h3 id="数据独立"><a href="#数据独立" class="headerlink" title="数据独立"></a>数据独立</h3><p>在不影响程序访问该数据的能力的情况下改变数据存储特性(Data storage characteristic)</p>
-<p>总而言之：数据依赖的实际意义在于逻辑(logical)和物理格式(physical format)的区别</p>
-<h3 id="数据冗余-Data-Redundancy"><a href="#数据冗余-Data-Redundancy" class="headerlink" title="数据冗余(Data Redundancy)"></a>数据冗余(Data Redundancy)</h3><p>描述：将相同的数据存储在不同的地方</p>
-<ul>
-<li><p>信息岛(Islands of information),即分散的(scattered)数据位置</p>
-</li>
-<li><p>增加相同数据的不同版本的概率</p>
-</li>
-</ul>
-<p>结果：</p>
-<p>① 数据安全性降低(Poor data security)</p>
-<p>增加未经授权(unauthorized)查阅资料副本(a copy of the data)的机会</p>
-<p>② 数据不一致(Data inconsistency)</p>
-<p>当相同数据的不同版本和冲突版本出现在不同的地方时存在</p>
-<p>③ 数据输入错误(Data-entry errors)</p>
-<p>当在几个不同的文件中创建复杂的条目时，更有可能发生</p>
-<p>④ 数据完整性问题(Data integrity problems)</p>
-<p>保证数据的准确性和一致性-&gt;需要手动的努力</p>
-<h3 id="数据异常-Data-Anomalies"><a href="#数据异常-Data-Anomalies" class="headerlink" title="数据异常(Data Anomalies)"></a>数据异常(Data Anomalies)</h3><p>描述：没有完成所有必需的更改时进行开发</p>
-<p>类别：</p>
-<ul>
-<li><p>更新异常</p>
-</li>
-<li><p>插入异常</p>
-</li>
-<li><p>删除异常</p>
-</li>
-</ul>
-<h3 id="数据库系统-Database-System"><a href="#数据库系统-Database-System" class="headerlink" title="数据库系统(Database System)"></a>数据库系统(Database System)</h3><p>描述：逻辑相关的数据存储在一个逻辑数据存储库(logical data repository)中</p>
-<ul>
-<li>分布在多个存储设施之间</li>
-<li>DBMS消除了大多数文件系统的数据不一致(data inconsistency)、数据异常(data anomaly)、数据依赖(data dependence)和结构依赖(structural dependence)问题</li>
-</ul>
-<h3 id="数据库系统环境"><a href="#数据库系统环境" class="headerlink" title="数据库系统环境"></a>数据库系统环境</h3><p>数据库系统就是在数据库环境中定义(define)和规范(regulate)数据的收集(collection)、存储(storage)、管理(management)和使用(use of data)的组件的组织</p>
-<h3 id="DBMS功能"><a href="#DBMS功能" class="headerlink" title="DBMS功能"></a>DBMS功能</h3><p>① 数据字典管理(Data dictionary management)</p>
-<p>​     数据字典:存储数据元素(data elements)及其关系的定义</p>
-<p>② 数据存储管理(Data storage management)</p>
-<p>​     确保高效的性能</p>
-<p>③ 数据转换和演示(Data transformation and presentation)</p>
-<p>​     数据的格式符合(conform to)逻辑预期(logical expectations)</p>
-<p>④ 安全管理(Security management)</p>
-<p>​     加强用户安全和数据隐私(data privacy)</p>
-<p>⑤ 多用户访问控制(Multiuser access control)</p>
-<p>​     确保多个用户可以同时访问数据库而不影响其完整性</p>
-<p>⑥ 备份和恢复管理(Backup and recovery management)</p>
-<p>​     能够在失败后恢复数据库</p>
-<p>⑦ 数据完整性管理(Data integrity management)</p>
-<p>​     最小化冗余，最大化一致性</p>
-<p>⑧ 数据库访问语言和应用程序编程接口(Database access languages and application programming interfaces)</p>
-<p>​     查询语言:让用户指定必须做什么，而不必指定如何做</p>
-<p>​     结构化查询语言(SQL):事实上的查询语言和数据访问标准，被大多数DBMS供应商支持</p>
-<p>⑨ 数据库通信接口(Database communication interfaces)</p>
-<p>​     通过多个、不同的网络环境接受终端用户请求</p>
-<h3 id="管理数据库系统-焦点转移"><a href="#管理数据库系统-焦点转移" class="headerlink" title="管理数据库系统:焦点转移"></a>管理数据库系统:焦点转移</h3><p>数据库系统的缺点：</p>
-<p>① 成本高(Increased acquisition and operating costs)</p>
-<p>需要精密的硬件和软件(sophisticated hardware and software)以及高度熟练的人员(highly skilled personnel)</p>
-<p>② 管理复杂(Management complexity)</p>
-<p>许多不同的技术接口(interface with many different technologies)</p>
-<p>③ 保持时效性(Maintaining currency)</p>
-<p>为了最大化数据库系统的效率</p>
-<p>④ 依赖供应商(Vendor dependence)</p>
-<p>需要在技术和人才培训方面进行投资</p>
-<p>⑤ 更新与更换频繁(Frequent upgrade/replacement cycles)</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
-<li><p>数据由原始事实组成，通常存储在数据库中</p>
-</li>
-<li><p>数据库设计定义了数据库结构，可以根据用户数量、位置以及数据使用和结构进行分类吗</p>
-</li>
-<li><p>数据库从手工和计算机化的文件系统演变而来，因为文件系统数据管理有一些限制所以开发了DBMS</p>
-</li>
-</ul>
-<h2 id="Chapter-2-Data-models"><a href="#Chapter-2-Data-models" class="headerlink" title="Chapter 2 Data models"></a>Chapter 2 Data models</h2><h3 id="数据建模和数据模型"><a href="#数据建模和数据模型" class="headerlink" title="数据建模和数据模型"></a>数据建模和数据模型</h3><p>数据建模(Data modeling)：为问题域(Problem domain)创建特定数据模型(specific data model)的过程(process)</p>
+                <h2 id="1-1-数据库系统概述"><a href="#1-1-数据库系统概述" class="headerlink" title="1.1 数据库系统概述"></a>1.1 数据库系统概述</h2><h3 id="1-1-1-数据库的地位"><a href="#1-1-1-数据库的地位" class="headerlink" title="1.1.1 数据库的地位"></a>1.1.1 数据库的地位</h3><h3 id="1-1-2-四个基本概念"><a href="#1-1-2-四个基本概念" class="headerlink" title="1.1.2 四个基本概念"></a>1.1.2 四个基本概念</h3><h3 id="1-1-3-数据库管理技术的产生与发展"><a href="#1-1-3-数据库管理技术的产生与发展" class="headerlink" title="1.1.3 数据库管理技术的产生与发展"></a>1.1.3 数据库管理技术的产生与发展</h3><h2 id="Chapter-2-Data-models"><a href="#Chapter-2-Data-models" class="headerlink" title="Chapter 2 Data models"></a>Chapter 2 Data models</h2><h3 id="数据建模和数据模型"><a href="#数据建模和数据模型" class="headerlink" title="数据建模和数据模型"></a>数据建模和数据模型</h3><p>数据建模(Data modeling)：为问题域(Problem domain)创建特定数据模型(specific data model)的过程(process)</p>
 <ul>
 <li>问题域(Problem domain)：在现实世界环境中明确定义的区域,有确定的范围(scope)和边界(boundaries)</li>
 <li>模型(Model)：对现实世界中更复杂的对象(complex object)或事件的抽象(abstraction)</li>
@@ -1023,7 +882,7 @@
 <td>Neither hardware nor software</td>
 </tr>
 </tbody></table>
-<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
 <li>数据模型是对复杂的真实数据环境的抽象</li>
 <li>有许多类型的数据模型(例如，分层的、网络的、关系的、面向对象的、扩展的关系数据模型等)。</li>
 <li>数据建模需求是不同数据视图(全局视图与局部视图)和数据抽象级别的功能</li>
@@ -1837,7 +1696,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;</i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">37.5k</span>&nbsp;字
+                class="white-color">37.7k</span>&nbsp;字
             
             
             
