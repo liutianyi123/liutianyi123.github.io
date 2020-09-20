@@ -609,7 +609,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    562
+                    781
                 </div>
                 
 
@@ -648,22 +648,28 @@
 </li>
 <li><p>码</p>
 <ul>
-<li><p>超码(superkey)是一个或多个属性的集合，通过这些属性的组合可以使我们唯一标识一个元组。</p>
+<li>超码(superkey)是一个或多个属性的集合，通过这些属性的组合可以使我们唯一标识一个元组。</li>
+</ul>
 </li>
 <li><p>候选码(candidate key)是最小超码。</p>
+<ul>
+<li>主码(primary key)是被设计者选中的候选码。</li>
+<li>唯一的（名字不能为主码，因为可能重名）<ul>
+<li>不变的（居住地不能为主码，因为可能搬家）</li>
+</ul>
 </li>
-<li><p>主码(primary key)是被设计者选中的候选码。</p>
-</li>
-<li><p>辅键码(secondary key)是用于数据检索目的的属性或属性组合。</p>
+<li>不能为 NULL</li>
+<li>辅键码(secondary key)是用于数据检索目的的属性或属性组合。</li>
+</ul>
 </li>
 <li><p>一个关系模式(r1)包含另一个关系模式(r2)的主码，那么这个属性在r1中被称作外码(foreign key),  关系r1称作外码依赖的参照关系(referencing relation), 关系r2叫做外码的被参照关系(referenced relation)。</p>
-</li>
-<li><p>参照完整性约束(referential integrity constraint)指的是在参照关系中任意元组在特定属性上的取值必然等于被参照关系中某个元组在特定属性上的取值。</p>
+<ul>
+<li>参照完整性约束(referential integrity constraint)指的是在参照关系中任意元组在特定属性上的取值必然等于被参照关系中某个元组在特定属性上的取值。</li>
+</ul>
 </li>
 <li><p>实体完整性(entity integrity)：每一个主键值是唯一的，不能有NULL值。</p>
-</li>
-<li><p>参照完整性(referential integrity)：外键的值(可以为NULL)能和参考表单中的值一 一对应。</p>
-</li>
+<ul>
+<li>参照完整性(referential integrity)：外键的值(可以为NULL)能和参考表单中的值一 一对应。</li>
 </ul>
 </li>
 </ul>
@@ -679,7 +685,31 @@
 </ul>
 </li>
 </ul>
-<h2 id="2-2-关系操作"><a href="#2-2-关系操作" class="headerlink" title="2.2  关系操作"></a>2.2  关系操作</h2><h2 id="2-3-关系的完整性"><a href="#2-3-关系的完整性" class="headerlink" title="2.3  关系的完整性"></a>2.3  关系的完整性</h2><h2 id="2-4-关系代数"><a href="#2-4-关系代数" class="headerlink" title="2.4  关系代数"></a>2.4  关系代数</h2>
+<h2 id="2-2-关系的完整性"><a href="#2-2-关系的完整性" class="headerlink" title="2.2  关系的完整性"></a>2.2  关系的完整性</h2><h3 id="2-2-1-实体完整性"><a href="#2-2-1-实体完整性" class="headerlink" title="2.2.1 实体完整性"></a>2.2.1 实体完整性</h3><ul>
+<li><p>若属性A是基本关系R的主属性，则属性A不能取空值</p>
+</li>
+<li><p>空值就是“不知道”或“不存在”或“无意义”的值</p>
+<blockquote>
+<p>选修（学号，课程号，成绩）<br>若“学号、课程号”为主码<br>“学号”和“课程号”两个属性都不能取空值</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="2-2-2-参照完整性"><a href="#2-2-2-参照完整性" class="headerlink" title="2.2.2 参照完整性"></a>2.2.2 参照完整性</h3><ul>
+<li>若属性F是基本关系R的外码它与基本关系S的主码Ks相对应，则对于R中每个元组在F上的值必须为：<ul>
+<li>空值或者等于S中某个元组的主码值</li>
+</ul>
+</li>
+</ul>
+<h2 id="如果有其他问题欢迎留言或邮件提问"><a href="#如果有其他问题欢迎留言或邮件提问" class="headerlink" title="如果有其他问题欢迎留言或邮件提问"></a>如果有其他问题欢迎留言或邮件提问</h2><p>QQ：1269112498</p>
+<p>Email：<a href="mailto:1269112498@qq.com">1269112498@qq.com</a></p>
+<p><strong>相关文章</strong></p>
+<ul>
+<li><p><a href="http://liutianyi123.github.io/posts/370d.html">数据库系统概论(一)——绪论</a></p>
+</li>
+<li><p><a href="http://liutianyi123.github.io/posts/b1e0.html">数据库系统概论(二)——关系数据库</a></p>
+</li>
+</ul>
+
             </div>
             <hr/>
 
@@ -1415,7 +1445,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;</i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">38.3k</span>&nbsp;字
+                class="white-color">35.3k</span>&nbsp;字
             
             
             
@@ -1600,10 +1630,10 @@ if (windowWidth > 768) {
 <script src="/js/cursor.js"></script>
 <script src="/js/rainbow.js"></script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":250},"mobile":{"show":false},"log":false});</script><script>
+<script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":250},"mobile":{"show":false},"log":false});</script></body>
 </html>
