@@ -609,14 +609,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    2.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    9 分
                 </div>
                 
 
@@ -818,7 +818,103 @@ order by一般放在查询语句最后，limit子句除外</code></pre><p><stron
 <span class="token keyword">select</span> rpad<span class="token punctuation">(</span><span class="token string">'殷素素'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token string">'*'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> output<span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回 殷素</span></code></pre>
 <p><strong><em>replace函数替换</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> replace<span class="token punctuation">(</span><span class="token string">'aaabbbaaa'</span><span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> output<span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回cccbbbccc</span></code></pre>
-<h5 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h5><h5 id="日期函数"><a href="#日期函数" class="headerlink" title="日期函数"></a>日期函数</h5><h5 id="其他函数"><a href="#其他函数" class="headerlink" title="其他函数"></a>其他函数</h5><h5 id="流程控制函数"><a href="#流程控制函数" class="headerlink" title="流程控制函数"></a>流程控制函数</h5><h4 id="分组函数（统计函数，聚合函数，组函数）"><a href="#分组函数（统计函数，聚合函数，组函数）" class="headerlink" title="分组函数（统计函数，聚合函数，组函数）"></a>分组函数（统计函数，聚合函数，组函数）</h4><h3 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h3><h3 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h3><h3 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h3><h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><h3 id="union联合查询"><a href="#union联合查询" class="headerlink" title="union联合查询"></a>union联合查询</h3>
+<h5 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h5><p><strong><em>round 四舍五入</em></strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token function">round</span><span class="token punctuation">(</span><span class="token number">1.65</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回 2</span>
+<span class="token keyword">select</span> <span class="token function">round</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1.45</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回 -1</span>
+<span class="token keyword">select</span> <span class="token function">round</span><span class="token punctuation">(</span><span class="token number">1.567</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span>； <span class="token comment" spellcheck="true"># 小数点后精确两位，返回 1.57</span></code></pre>
+<p><strong><em>floor向下取整</em></strong></p>
+<p><strong>注意：</strong>返回 &lt;= 该参数的最大整数</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> floor<span class="token punctuation">(</span><span class="token number">1.52</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true"># 返回 1</span>
+<span class="token keyword">select</span> floor<span class="token punctuation">(</span><span class="token number">1.00</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true"># 返回 1</span>
+<span class="token keyword">select</span> floor<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回 -2</span></code></pre>
+<p><strong><em>ceil向上取整</em></strong></p>
+<p><strong>注意：</strong>返回 &gt;= 该参数的最小整数</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> ceil<span class="token punctuation">(</span><span class="token number">1.52</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true"># 返回 2</span>
+<span class="token keyword">select</span> ceil<span class="token punctuation">(</span><span class="token number">1.00</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true"># 返回 1</span>
+<span class="token keyword">select</span> ceil<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回 -1</span></code></pre>
+<p><strong><em>mod取余</em></strong></p>
+<p><strong>注意：mod(a,b)的底层算法是 a -  a / b*b</strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> mod<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回 1</span>
+<span class="token keyword">select</span> mod<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回 1</span>
+<span class="token keyword">select</span> mod<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回 -1</span></code></pre>
+<p><strong><em>truncate截断</em></strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">truncate</span><span class="token punctuation">(</span><span class="token number">1.699999</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>； <span class="token comment" spellcheck="true"># 返回 1.6</span></code></pre>
+<h5 id="日期函数"><a href="#日期函数" class="headerlink" title="日期函数"></a>日期函数</h5><p><strong><em>now当前系统日期+时间</em></strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回 2020-09-23 10:30:58</span></code></pre>
+<p><strong><em>current_date当前系统日期</em></strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">current_date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回 2020-09-23</span></code></pre>
+<p><strong><em>current_time当前系统时间</em></strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">current_time</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回 10:30:58</span></code></pre>
+<p><strong><em>str_to_date 将字符转换成日期</em></strong></p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>格式符</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>%Y</td>
+<td>四位的年份</td>
+</tr>
+<tr>
+<td>2</td>
+<td>%h</td>
+<td>二位的年份</td>
+</tr>
+<tr>
+<td>3</td>
+<td>%m</td>
+<td>月份(01,02…11,12）</td>
+</tr>
+<tr>
+<td>4</td>
+<td>%c</td>
+<td>月份(1,2…11,12)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>%d</td>
+<td>日(01,02….)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>%H</td>
+<td>24小时制</td>
+</tr>
+<tr>
+<td>7</td>
+<td>%h</td>
+<td>12小时制</td>
+</tr>
+<tr>
+<td>8</td>
+<td>%i</td>
+<td>分钟(00,01…59)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>%s</td>
+<td>秒(00,01,59)</td>
+</tr>
+</tbody></table>
+<pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true"># 查询入职时间为1992-4-3的员工信息</span>
+<span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> employees
+<span class="token keyword">where</span> hiredate <span class="token operator">=</span> str_to_date<span class="token punctuation">(</span><span class="token string">'4-3 1992'</span><span class="token punctuation">,</span><span class="token string">'%c-%d %Y'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p><strong><em>date_format将日期转换成字符</em></strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> date_format<span class="token punctuation">(</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">'%y年%m月%d日'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回：20年09月23日</span></code></pre>
+<p><strong><em>其他获取时间的函数</em></strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> year<span class="token punctuation">(</span><span class="token string">'2001-6-10'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回：2001</span>
+<span class="token keyword">select</span> month<span class="token punctuation">(</span><span class="token string">'2001-6-10'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回：6</span>
+<span class="token keyword">select</span> monthname<span class="token punctuation">(</span><span class="token string">'2001-6-10'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回：June</span>
+<span class="token keyword">select</span> day<span class="token punctuation">(</span><span class="token string">'2001-6-10'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true"># 返回：10</span>
+<span class="token keyword">select</span> hour<span class="token punctuation">(</span><span class="token string">'2020-09-23 10:30:58'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">#返回：10</span>
+<span class="token keyword">select</span> minute<span class="token punctuation">(</span><span class="token string">'2020-09-23 10:30:58'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">#返回：30</span>
+<span class="token keyword">select</span> second<span class="token punctuation">(</span><span class="token string">'2020-09-23 10:30:58'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">#返回：58</span></code></pre>
+<h5 id="其他函数"><a href="#其他函数" class="headerlink" title="其他函数"></a>其他函数</h5><h5 id="流程控制函数"><a href="#流程控制函数" class="headerlink" title="流程控制函数"></a>流程控制函数</h5><h4 id="分组函数（统计函数，聚合函数，组函数）"><a href="#分组函数（统计函数，聚合函数，组函数）" class="headerlink" title="分组函数（统计函数，聚合函数，组函数）"></a>分组函数（统计函数，聚合函数，组函数）</h4><h3 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h3><h3 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h3><h3 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h3><h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><h3 id="union联合查询"><a href="#union联合查询" class="headerlink" title="union联合查询"></a>union联合查询</h3>
             </div>
             <hr/>
 
@@ -1552,7 +1648,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;</i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">38.3k</span>&nbsp;字
+                class="white-color">38.7k</span>&nbsp;字
             
             
             
