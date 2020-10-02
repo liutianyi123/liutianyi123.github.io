@@ -662,6 +662,12 @@
 </blockquote>
 <p>第一范式是对关系模式的最起码的要求，不满足第一范式的数据库模式不能称为关系数据库。但满足第一范式的关系模式并不一定是一个好的数据库。</p>
 <p>例如，如果将教师表的姓名与性别放在同一列就不符合1NF，当然这在建表的时候就不会成功。简而言之，同一列中不能有多个值。</p>
+<p>判断方法：</p>
+<ul>
+<li>是否表中套表</li>
+<li>是否存在主键</li>
+<li>非主键是否依赖于主键</li>
+</ul>
 <h2 id="第二范式-2NF"><a href="#第二范式-2NF" class="headerlink" title="第二范式(2NF)"></a>第二范式(2NF)</h2><h3 id="定义-6"><a href="#定义-6" class="headerlink" title="定义"></a>定义</h3><blockquote>
 <p>在1NF基础上，消除非主属性的部分依赖</p>
 </blockquote>
@@ -1447,7 +1453,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;</i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">36.9k</span>&nbsp;字
+                class="white-color">37.2k</span>&nbsp;字
             
             
             
