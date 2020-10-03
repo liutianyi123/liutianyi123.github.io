@@ -609,14 +609,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.3k
+                    3.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    14 分
+                    16 分
                 </div>
                 
 
@@ -951,7 +951,7 @@ order by一般放在查询语句最后，limit子句除外</code></pre><p><stron
 <span class="token keyword">else</span> <span class="token string">'D'</span>
 <span class="token keyword">end</span> <span class="token keyword">as</span> 等级
 <span class="token keyword">from</span> employees<span class="token punctuation">;</span></code></pre>
-<h4 id="分组函数（统计函数，聚合函数，组函数）"><a href="#分组函数（统计函数，聚合函数，组函数）" class="headerlink" title="分组函数（统计函数，聚合函数，组函数）"></a>分组函数（统计函数，聚合函数，组函数）</h4><p><strong>特点</strong></p>
+<h4 id="分组函数-统计函数，聚合函数，组函数"><a href="#分组函数-统计函数，聚合函数，组函数" class="headerlink" title="分组函数(统计函数，聚合函数，组函数)"></a>分组函数(统计函数，聚合函数，组函数)</h4><p><strong>特点</strong></p>
 <pre><code>1、sum,avg,max,min,count忽略null值
    count(*)不忽略null值
 2、sum和avg一般用于处理数值型，
@@ -1052,7 +1052,70 @@ order by一般放在查询语句最后，limit子句除外</code></pre><p><stron
 <span class="token keyword">from</span> employees
 <span class="token keyword">group</span> <span class="token keyword">by</span> department_id<span class="token punctuation">,</span>job_id
 <span class="token keyword">order</span> <span class="token keyword">by</span> <span class="token function">avg</span><span class="token punctuation">(</span>salary<span class="token punctuation">)</span> <span class="token keyword">desc</span><span class="token punctuation">;</span></code></pre>
-<h3 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h3><h3 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h3><h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><h3 id="union联合查询"><a href="#union联合查询" class="headerlink" title="union联合查询"></a>union联合查询</h3><h2 id="如果有其他问题欢迎留言或邮件提问"><a href="#如果有其他问题欢迎留言或邮件提问" class="headerlink" title="如果有其他问题欢迎留言或邮件提问"></a>如果有其他问题欢迎留言或邮件提问</h2><p>QQ：1269112498</p>
+<h3 id="连接查询-多表查询，多表连接"><a href="#连接查询-多表查询，多表连接" class="headerlink" title="连接查询(多表查询，多表连接)"></a>连接查询(多表查询，多表连接)</h3><p><strong>含义</strong></p>
+<p>当查询中涉及到了多个表的字段，需要使用多表连接</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> 字段<span class="token number">1</span>，字段<span class="token number">2</span>
+<span class="token keyword">from</span> 表<span class="token number">1</span>，表<span class="token number">2</span><span class="token punctuation">;</span></code></pre>
+<blockquote>
+<p>笛卡尔乘积：当查询多个表时，没有添加有效的连接条件，导致多个表所有行实现完全连接<br>如何解决：添加有效的连接条件</p>
+</blockquote>
+<p><strong>分类</strong></p>
+<p><strong>按年代分类</strong></p>
+<pre><code>sq192标准：仅仅支持内连接
+sq199标准【推荐】</code></pre><p><strong>按功能分类</strong></p>
+<pre><code>内连接
+    等值连接
+    非等值连接
+    自连接
+外连接
+    左外连接
+    右外连接
+    全外连接
+交叉连接</code></pre><h4 id="等值连接"><a href="#等值连接" class="headerlink" title="等值连接"></a>等值连接</h4><p><strong><em>案例1：查询女神和对应的男神名</em></strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> boyname<span class="token punctuation">,</span><span class="token punctuation">`</span>name<span class="token punctuation">`</span> 
+<span class="token keyword">from</span> boys<span class="token punctuation">,</span>beauty
+<span class="token keyword">where</span> beauty<span class="token punctuation">.</span>boyfriend_id<span class="token operator">=</span>boys<span class="token punctuation">.</span>id；</code></pre>
+<p><strong><em>案例2：查询员工名和对应的部门名</em></strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> last_name<span class="token punctuation">,</span>department_name
+<span class="token keyword">from</span> employees<span class="token punctuation">,</span>departments
+<span class="token keyword">where</span> employees<span class="token punctuation">.</span>department_id<span class="token operator">=</span>departments<span class="token punctuation">.</span>department_id<span class="token punctuation">;</span></code></pre>
+<p><strong><em>案例3：查询由奖金的员工名，部门名</em></strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> last_name<span class="token punctuation">,</span>department_name
+<span class="token keyword">from</span> employees<span class="token punctuation">,</span>departments
+<span class="token keyword">where</span> departments<span class="token punctuation">.</span>department_id<span class="token operator">=</span>employees<span class="token punctuation">.</span>department_id
+<span class="token operator">and</span> employees<span class="token punctuation">.</span>commission_pct <span class="token operator">is</span> <span class="token operator">not</span> <span class="token boolean">null</span><span class="token punctuation">;</span></code></pre>
+<p><strong><em>案例4：查询城市名中第二个字符为O的部门名和城市名</em></strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> department_name<span class="token punctuation">,</span>city
+<span class="token keyword">from</span> departments <span class="token number">d</span><span class="token punctuation">,</span>locations l
+<span class="token keyword">where</span> <span class="token number">d</span><span class="token punctuation">.</span>location_id<span class="token operator">=</span>l<span class="token punctuation">.</span>location_id
+<span class="token operator">and</span> city <span class="token operator">like</span> <span class="token string">"_o%"</span><span class="token punctuation">;</span></code></pre>
+<p><strong><em>案例5：查询每个城市的部门个数</em></strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">,</span>city
+<span class="token keyword">from</span> locations<span class="token punctuation">,</span>departments
+<span class="token keyword">where</span> departments<span class="token punctuation">.</span>location_id<span class="token operator">=</span>locations<span class="token punctuation">.</span>location_id
+<span class="token keyword">group</span> <span class="token keyword">by</span> city<span class="token punctuation">;</span></code></pre>
+<p><strong><em>案例6：查询有奖金的每个部门的部门名和部门的领导编号和该部门的最低工资</em></strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> department_name<span class="token punctuation">,</span>departments<span class="token punctuation">.</span>manager_id<span class="token punctuation">,</span><span class="token function">min</span><span class="token punctuation">(</span>salary<span class="token punctuation">)</span>
+<span class="token keyword">from</span> departments<span class="token punctuation">,</span>employees
+<span class="token keyword">where</span> employees<span class="token punctuation">.</span>department_id<span class="token operator">=</span>departments<span class="token punctuation">.</span>department_id
+<span class="token operator">and</span> commission_pct <span class="token operator">is</span> <span class="token operator">not</span> <span class="token boolean">null</span>
+<span class="token keyword">group</span> <span class="token keyword">by</span> department_name<span class="token punctuation">;</span></code></pre>
+<p><strong><em>案例7：查询每个工种工种名和员工的个数，并按员工个数降序</em></strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> job_title<span class="token punctuation">,</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> 个数
+<span class="token keyword">from</span> jobs<span class="token punctuation">,</span>employees
+<span class="token keyword">where</span> employees<span class="token punctuation">.</span>job_id<span class="token operator">=</span>jobs<span class="token punctuation">.</span>job_id
+<span class="token keyword">group</span> <span class="token keyword">by</span> job_title
+<span class="token keyword">order</span> <span class="token keyword">by</span> 个数 <span class="token keyword">desc</span><span class="token punctuation">;</span></code></pre>
+<p><strong><em>案例8：查询员工名，部门名和所在的城市</em></strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> department_name<span class="token punctuation">,</span>last_name<span class="token punctuation">,</span>city
+<span class="token keyword">from</span> employees<span class="token punctuation">,</span>departments<span class="token punctuation">,</span>locations
+<span class="token keyword">where</span> employees<span class="token punctuation">.</span>department_id<span class="token operator">=</span>departments<span class="token punctuation">.</span>department_id
+<span class="token operator">and</span> locations<span class="token punctuation">.</span>location_id<span class="token operator">=</span>departments<span class="token punctuation">.</span>location_id<span class="token punctuation">;</span></code></pre>
+<p><strong>特点</strong></p>
+<pre><code>1. 一般为表起别名
+2.多表的顺序可以调换
+3.n表连接至少需要n-1个连接条件
+4.等值连接的结果是多表的交集部分</code></pre><h4 id="非等值连接"><a href="#非等值连接" class="headerlink" title="非等值连接"></a>非等值连接</h4><h4 id="自连接"><a href="#自连接" class="headerlink" title="自连接"></a>自连接</h4><h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><h3 id="union联合查询"><a href="#union联合查询" class="headerlink" title="union联合查询"></a>union联合查询</h3><h2 id="如果有其他问题欢迎留言或邮件提问"><a href="#如果有其他问题欢迎留言或邮件提问" class="headerlink" title="如果有其他问题欢迎留言或邮件提问"></a>如果有其他问题欢迎留言或邮件提问</h2><p>QQ：1269112498</p>
 <p>Email：<a href="mailto:1269112498@qq.com">1269112498@qq.com</a></p>
 <p><strong>相关文章</strong></p>
 <ul>
@@ -1798,7 +1861,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;</i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">37.4k</span>&nbsp;字
+                class="white-color">37.9k</span>&nbsp;字
             
             
             
