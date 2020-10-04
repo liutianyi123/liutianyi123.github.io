@@ -631,22 +631,24 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="DQL语言学习（数据查询语言）"><a href="#DQL语言学习（数据查询语言）" class="headerlink" title="DQL语言学习（数据查询语言）"></a>DQL语言学习（数据查询语言）</h2><p>关于数据库如何导入现有的文件请看这篇文章：<a href="https://blog.csdn.net/u010801439/article/details/78762387" target="_blank" rel="noopener">传送门</a></p>
-<h3 id="基础查询"><a href="#基础查询" class="headerlink" title="基础查询"></a>基础查询</h3><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> 查询列表 <span class="token keyword">from</span> 表名</code></pre>
-<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><pre class=" language-sql"><code class="language-sql"><span class="token number">1</span><span class="token punctuation">.</span>查询列表可以是：表中的字段，常量值，表达式，函数
+                <p>关于数据库如何导入现有的文件请看这篇文章：<a href="https://blog.csdn.net/u010801439/article/details/78762387" target="_blank" rel="noopener">传送门</a></p>
+<h2 id="基础查询"><a href="#基础查询" class="headerlink" title="基础查询"></a>基础查询</h2><p><strong>语法</strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> 查询列表 <span class="token keyword">from</span> 表名</code></pre>
+<p><strong>特点</strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token number">1</span><span class="token punctuation">.</span>查询列表可以是：表中的字段，常量值，表达式，函数
 <span class="token number">2</span><span class="token punctuation">.</span>查询的结果是一个虚拟表格</code></pre>
-<h4 id="1-查询表中的单个字段"><a href="#1-查询表中的单个字段" class="headerlink" title="1.查询表中的单个字段"></a>1.查询表中的单个字段</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> last_name <span class="token keyword">from</span> employees<span class="token punctuation">;</span></code></pre>
-<h4 id="2-查询表中的多个字段"><a href="#2-查询表中的多个字段" class="headerlink" title="2.查询表中的多个字段"></a>2.查询表中的多个字段</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> last_name<span class="token punctuation">,</span>salary<span class="token punctuation">,</span>email <span class="token keyword">from</span> employees<span class="token punctuation">;</span></code></pre>
-<h4 id="3-查询表中的所有字段"><a href="#3-查询表中的所有字段" class="headerlink" title="3.查询表中的所有字段"></a>3.查询表中的所有字段</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> employee_id<span class="token punctuation">,</span>first_name<span class="token punctuation">,</span>last_name<span class="token punctuation">,</span>email<span class="token punctuation">,</span>phone_number<span class="token punctuation">,</span>job_id<span class="token punctuation">,</span>salary<span class="token punctuation">,</span>commission_pct<span class="token punctuation">,</span>manager_id<span class="token punctuation">,</span>department_id<span class="token punctuation">,</span>hiredate
+<h3 id="1-查询表中的单个字段"><a href="#1-查询表中的单个字段" class="headerlink" title="1.查询表中的单个字段"></a>1.查询表中的单个字段</h3><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> last_name <span class="token keyword">from</span> employees<span class="token punctuation">;</span></code></pre>
+<h3 id="2-查询表中的多个字段"><a href="#2-查询表中的多个字段" class="headerlink" title="2.查询表中的多个字段"></a>2.查询表中的多个字段</h3><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> last_name<span class="token punctuation">,</span>salary<span class="token punctuation">,</span>email <span class="token keyword">from</span> employees<span class="token punctuation">;</span></code></pre>
+<h3 id="3-查询表中的所有字段"><a href="#3-查询表中的所有字段" class="headerlink" title="3.查询表中的所有字段"></a>3.查询表中的所有字段</h3><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> employee_id<span class="token punctuation">,</span>first_name<span class="token punctuation">,</span>last_name<span class="token punctuation">,</span>email<span class="token punctuation">,</span>phone_number<span class="token punctuation">,</span>job_id<span class="token punctuation">,</span>salary<span class="token punctuation">,</span>commission_pct<span class="token punctuation">,</span>manager_id<span class="token punctuation">,</span>department_id<span class="token punctuation">,</span>hiredate
 <span class="token keyword">from</span> employees<span class="token punctuation">;</span></code></pre>
 <p>也可以：</p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> employees<span class="token punctuation">;</span></code></pre>
-<h4 id="4-查询常量值"><a href="#4-查询常量值" class="headerlink" title="4.查询常量值"></a>4.查询常量值</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token number">100</span><span class="token punctuation">;</span>
+<h3 id="4-查询常量值"><a href="#4-查询常量值" class="headerlink" title="4.查询常量值"></a>4.查询常量值</h3><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token number">100</span><span class="token punctuation">;</span>
 <span class="token keyword">select</span> <span class="token string">'john'</span><span class="token punctuation">;</span></code></pre>
-<h4 id="5-查询表达式"><a href="#5-查询表达式" class="headerlink" title="5.查询表达式"></a>5.查询表达式</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token number">100</span><span class="token operator">*</span><span class="token number">98</span><span class="token punctuation">;</span>
+<h3 id="5-查询表达式"><a href="#5-查询表达式" class="headerlink" title="5.查询表达式"></a>5.查询表达式</h3><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token number">100</span><span class="token operator">*</span><span class="token number">98</span><span class="token punctuation">;</span>
 <span class="token keyword">select</span> <span class="token number">100</span><span class="token operator">%</span><span class="token number">98</span><span class="token punctuation">;</span></code></pre>
-<h4 id="6-查询函数"><a href="#6-查询函数" class="headerlink" title="6.查询函数"></a>6.查询函数</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> version<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<h4 id="7-起别名"><a href="#7-起别名" class="headerlink" title="7.起别名"></a>7.起别名</h4><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">/*
+<h3 id="6-查询函数"><a href="#6-查询函数" class="headerlink" title="6.查询函数"></a>6.查询函数</h3><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> version<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h3 id="7-起别名"><a href="#7-起别名" class="headerlink" title="7.起别名"></a>7.起别名</h3><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">/*
 ①便于理解
 ②如果查询字段有重名的情况，使用别名可以区分开来
 */</span>
@@ -655,9 +657,9 @@
 <span class="token keyword">select</span> last_name <span class="token keyword">As</span> 姓<span class="token punctuation">,</span>first_name <span class="token keyword">AS</span> 名 <span class="token keyword">from</span> employees<span class="token punctuation">;</span> 
 <span class="token comment" spellcheck="true">#方式二：</span>
 <span class="token keyword">select</span> last_name 姓<span class="token punctuation">,</span>first_name 名 <span class="token keyword">from</span> employees<span class="token punctuation">;</span> </code></pre>
-<h4 id="8-去重"><a href="#8-去重" class="headerlink" title="8.去重"></a>8.去重</h4><p><strong><em>案例：查询员工列表中涉及的所有部门的编号</em></strong></p>
+<h3 id="8-去重"><a href="#8-去重" class="headerlink" title="8.去重"></a>8.去重</h3><p><strong><em>案例：查询员工列表中涉及的所有部门的编号</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">distinct</span> department_id <span class="token keyword">from</span> employees<span class="token punctuation">;</span></code></pre>
-<h4 id="9-号的作用"><a href="#9-号的作用" class="headerlink" title="9.+号的作用"></a>9.+号的作用</h4><pre class=" language-sql"><code class="language-sql">只有一个功能：运算符
+<h3 id="9-号的作用"><a href="#9-号的作用" class="headerlink" title="9.+号的作用"></a>9.+号的作用</h3><pre class=" language-sql"><code class="language-sql">只有一个功能：运算符
 <span class="token keyword">select</span> <span class="token number">100</span><span class="token operator">+</span><span class="token number">90</span><span class="token punctuation">;</span> 两个操作数都为数值型，则做加法运算
 <span class="token keyword">select</span> <span class="token string">'123'</span><span class="token operator">+</span><span class="token number">90</span><span class="token punctuation">;</span>只要其中一方为字符型，试图将字符型数值转换成数值型
                 如果转换成功，则继续做加法运算
@@ -667,21 +669,23 @@
 <p><strong><em>案例：查询员工的姓和名连接成一个字段，并显示为姓名</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> concat<span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> 结果<span class="token punctuation">;</span>
 <span class="token keyword">select</span> concat<span class="token punctuation">(</span>last_name<span class="token punctuation">,</span>first_name<span class="token punctuation">)</span> <span class="token keyword">AS</span> 姓名 <span class="token keyword">from</span> employees<span class="token punctuation">;</span></code></pre>
-<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">#在查询前最好先打开指定的库</span>
+<p><strong>注意</strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">#在查询前最好先打开指定的库</span>
 <span class="token keyword">USE</span> 库名；</code></pre>
-<h3 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h3><h4 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span>
+<h2 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h2><p><strong>语法</strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span>
     查询列表
 <span class="token keyword">from</span>
     表名
 <span class="token keyword">where</span>
     筛选条件</code></pre>
-<h4 id="条件表达式"><a href="#条件表达式" class="headerlink" title="条件表达式"></a>条件表达式</h4><pre><code>条件运算符：
+<h3 id="1-条件表达式"><a href="#1-条件表达式" class="headerlink" title="1.条件表达式"></a>1.条件表达式</h3><pre><code>条件运算符：
 &gt; &lt; &gt;= &lt;= = != &lt;&gt;</code></pre><p><strong><em>案例1:查询部门编号不为90的员工姓，部门编号</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> last_name<span class="token punctuation">,</span>department_id
 <span class="token keyword">from</span> employees
 <span class="token keyword">where</span>
 department_id<span class="token operator">&lt;></span><span class="token number">90</span><span class="token punctuation">;</span></code></pre>
-<h4 id="逻辑表达式"><a href="#逻辑表达式" class="headerlink" title="逻辑表达式"></a>逻辑表达式</h4><pre class=" language-sql"><code class="language-sql">逻辑运算符：
+<h3 id="2-逻辑表达式"><a href="#2-逻辑表达式" class="headerlink" title="2.逻辑表达式"></a>2.逻辑表达式</h3><pre class=" language-sql"><code class="language-sql">逻辑运算符：
 <span class="token operator">and</span>（<span class="token operator">&amp;&amp;</span>）:两个条件如果同时成立，结果为<span class="token boolean">true</span>，否则为<span class="token boolean">false</span>
 <span class="token operator">or</span><span class="token punctuation">(</span><span class="token operator">||</span><span class="token punctuation">)</span>：两个条件只要有一个成立，结果为<span class="token boolean">true</span>，否则为<span class="token boolean">false</span>
 <span class="token operator">not</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">)</span>：如果条件成立，则<span class="token operator">not</span>后为<span class="token boolean">false</span>，否则为<span class="token boolean">true</span></code></pre>
@@ -701,7 +705,7 @@ department_id<span class="token operator">&lt;</span><span class="token number">
 department_id<span class="token operator">></span><span class="token number">110</span>
 <span class="token operator">or</span>
 salary<span class="token operator">></span><span class="token number">15000</span></code></pre>
-<h4 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h4><h5 id="like-关键字"><a href="#like-关键字" class="headerlink" title="like 关键字"></a>like 关键字</h5><p><strong><em>特点</em></strong></p>
+<h3 id="3-模糊查询"><a href="#3-模糊查询" class="headerlink" title="3.模糊查询"></a>3.模糊查询</h3><h4 id="①like-关键字"><a href="#①like-关键字" class="headerlink" title="①like 关键字"></a>①like 关键字</h4><p><strong>特点</strong></p>
 <pre><code>一般和通配符搭配使用
 通配符：
 % 代表任意多个字符
@@ -720,19 +724,19 @@ _ 任意单个字符</code></pre><p><strong><em>案例1：查询员工姓中含�
 <span class="token keyword">select</span> last_name
 <span class="token keyword">from</span> employees
 <span class="token keyword">where</span> last_name <span class="token operator">like</span> <span class="token string">'_$_%'</span> <span class="token keyword">escape</span> <span class="token string">'$'</span><span class="token punctuation">;</span></code></pre>
-<h5 id="between-and-关键字"><a href="#between-and-关键字" class="headerlink" title="between and 关键字"></a>between and 关键字</h5><p><strong><em>特点</em></strong></p>
+<h4 id="②between-and-关键字"><a href="#②between-and-关键字" class="headerlink" title="②between and 关键字"></a>②between and 关键字</h4><p><strong><em>特点</em></strong></p>
 <pre><code>包含临界值
 临界值不要颠倒</code></pre><p><strong><em>案例4：查询员工编号再100到120之间的员工信息</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span>
 <span class="token keyword">from</span> employees
 <span class="token keyword">where</span> employee_id <span class="token operator">between</span> <span class="token number">100</span> <span class="token operator">and</span> <span class="token number">120</span><span class="token punctuation">;</span></code></pre>
-<h5 id="in-关键字"><a href="#in-关键字" class="headerlink" title="in 关键字"></a>in 关键字</h5><p><strong><em>特点</em></strong></p>
+<h4 id="③in-关键字"><a href="#③in-关键字" class="headerlink" title="③in 关键字"></a>③in 关键字</h4><p><strong><em>特点</em></strong></p>
 <pre><code>in 列表种类必须一致或兼容
 不可使用通配符</code></pre><p><strong><em>案例5：查询员工工种编号是 IT_PROG , AD_VP , AD_PRES 中一个的员工名和工种编号</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> last_name<span class="token punctuation">,</span>job_id
 <span class="token keyword">from</span> employees
 <span class="token keyword">where</span> job_id <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token string">'IT_PROG'</span><span class="token punctuation">,</span><span class="token string">'AD_VP'</span><span class="token punctuation">,</span><span class="token string">'AD_PRES'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<h5 id="is-NULL-关键字"><a href="#is-NULL-关键字" class="headerlink" title="is NULL 关键字"></a>is NULL 关键字</h5><p><strong><em>特点</em></strong></p>
+<h4 id="④is-NULL-关键字"><a href="#④is-NULL-关键字" class="headerlink" title="④is NULL 关键字"></a>④is NULL 关键字</h4><p><strong><em>特点</em></strong></p>
 <pre><code>=，&lt;&gt;不能判断NULL值
 is只能判断NULL</code></pre><p><strong><em>案例6：查询没有奖金的员工名和奖金率</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> last_name<span class="token punctuation">,</span>commission_pct
@@ -742,7 +746,7 @@ is只能判断NULL</code></pre><p><strong><em>案例6：查询没有奖金的员
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> last_name<span class="token punctuation">,</span>commission_pct
 <span class="token keyword">from</span> employees
 <span class="token keyword">where</span> commission_pct <span class="token operator">is</span> <span class="token operator">not</span> <span class="token boolean">NULL</span><span class="token punctuation">;</span></code></pre>
-<h5 id="补充：安全等于"><a href="#补充：安全等于" class="headerlink" title="补充：安全等于"></a>补充：安全等于</h5><p><strong><em>案例1：查询没有奖金的员工名和奖金率</em></strong></p>
+<h4 id="⑤-lt-gt-安全等于"><a href="#⑤-lt-gt-安全等于" class="headerlink" title="⑤&lt;=&gt;安全等于"></a>⑤&lt;=&gt;安全等于</h4><p><strong><em>案例1：查询没有奖金的员工名和奖金率</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> last_name<span class="token punctuation">,</span>commission_pct
 <span class="token keyword">from</span> employees
 <span class="token keyword">where</span> commission_pct <span class="token operator">&lt;=></span> <span class="token boolean">NULL</span><span class="token punctuation">;</span></code></pre>
@@ -752,18 +756,20 @@ is只能判断NULL</code></pre><p><strong><em>案例6：查询没有奖金的员
 <span class="token keyword">where</span> salary <span class="token operator">&lt;=></span> <span class="token number">12000</span><span class="token punctuation">;</span></code></pre>
 <p><strong><em>比较</em></strong></p>
 <pre><code>is NUll: 仅仅可以判断NULL值，可读性较高，建议使用
-&lt;=&gt;: 既可以判断NULL值，又可以判断普通的数据，可读性较低</code></pre><h3 id="排序查询"><a href="#排序查询" class="headerlink" title="排序查询"></a>排序查询</h3><h4 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> 查询列表
+&lt;=&gt;: 既可以判断NULL值，又可以判断普通的数据，可读性较低</code></pre><h2 id="排序查询"><a href="#排序查询" class="headerlink" title="排序查询"></a>排序查询</h2><p><strong>语法</strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> 查询列表
 <span class="token keyword">from</span> 表
 <span class="token keyword">where</span> 筛选条件
 <span class="token keyword">order</span> <span class="token keyword">by</span> 排序列表【<span class="token keyword">asc</span><span class="token operator">/</span><span class="token keyword">desc</span>】</code></pre>
-<h4 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h4><pre><code>asc代表升序，desc代表降序
+<p><strong>特点</strong></p>
+<pre><code>asc代表升序，desc代表降序
 如果不写默认是升序
 order by可以支持单个字段，多个字段，表达式，函数，别名
-order by一般放在查询语句最后，limit子句除外</code></pre><p><strong><em>案例1：查询员工信息，要求工资从高到低</em></strong></p>
+order by一般放在查询语句最后，limit子句除外</code></pre><h3 id="1-降序"><a href="#1-降序" class="headerlink" title="1.降序"></a>1.降序</h3><p><strong><em>案例1：查询员工信息，要求工资从高到低</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span>
 <span class="token keyword">from</span> employees
 <span class="token keyword">order</span> <span class="token keyword">by</span> salary <span class="token keyword">desc</span><span class="token punctuation">;</span></code></pre>
-<p><strong><em>案例1：查询员工信息，要求工资从低到高</em></strong></p>
+<h3 id="2-升序"><a href="#2-升序" class="headerlink" title="2.升序"></a>2.升序</h3><p><strong><em>案例1：查询员工信息，要求工资从低到高</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span>
 <span class="token keyword">from</span> employees
 <span class="token keyword">order</span> <span class="token keyword">by</span> salary <span class="token keyword">asc</span><span class="token punctuation">;</span></code></pre>
@@ -771,8 +777,8 @@ order by一般放在查询语句最后，limit子句除外</code></pre><p><stron
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span>
 <span class="token keyword">from</span> employees
 <span class="token keyword">where</span> department_id<span class="token operator">>=</span><span class="token number">90</span>
-<span class="token keyword">order</span> <span class="token keyword">by</span> hiredate  <span class="token keyword">asc</span><span class="token punctuation">;</span></code></pre>
-<p><strong><em>案例3：按年薪的高低显示员工的信息和年薪（按别名排序）</em></strong></p>
+<span class="token keyword">order</span> <span class="token keyword">by</span> hiredate <span class="token keyword">asc</span><span class="token punctuation">;</span></code></pre>
+<h3 id="3-按别名排序"><a href="#3-按别名排序" class="headerlink" title="3.按别名排序"></a>3.按别名排序</h3><p><strong><em>案例3：按年薪的高低显示员工的信息和年薪</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span><span class="token punctuation">,</span>salary<span class="token operator">*</span><span class="token number">12</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">+</span>ifnull<span class="token punctuation">(</span>commission_pct<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> 年薪
 <span class="token keyword">from</span> employees
 <span class="token keyword">order</span> <span class="token keyword">by</span> salary<span class="token operator">*</span><span class="token number">12</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">+</span>ifnull<span class="token punctuation">(</span>commission_pct<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">desc</span><span class="token punctuation">;</span>
@@ -780,15 +786,15 @@ order by一般放在查询语句最后，limit子句除外</code></pre><p><stron
 <span class="token keyword">select</span> <span class="token operator">*</span><span class="token punctuation">,</span>salary<span class="token operator">*</span><span class="token number">12</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">+</span>ifnull<span class="token punctuation">(</span>commission_pct<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> 年薪
 <span class="token keyword">from</span> employees
 <span class="token keyword">order</span> <span class="token keyword">by</span> 年薪 <span class="token keyword">desc</span><span class="token punctuation">;</span></code></pre>
-<p><strong><em>案例4：按姓名的长度显示员工的姓名和工资（按函数排序）</em></strong></p>
+<h3 id="4-按函数排序"><a href="#4-按函数排序" class="headerlink" title="4.按函数排序"></a>4.按函数排序</h3><p><strong><em>案例4：按姓名的长度显示员工的姓名和工资</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> length<span class="token punctuation">(</span>last_name<span class="token punctuation">)</span> <span class="token keyword">as</span> 字节长度<span class="token punctuation">,</span>last_name<span class="token punctuation">,</span>salary
 <span class="token keyword">from</span> employees
 <span class="token keyword">order</span> <span class="token keyword">by</span> length<span class="token punctuation">(</span>last_name<span class="token punctuation">)</span> <span class="token keyword">desc</span><span class="token punctuation">;</span></code></pre>
-<p><strong><em>案例5：查询员工信息，要求先按工资排序，再按员工编号排序</em></strong></p>
+<h3 id="5-多重排序"><a href="#5-多重排序" class="headerlink" title="5.多重排序"></a>5.多重排序</h3><p><strong><em>案例5：查询员工信息，要求先按工资排序，再按员工编号排序</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span>
 <span class="token keyword">from</span> employees
 <span class="token keyword">order</span> <span class="token keyword">by</span> salary <span class="token keyword">asc</span><span class="token punctuation">,</span>employee_id <span class="token keyword">desc</span>；</code></pre>
-<h3 id="常见函数"><a href="#常见函数" class="headerlink" title="常见函数"></a>常见函数</h3><h4 id="单行函数"><a href="#单行函数" class="headerlink" title="单行函数"></a>单行函数</h4><h5 id="字符函数"><a href="#字符函数" class="headerlink" title="字符函数"></a>字符函数</h5><p><strong><em>length函数获取参数值的字节个数</em></strong></p>
+<h2 id="常见函数"><a href="#常见函数" class="headerlink" title="常见函数"></a>常见函数</h2><h3 id="1-单行函数"><a href="#1-单行函数" class="headerlink" title="1.单行函数"></a>1.单行函数</h3><h4 id="①字符函数"><a href="#①字符函数" class="headerlink" title="①字符函数"></a>①字符函数</h4><p><strong><em>length函数获取参数值的字节个数</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> length<span class="token punctuation">(</span><span class="token string">'john'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true"># 返回4</span>
 <span class="token keyword">select</span> length<span class="token punctuation">(</span><span class="token string">'刘天翼'</span><span class="token punctuation">)</span>； <span class="token comment" spellcheck="true"># 返回9</span></code></pre>
 <p><strong><em>concat函数拼接字符串</em></strong></p>
@@ -818,7 +824,7 @@ order by一般放在查询语句最后，limit子句除外</code></pre><p><stron
 <span class="token keyword">select</span> rpad<span class="token punctuation">(</span><span class="token string">'殷素素'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token string">'*'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> output<span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回 殷素</span></code></pre>
 <p><strong><em>replace函数替换</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> replace<span class="token punctuation">(</span><span class="token string">'aaabbbaaa'</span><span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> output<span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回cccbbbccc</span></code></pre>
-<h5 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h5><p><strong><em>round 四舍五入</em></strong></p>
+<h4 id="②数学函数"><a href="#②数学函数" class="headerlink" title="②数学函数"></a>②数学函数</h4><p><strong><em>round 四舍五入</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token function">round</span><span class="token punctuation">(</span><span class="token number">1.65</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回 2</span>
 <span class="token keyword">select</span> <span class="token function">round</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1.45</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回 -1</span>
 <span class="token keyword">select</span> <span class="token function">round</span><span class="token punctuation">(</span><span class="token number">1.567</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span>； <span class="token comment" spellcheck="true"># 小数点后精确两位，返回 1.57</span></code></pre>
@@ -839,7 +845,7 @@ order by一般放在查询语句最后，limit子句除外</code></pre><p><stron
 <span class="token keyword">select</span> mod<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回 -1</span></code></pre>
 <p><strong><em>truncate截断</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">truncate</span><span class="token punctuation">(</span><span class="token number">1.699999</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>； <span class="token comment" spellcheck="true"># 返回 1.6</span></code></pre>
-<h5 id="日期函数"><a href="#日期函数" class="headerlink" title="日期函数"></a>日期函数</h5><p><strong><em>now当前系统日期+时间</em></strong></p>
+<h4 id="③日期函数"><a href="#③日期函数" class="headerlink" title="③日期函数"></a>③日期函数</h4><p><strong><em>now当前系统日期+时间</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回 2020-09-23 10:30:58</span></code></pre>
 <p><strong><em>current_date当前系统日期</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">current_date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回 2020-09-23</span></code></pre>
@@ -914,10 +920,10 @@ order by一般放在查询语句最后，limit子句除外</code></pre><p><stron
 <span class="token keyword">select</span> hour<span class="token punctuation">(</span><span class="token string">'2020-09-23 10:30:58'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">#返回：10</span>
 <span class="token keyword">select</span> minute<span class="token punctuation">(</span><span class="token string">'2020-09-23 10:30:58'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">#返回：30</span>
 <span class="token keyword">select</span> second<span class="token punctuation">(</span><span class="token string">'2020-09-23 10:30:58'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">#返回：58</span></code></pre>
-<h5 id="其他函数"><a href="#其他函数" class="headerlink" title="其他函数"></a>其他函数</h5><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> version<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 查询版本号</span>
+<h4 id="④其他函数"><a href="#④其他函数" class="headerlink" title="④其他函数"></a>④其他函数</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> version<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 查询版本号</span>
 <span class="token keyword">select</span> <span class="token keyword">database</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">#查询当前数据库</span>
 <span class="token keyword">select</span> <span class="token keyword">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">#查询当前用户</span></code></pre>
-<h5 id="流程控制函数"><a href="#流程控制函数" class="headerlink" title="流程控制函数"></a>流程控制函数</h5><p><strong><em>if 处理双分支</em></strong></p>
+<h4 id="⑤流程控制函数"><a href="#⑤流程控制函数" class="headerlink" title="⑤流程控制函数"></a>⑤流程控制函数</h4><p><strong><em>if 处理双分支</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token operator">></span><span class="token number">5</span><span class="token punctuation">,</span><span class="token string">'大'</span><span class="token punctuation">,</span><span class="token string">'小'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回 大</span>
 <span class="token keyword">select</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token string">'大'</span><span class="token punctuation">,</span><span class="token string">'小'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 返回 小</span></code></pre>
 <p><strong><em>case语句 处理多分支</em></strong></p>
@@ -951,7 +957,7 @@ order by一般放在查询语句最后，limit子句除外</code></pre><p><stron
 <span class="token keyword">else</span> <span class="token string">'D'</span>
 <span class="token keyword">end</span> <span class="token keyword">as</span> 等级
 <span class="token keyword">from</span> employees<span class="token punctuation">;</span></code></pre>
-<h4 id="分组函数-统计函数，聚合函数，组函数"><a href="#分组函数-统计函数，聚合函数，组函数" class="headerlink" title="分组函数(统计函数，聚合函数，组函数)"></a>分组函数(统计函数，聚合函数，组函数)</h4><p><strong>特点</strong></p>
+<h3 id="2-分组函数-统计函数，聚合函数，组函数"><a href="#2-分组函数-统计函数，聚合函数，组函数" class="headerlink" title="2.分组函数(统计函数，聚合函数，组函数)"></a>2.分组函数(统计函数，聚合函数，组函数)</h3><p><strong>特点</strong></p>
 <pre><code>1、sum,avg,max,min,count忽略null值
    count(*)不忽略null值
 2、sum和avg一般用于处理数值型，
@@ -972,12 +978,13 @@ order by一般放在查询语句最后，limit子句除外</code></pre><p><stron
 <span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">from</span> employees<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true"># 计算总行数</span>
 <span class="token comment" spellcheck="true"># 也可以</span>
 <span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">from</span> employees<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true"># 计算总行数</span></code></pre>
-<h3 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h3><h4 id="语法-3"><a href="#语法-3" class="headerlink" title="语法"></a>语法</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> 分组函数，列<span class="token punctuation">(</span>要求出现在<span class="token keyword">group</span> <span class="token keyword">by</span>后面<span class="token punctuation">)</span>
+<h2 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h2><p><strong>语法</strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> 分组函数，列<span class="token punctuation">(</span>要求出现在<span class="token keyword">group</span> <span class="token keyword">by</span>后面<span class="token punctuation">)</span>
 <span class="token keyword">from</span> 表名
 <span class="token keyword">where</span> 筛选条件（在原始表中存在）
 <span class="token keyword">group</span> <span class="token keyword">by</span> 分组列表
 <span class="token keyword">order</span> <span class="token keyword">by</span> 子句</code></pre>
-<h4 id="添加分组前筛选"><a href="#添加分组前筛选" class="headerlink" title="添加分组前筛选"></a>添加分组前筛选</h4><p><strong><em>案例1：每个工种的最高工资</em></strong></p>
+<h3 id="1-添加分组前筛选"><a href="#1-添加分组前筛选" class="headerlink" title="1.添加分组前筛选"></a>1.添加分组前筛选</h3><p><strong><em>案例1：每个工种的最高工资</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token function">max</span><span class="token punctuation">(</span>salary<span class="token punctuation">)</span><span class="token punctuation">,</span>job_id
 <span class="token keyword">from</span> employees
 <span class="token keyword">group</span> <span class="token keyword">by</span> job_id<span class="token punctuation">;</span></code></pre>
@@ -995,7 +1002,7 @@ order by一般放在查询语句最后，limit子句除外</code></pre><p><stron
 <span class="token keyword">from</span> employees
 <span class="token keyword">where</span> commission_pct <span class="token operator">is</span> <span class="token operator">not</span> <span class="token boolean">null</span>
 <span class="token keyword">group</span> <span class="token keyword">by</span> manager_id<span class="token punctuation">;</span></code></pre>
-<h4 id="添加分组后筛选"><a href="#添加分组后筛选" class="headerlink" title="添加分组后筛选"></a>添加分组后筛选</h4><p><strong><em>案例1：哪个部门的员工个数大于2</em></strong></p>
+<h3 id="2-添加分组后筛选"><a href="#2-添加分组后筛选" class="headerlink" title="2.添加分组后筛选"></a>2.添加分组后筛选</h3><p><strong><em>案例1：哪个部门的员工个数大于2</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true"># 查询每个部门的员工个数之后根据结果进行筛选即为所求</span>
 <span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">,</span>department_id
 <span class="token keyword">from</span> employees
@@ -1015,7 +1022,8 @@ order by一般放在查询语句最后，limit子句除外</code></pre><p><stron
 <span class="token keyword">where</span> manager_id<span class="token operator">></span><span class="token number">102</span>
 <span class="token keyword">group</span> <span class="token keyword">by</span> manager_id
 <span class="token keyword">having</span> <span class="token function">min</span><span class="token punctuation">(</span>salary<span class="token punctuation">)</span><span class="token operator">></span><span class="token number">5000</span><span class="token punctuation">;</span></code></pre>
-<h4 id="特点-2"><a href="#特点-2" class="headerlink" title="特点"></a>特点</h4><table>
+<p><strong>特点</strong></p>
+<table>
 <thead>
 <tr>
 <th></th>
@@ -1038,21 +1046,21 @@ order by一般放在查询语句最后，limit子句除外</code></pre><p><stron
 </tr>
 </tbody></table>
 <pre><code>分组函数做条件一定放在having子句中
-能用分组前筛选的，就优先考虑使用分组前筛选</code></pre><h4 id="按表达式或函数分组"><a href="#按表达式或函数分组" class="headerlink" title="按表达式或函数分组"></a>按表达式或函数分组</h4><p><strong><em>案例：按员工姓名的长度分组，查询每一组员工的个数，筛选员工个数&gt;5的有哪些</em></strong></p>
+能用分组前筛选的，就优先考虑使用分组前筛选</code></pre><h4 id="①按表达式或函数分组"><a href="#①按表达式或函数分组" class="headerlink" title="①按表达式或函数分组"></a>①按表达式或函数分组</h4><p><strong><em>案例：按员工姓名的长度分组，查询每一组员工的个数，筛选员工个数&gt;5的有哪些</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">,</span>length<span class="token punctuation">(</span>last_name<span class="token punctuation">)</span> <span class="token keyword">as</span> len_name
 <span class="token keyword">from</span> employees
 <span class="token keyword">group</span> <span class="token keyword">by</span> len_name
 <span class="token keyword">having</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">5</span><span class="token punctuation">;</span></code></pre>
-<h4 id="按多个字段分组"><a href="#按多个字段分组" class="headerlink" title="按多个字段分组"></a>按多个字段分组</h4><p><strong><em>案例：查询每个部门每个工种的员工的平均工资</em></strong></p>
+<h4 id="②按多个字段分组"><a href="#②按多个字段分组" class="headerlink" title="②按多个字段分组"></a>②按多个字段分组</h4><p><strong><em>案例：查询每个部门每个工种的员工的平均工资</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token function">avg</span><span class="token punctuation">(</span>salary<span class="token punctuation">)</span><span class="token punctuation">,</span>department_id<span class="token punctuation">,</span>job_id
 <span class="token keyword">from</span> employees
 <span class="token keyword">group</span> <span class="token keyword">by</span> department_id<span class="token punctuation">,</span>job_id<span class="token punctuation">;</span></code></pre>
-<h4 id="分组查询添加排序"><a href="#分组查询添加排序" class="headerlink" title="分组查询添加排序"></a>分组查询添加排序</h4><p><strong><em>案例：查询每个部门每个工种的员工的平均工资并由高到低排序</em></strong></p>
+<h4 id="③分组查询添加排序"><a href="#③分组查询添加排序" class="headerlink" title="③分组查询添加排序"></a>③分组查询添加排序</h4><p><strong><em>案例：查询每个部门每个工种的员工的平均工资并由高到低排序</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token function">avg</span><span class="token punctuation">(</span>salary<span class="token punctuation">)</span><span class="token punctuation">,</span>department_id<span class="token punctuation">,</span>job_id
 <span class="token keyword">from</span> employees
 <span class="token keyword">group</span> <span class="token keyword">by</span> department_id<span class="token punctuation">,</span>job_id
 <span class="token keyword">order</span> <span class="token keyword">by</span> <span class="token function">avg</span><span class="token punctuation">(</span>salary<span class="token punctuation">)</span> <span class="token keyword">desc</span><span class="token punctuation">;</span></code></pre>
-<h3 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h3><p><strong>含义</strong></p>
+<h2 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h2><p><strong>含义</strong></p>
 <p>当查询中涉及到了多个表的字段，需要使用多表连接</p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> 字段<span class="token number">1</span>，字段<span class="token number">2</span>
 <span class="token keyword">from</span> 表<span class="token number">1</span>，表<span class="token number">2</span><span class="token punctuation">;</span></code></pre>
@@ -1071,7 +1079,7 @@ sq199标准【推荐】</code></pre><p><strong>按功能分类</strong></p>
     左外连接
     右外连接
     全外连接
-交叉连接</code></pre><h4 id="sql92语法"><a href="#sql92语法" class="headerlink" title="sql92语法"></a>sql92语法</h4><h5 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h5><h6 id="等值连接"><a href="#等值连接" class="headerlink" title="等值连接"></a>等值连接</h6><pre><code>语法：
+交叉连接</code></pre><h3 id="sql92语法"><a href="#sql92语法" class="headerlink" title="sql92语法"></a>sql92语法</h3><h4 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h4><h5 id="等值连接"><a href="#等值连接" class="headerlink" title="等值连接"></a>等值连接</h5><pre><code>语法：
 select 查询列表
 from 表1 别名,表2 别名
 where 表1.key=表2.key
@@ -1122,7 +1130,7 @@ where 表1.key=表2.key
 <pre><code>1. 一般为表起别名
 2.多表的顺序可以调换
 3.n表连接至少需要n-1个连接条件
-4.等值连接的结果是多表的交集部分</code></pre><h6 id="非等值连接"><a href="#非等值连接" class="headerlink" title="非等值连接"></a>非等值连接</h6><pre><code>语法：
+4.等值连接的结果是多表的交集部分</code></pre><h5 id="非等值连接"><a href="#非等值连接" class="headerlink" title="非等值连接"></a>非等值连接</h5><pre><code>语法：
 select 查询列表
 from 表1 别名,表2 别名
 where 非等值的连接条件
@@ -1133,7 +1141,7 @@ where 非等值的连接条件
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> salary<span class="token punctuation">,</span>grade_level
 <span class="token keyword">from</span> employees<span class="token punctuation">,</span>job_grades
 <span class="token keyword">where</span> salary <span class="token operator">between</span> job_grades<span class="token punctuation">.</span>lowest_sal <span class="token operator">and</span> job_grades<span class="token punctuation">.</span>highest_sal<span class="token punctuation">;</span></code></pre>
-<h6 id="自连接"><a href="#自连接" class="headerlink" title="自连接"></a>自连接</h6><pre><code>select 查询列表
+<h5 id="自连接"><a href="#自连接" class="headerlink" title="自连接"></a>自连接</h5><pre><code>select 查询列表
 from 表 别名1,表 别名2
 where 等值的连接条件
 【and 筛选条件】
@@ -1143,7 +1151,7 @@ where 等值的连接条件
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token number">e</span><span class="token punctuation">.</span>employee_id<span class="token punctuation">,</span><span class="token number">e</span><span class="token punctuation">.</span>last_name<span class="token punctuation">,</span>m<span class="token punctuation">.</span>employee_id<span class="token punctuation">,</span>m<span class="token punctuation">.</span>last_name
 <span class="token keyword">from</span> employees <span class="token number">e</span><span class="token punctuation">,</span>employees m
 <span class="token keyword">where</span> <span class="token number">e</span><span class="token punctuation">.</span>manager_id <span class="token operator">=</span> m<span class="token punctuation">.</span>employee_id<span class="token punctuation">;</span></code></pre>
-<h4 id="sql99语法"><a href="#sql99语法" class="headerlink" title="sql99语法"></a>sql99语法</h4><h5 id="内连接-1"><a href="#内连接-1" class="headerlink" title="内连接"></a>内连接</h5><h6 id="等值连接-1"><a href="#等值连接-1" class="headerlink" title="等值连接"></a>等值连接</h6><pre><code>语法：
+<h3 id="sql99语法"><a href="#sql99语法" class="headerlink" title="sql99语法"></a>sql99语法</h3><h4 id="内连接-1"><a href="#内连接-1" class="headerlink" title="内连接"></a>内连接</h4><h5 id="等值连接-1"><a href="#等值连接-1" class="headerlink" title="等值连接"></a>等值连接</h5><pre><code>语法：
 select 查询列表
 from 表1 别名
 【inner】 join 表2 别名 
@@ -1184,7 +1192,7 @@ limit 子句;</code></pre><p><strong><em>案例1：查询员工名，部门名</
 <span class="token keyword">inner</span> <span class="token keyword">join</span> departments <span class="token number">d</span> <span class="token keyword">on</span> <span class="token number">e</span><span class="token punctuation">.</span>department_id<span class="token operator">=</span><span class="token number">d</span><span class="token punctuation">.</span>department_id
 <span class="token keyword">inner</span> <span class="token keyword">join</span> jobs j <span class="token keyword">on</span> j<span class="token punctuation">.</span>job_id<span class="token operator">=</span><span class="token number">e</span><span class="token punctuation">.</span>job_id
 <span class="token keyword">order</span> <span class="token keyword">by</span> department_name <span class="token keyword">desc</span><span class="token punctuation">;</span></code></pre>
-<h6 id="非等值连接-1"><a href="#非等值连接-1" class="headerlink" title="非等值连接"></a>非等值连接</h6><p><strong><em>案例1：查询员工的工资和工资级别</em></strong></p>
+<h5 id="非等值连接-1"><a href="#非等值连接-1" class="headerlink" title="非等值连接"></a>非等值连接</h5><p><strong><em>案例1：查询员工的工资和工资级别</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> salary<span class="token punctuation">,</span>grade_level
 <span class="token keyword">from</span> employees <span class="token number">e</span>
 <span class="token keyword">inner</span> <span class="token keyword">join</span> job_grades j
@@ -1197,13 +1205,13 @@ limit 子句;</code></pre><p><strong><em>案例1：查询员工名，部门名</
 <span class="token keyword">group</span> <span class="token keyword">by</span> grade_level
 <span class="token keyword">having</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">></span><span class="token number">20</span>
 <span class="token keyword">order</span> <span class="token keyword">by</span> grade_level <span class="token keyword">desc</span>；</code></pre>
-<h6 id="自连接-1"><a href="#自连接-1" class="headerlink" title="自连接"></a>自连接</h6><p><strong><em>案例1：查询员工名含k的员工名和他上级的名称***</em></strong></p>
+<h5 id="自连接-1"><a href="#自连接-1" class="headerlink" title="自连接"></a>自连接</h5><p><strong><em>案例1：查询员工名含k的员工名和他上级的名称***</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token number">e</span><span class="token punctuation">.</span>employee_id<span class="token punctuation">,</span><span class="token number">e</span><span class="token punctuation">.</span>last_name<span class="token punctuation">,</span>m<span class="token punctuation">.</span>employee_id<span class="token punctuation">,</span>m<span class="token punctuation">.</span>last_name
 <span class="token keyword">from</span> employees <span class="token number">e</span>
 <span class="token keyword">inner</span> <span class="token keyword">join</span> employees m
 <span class="token keyword">on</span> <span class="token number">e</span><span class="token punctuation">.</span>manager_id <span class="token operator">=</span> m<span class="token punctuation">.</span>employee_id
 <span class="token keyword">where</span> <span class="token number">e</span><span class="token punctuation">.</span>last_name <span class="token operator">like</span> <span class="token string">"%k%"</span><span class="token punctuation">;</span></code></pre>
-<h5 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h5><pre><code>语法：
+<h4 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h4><pre><code>语法：
 select 查询列表
 from 表1 别名
 left|right|full【outer】 join 表2 别名 on 连接条件
@@ -1211,7 +1219,7 @@ where 筛选条件
 group by 分组列表
 having 分组后的筛选
 order by 排序列表
-limit 子句;</code></pre><h6 id="左外链接"><a href="#左外链接" class="headerlink" title="左外链接"></a>左外链接</h6><h6 id="右外连接"><a href="#右外连接" class="headerlink" title="右外连接"></a>右外连接</h6><h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><h3 id="union联合查询"><a href="#union联合查询" class="headerlink" title="union联合查询"></a>union联合查询</h3><h2 id="如果有其他问题欢迎留言或邮件提问"><a href="#如果有其他问题欢迎留言或邮件提问" class="headerlink" title="如果有其他问题欢迎留言或邮件提问"></a>如果有其他问题欢迎留言或邮件提问</h2><p>QQ：1269112498</p>
+limit 子句;</code></pre><h5 id="左外链接"><a href="#左外链接" class="headerlink" title="左外链接"></a>左外链接</h5><h5 id="右外连接"><a href="#右外连接" class="headerlink" title="右外连接"></a>右外连接</h5><h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><h3 id="union联合查询"><a href="#union联合查询" class="headerlink" title="union联合查询"></a>union联合查询</h3><h2 id="如果有其他问题欢迎留言或邮件提问"><a href="#如果有其他问题欢迎留言或邮件提问" class="headerlink" title="如果有其他问题欢迎留言或邮件提问"></a>如果有其他问题欢迎留言或邮件提问</h2><p>QQ：1269112498</p>
 <p>Email：<a href="mailto:1269112498@qq.com">1269112498@qq.com</a></p>
 <p><strong>相关文章</strong></p>
 <ul>
