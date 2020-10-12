@@ -609,7 +609,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    570
+                    558
                 </div>
                 
 
@@ -631,15 +631,15 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="DDL语言学习（数据定义语言）"><a href="#DDL语言学习（数据定义语言）" class="headerlink" title="DDL语言学习（数据定义语言）"></a>DDL语言学习（数据定义语言）</h2><h3 id="库的管理"><a href="#库的管理" class="headerlink" title="库的管理"></a>库的管理</h3><h4 id="创建库"><a href="#创建库" class="headerlink" title="创建库"></a>创建库</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">database</span> 库名<span class="token punctuation">;</span>
+                <h2 id="库的管理"><a href="#库的管理" class="headerlink" title="库的管理"></a>库的管理</h2><h3 id="创建库"><a href="#创建库" class="headerlink" title="创建库"></a>创建库</h3><pre class=" language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">database</span> 库名<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true"># 也可以</span>
 <span class="token keyword">create</span> <span class="token keyword">database</span> <span class="token keyword">if</span> <span class="token operator">not</span> <span class="token keyword">exists</span> 库名<span class="token punctuation">;</span></code></pre>
-<h4 id="修改库"><a href="#修改库" class="headerlink" title="修改库"></a>修改库</h4><p>若想修改库名则需要到<strong>C:\ProgramData\MySQL\MySQL Server 8.0\Data</strong>中找到相应的库名进行修改</p>
-<h5 id="更改库的字符集"><a href="#更改库的字符集" class="headerlink" title="更改库的字符集"></a>更改库的字符集</h5><pre class=" language-sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">database</span> 库名 <span class="token keyword">character set</span> gbk<span class="token punctuation">;</span></code></pre>
-<h4 id="删除库"><a href="#删除库" class="headerlink" title="删除库"></a>删除库</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">drop</span> <span class="token keyword">database</span> 库名<span class="token punctuation">;</span>
+<h3 id="修改库"><a href="#修改库" class="headerlink" title="修改库"></a>修改库</h3><p>若想修改库名则需要到<strong>C:\ProgramData\MySQL\MySQL Server 8.0\Data</strong>中找到相应的库名进行修改</p>
+<h4 id="更改库的字符集"><a href="#更改库的字符集" class="headerlink" title="更改库的字符集"></a>更改库的字符集</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">database</span> 库名 <span class="token keyword">character set</span> gbk<span class="token punctuation">;</span></code></pre>
+<h3 id="删除库"><a href="#删除库" class="headerlink" title="删除库"></a>删除库</h3><pre class=" language-sql"><code class="language-sql"><span class="token keyword">drop</span> <span class="token keyword">database</span> 库名<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true"># 也可以</span>
 <span class="token keyword">drop</span> <span class="token keyword">database</span> <span class="token keyword">if</span> <span class="token keyword">exists</span> 库名<span class="token punctuation">;</span></code></pre>
-<h3 id="表的管理"><a href="#表的管理" class="headerlink" title="表的管理"></a>表的管理</h3><h4 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">table</span> <span class="token keyword">if</span> <span class="token operator">not</span> <span class="token keyword">exists</span> 表名<span class="token punctuation">(</span>
+<h2 id="表的管理"><a href="#表的管理" class="headerlink" title="表的管理"></a>表的管理</h2><h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><pre class=" language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">table</span> <span class="token keyword">if</span> <span class="token operator">not</span> <span class="token keyword">exists</span> 表名<span class="token punctuation">(</span>
     列名 列的类型<span class="token punctuation">[</span><span class="token punctuation">(</span>长度<span class="token punctuation">)</span><span class="token punctuation">,</span>约束<span class="token punctuation">]</span>
     列名 列的类型<span class="token punctuation">[</span><span class="token punctuation">(</span>长度<span class="token punctuation">)</span><span class="token punctuation">,</span>约束<span class="token punctuation">]</span>
     列名 列的类型<span class="token punctuation">[</span><span class="token punctuation">(</span>长度<span class="token punctuation">)</span><span class="token punctuation">,</span>约束<span class="token punctuation">]</span>
@@ -668,14 +668,14 @@
     au_name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
     nation <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<h4 id="修改表"><a href="#修改表" class="headerlink" title="修改表"></a>修改表</h4><h5 id="修改列名"><a href="#修改列名" class="headerlink" title="修改列名"></a>修改列名</h5><pre class=" language-sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 change <span class="token keyword">column</span> 原列名 新列名 新的列类型<span class="token punctuation">;</span></code></pre>
-<h5 id="修改列的类型或约束"><a href="#修改列的类型或约束" class="headerlink" title="修改列的类型或约束"></a>修改列的类型或约束</h5><pre class=" language-sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">modify</span> <span class="token keyword">column</span> 列名 列类型<span class="token punctuation">;</span></code></pre>
-<h5 id="添加列"><a href="#添加列" class="headerlink" title="添加列"></a>添加列</h5><pre class=" language-sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">add</span> <span class="token keyword">column</span> 列名 列类型<span class="token punctuation">;</span></code></pre>
-<h5 id="删除列"><a href="#删除列" class="headerlink" title="删除列"></a>删除列</h5><pre class=" language-sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">drop</span> <span class="token keyword">column</span> 列名<span class="token punctuation">;</span></code></pre>
-<h5 id="修改表名"><a href="#修改表名" class="headerlink" title="修改表名"></a>修改表名</h5><pre class=" language-sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">rename</span> <span class="token keyword">to</span> 新表名<span class="token punctuation">;</span></code></pre>
-<h4 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">drop</span> <span class="token keyword">table</span> 表名<span class="token punctuation">;</span>
+<h3 id="修改表"><a href="#修改表" class="headerlink" title="修改表"></a>修改表</h3><h4 id="修改列名"><a href="#修改列名" class="headerlink" title="修改列名"></a>修改列名</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 change <span class="token keyword">column</span> 原列名 新列名 新的列类型<span class="token punctuation">;</span></code></pre>
+<h4 id="修改列的类型或约束"><a href="#修改列的类型或约束" class="headerlink" title="修改列的类型或约束"></a>修改列的类型或约束</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">modify</span> <span class="token keyword">column</span> 列名 列类型<span class="token punctuation">;</span></code></pre>
+<h4 id="添加列"><a href="#添加列" class="headerlink" title="添加列"></a>添加列</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">add</span> <span class="token keyword">column</span> 列名 列类型<span class="token punctuation">;</span></code></pre>
+<h4 id="删除列"><a href="#删除列" class="headerlink" title="删除列"></a>删除列</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">drop</span> <span class="token keyword">column</span> 列名<span class="token punctuation">;</span></code></pre>
+<h4 id="修改表名"><a href="#修改表名" class="headerlink" title="修改表名"></a>修改表名</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">rename</span> <span class="token keyword">to</span> 新表名<span class="token punctuation">;</span></code></pre>
+<h3 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h3><pre class=" language-sql"><code class="language-sql"><span class="token keyword">drop</span> <span class="token keyword">table</span> 表名<span class="token punctuation">;</span>
 <span class="token keyword">drop</span> <span class="token keyword">table</span> <span class="token keyword">if</span> <span class="token keyword">exists</span> 表名<span class="token punctuation">;</span></code></pre>
-<h4 id="复制表"><a href="#复制表" class="headerlink" title="复制表"></a>复制表</h4><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true"># 仅仅复制表的结构</span>
+<h3 id="复制表"><a href="#复制表" class="headerlink" title="复制表"></a>复制表</h3><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true"># 仅仅复制表的结构</span>
 <span class="token keyword">create</span> <span class="token keyword">table</span> 表名 <span class="token operator">like</span> 被复制表名<span class="token punctuation">;</span>
 
 <span class="token comment" spellcheck="true"># 复制表的结构加数据</span>
@@ -693,7 +693,7 @@
 <span class="token keyword">select</span> 列名<span class="token number">1</span>，列名<span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 <span class="token keyword">from</span> 被复制表名
 <span class="token keyword">where</span> 不可能成立的筛选条件；</code></pre>
-<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><h4 id="数值型"><a href="#数值型" class="headerlink" title="数值型"></a>数值型</h4><h4 id="字符型"><a href="#字符型" class="headerlink" title="字符型"></a>字符型</h4><h4 id="日期型"><a href="#日期型" class="headerlink" title="日期型"></a>日期型</h4><h3 id="常见的约束"><a href="#常见的约束" class="headerlink" title="常见的约束"></a>常见的约束</h3><h4 id="常见的约束-1"><a href="#常见的约束-1" class="headerlink" title="常见的约束"></a>常见的约束</h4><h4 id="创建表时添加约束"><a href="#创建表时添加约束" class="headerlink" title="创建表时添加约束"></a>创建表时添加约束</h4><h4 id="修改表时添加或删除约束"><a href="#修改表时添加或删除约束" class="headerlink" title="修改表时添加或删除约束"></a>修改表时添加或删除约束</h4><h4 id="自增长列"><a href="#自增长列" class="headerlink" title="自增长列"></a>自增长列</h4><h2 id="如果有其他问题欢迎留言或邮件提问"><a href="#如果有其他问题欢迎留言或邮件提问" class="headerlink" title="如果有其他问题欢迎留言或邮件提问"></a>如果有其他问题欢迎留言或邮件提问</h2><p>QQ：1269112498</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="数值型"><a href="#数值型" class="headerlink" title="数值型"></a>数值型</h3><h3 id="字符型"><a href="#字符型" class="headerlink" title="字符型"></a>字符型</h3><h3 id="日期型"><a href="#日期型" class="headerlink" title="日期型"></a>日期型</h3><h2 id="常见的约束"><a href="#常见的约束" class="headerlink" title="常见的约束"></a>常见的约束</h2><h3 id="常见约束"><a href="#常见约束" class="headerlink" title="常见约束"></a>常见约束</h3><h3 id="创建表时添加约束"><a href="#创建表时添加约束" class="headerlink" title="创建表时添加约束"></a>创建表时添加约束</h3><h3 id="修改表时添加或删除约束"><a href="#修改表时添加或删除约束" class="headerlink" title="修改表时添加或删除约束"></a>修改表时添加或删除约束</h3><h3 id="自增长列"><a href="#自增长列" class="headerlink" title="自增长列"></a>自增长列</h3><h2 id="如果有其他问题欢迎留言或邮件提问"><a href="#如果有其他问题欢迎留言或邮件提问" class="headerlink" title="如果有其他问题欢迎留言或邮件提问"></a>如果有其他问题欢迎留言或邮件提问</h2><p>QQ：1269112498</p>
 <p>Email：<a href="mailto:1269112498@qq.com">1269112498@qq.com</a></p>
 <p><strong>相关文章</strong></p>
 <ul>
@@ -1265,7 +1265,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            MySQL的学习笔记
+                            MySQL数据操纵语言的学习笔记
                         
                     </div>
                     <div class="publish-info">
@@ -1439,7 +1439,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;</i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">45.7k</span>&nbsp;字
+                class="white-color">45.9k</span>&nbsp;字
             
             
             
@@ -1624,10 +1624,10 @@ if (windowWidth > 768) {
 <script src="/js/cursor.js"></script>
 <script src="/js/rainbow.js"></script>
 
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":250},"mobile":{"show":false},"log":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":250},"mobile":{"show":false},"log":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>
