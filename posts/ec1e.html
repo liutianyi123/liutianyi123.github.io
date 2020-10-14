@@ -609,14 +609,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    7 分
                 </div>
                 
 
@@ -899,7 +899,7 @@ FOREIGN KEY：外键，该字段的值引用了另外的表的字段</code></pre
 <span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">modify</span> <span class="token keyword">column</span> stuName <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token operator">not</span> <span class="token boolean">null</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true"># 删除</span>
 <span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">modify</span> <span class="token keyword">column</span> stuName <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<h4 id="2-添加或删除默认约束"><a href="#2-添加或删除默认约束" class="headerlink" title="2..添加或删除默认约束"></a>2..添加或删除默认约束</h4><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true"># 添加</span>
+<h4 id="2-添加或删除默认约束"><a href="#2-添加或删除默认约束" class="headerlink" title="2.添加或删除默认约束"></a>2.添加或删除默认约束</h4><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true"># 添加</span>
 <span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">modify</span> <span class="token keyword">column</span> age <span class="token keyword">int</span> <span class="token keyword">default</span> <span class="token number">18</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true"># 删除</span>
 <span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">modify</span> <span class="token keyword">column</span> age <span class="token keyword">int</span><span class="token punctuation">;</span></code></pre>
@@ -919,9 +919,32 @@ FOREIGN KEY：外键，该字段的值引用了另外的表的字段</code></pre
 <span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">modify</span> <span class="token keyword">column</span> seat <span class="token keyword">int</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true"># 也可以</span>
 <span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">drop</span> <span class="token keyword">index</span> seat<span class="token punctuation">;</span></code></pre>
-<h4 id="5-添加或删除外键约束"><a href="#5-添加或删除外键约束" class="headerlink" title="5.添加或删除外键约束"></a>5.添加或删除外键约束</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">add</span> <span class="token keyword">constraint</span> fk <span class="token keyword">foreign</span> <span class="token keyword">key</span><span class="token punctuation">(</span>majorid<span class="token punctuation">)</span> <span class="token keyword">references</span> major<span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">drop</span> <span class="token keyword">foreign</span> <span class="token keyword">key</span> fk</code></pre>
-<h3 id="自增长列"><a href="#自增长列" class="headerlink" title="自增长列"></a>自增长列</h3><h2 id="如果有其他问题欢迎留言或邮件提问"><a href="#如果有其他问题欢迎留言或邮件提问" class="headerlink" title="如果有其他问题欢迎留言或邮件提问"></a>如果有其他问题欢迎留言或邮件提问</h2><p>QQ：1269112498</p>
+<h4 id="5-添加或删除外键约束"><a href="#5-添加或删除外键约束" class="headerlink" title="5.添加或删除外键约束"></a>5.添加或删除外键约束</h4><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true"># 添加</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">add</span> <span class="token keyword">constraint</span> fk <span class="token keyword">foreign</span> <span class="token keyword">key</span><span class="token punctuation">(</span>majorid<span class="token punctuation">)</span> <span class="token keyword">references</span> major<span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true"># 删除</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">drop</span> <span class="token keyword">foreign</span> <span class="token keyword">key</span> fk<span class="token punctuation">;</span></code></pre>
+<h3 id="自增长列"><a href="#自增长列" class="headerlink" title="自增长列"></a>自增长列</h3><p>又称为标识列</p>
+<p>含义：可以不手动插入值，系统提供默认序列值</p>
+<h4 id="1-创建表时设置标识列"><a href="#1-创建表时设置标识列" class="headerlink" title="1.创建表时设置标识列"></a>1.创建表时设置标识列</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">drop</span> <span class="token keyword">table</span> <span class="token keyword">if</span> <span class="token keyword">exists</span> tab_identity<span class="token punctuation">;</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> <span class="token keyword">if</span> <span class="token operator">not</span> <span class="token keyword">exists</span> tab_identity<span class="token punctuation">(</span>
+    id <span class="token keyword">int</span> <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token keyword">auto_increment</span><span class="token punctuation">,</span>
+    name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> tab_identity<span class="token punctuation">(</span>id<span class="token punctuation">,</span>name<span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token boolean">Null</span><span class="token punctuation">,</span><span class="token string">"Aiden"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> tab_identity<span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token string">"Brian"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> tab_identity<span class="token punctuation">;</span></code></pre>
+<h4 id="2-修改表时设置标识列"><a href="#2-修改表时设置标识列" class="headerlink" title="2.修改表时设置标识列"></a>2.修改表时设置标识列</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 表 <span class="token keyword">modify</span> <span class="token keyword">column</span> 字段名 字段类型 约束 <span class="token keyword">auto_increment</span></code></pre>
+<h4 id="3-删除标识列"><a href="#3-删除标识列" class="headerlink" title="3.删除标识列"></a>3.删除标识列</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 表 <span class="token keyword">modify</span> <span class="token keyword">column</span> 字段名 字段类型 约束 </code></pre>
+<p>如何修改自增步长和起始值：</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">show</span> variables <span class="token operator">like</span> <span class="token string">"%auto_increment%"</span><span class="token punctuation">;</span>
+起始值<span class="token punctuation">(</span>auto_increment_offset<span class="token punctuation">)</span>：mysql不支持修改
+修改自增步长<span class="token punctuation">(</span>auto_increment_increment<span class="token punctuation">)</span>：
+<span class="token keyword">set</span> auto_increment_increment<span class="token operator">=</span>步长<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true"># 注意这样会使当前所有的表的步长全部被修改</span></code></pre>
+<p><strong>特点</strong></p>
+<pre><code>1.标识列不一定和主键搭配，但要求是一个key
+2.一个表中只能有一个标识列
+3.标识列的类型只能是数值型，一般是int</code></pre><h2 id="如果有其他问题欢迎留言或邮件提问"><a href="#如果有其他问题欢迎留言或邮件提问" class="headerlink" title="如果有其他问题欢迎留言或邮件提问"></a>如果有其他问题欢迎留言或邮件提问</h2><p>QQ：1269112498</p>
 <p>Email：<a href="mailto:1269112498@qq.com">1269112498@qq.com</a></p>
 <p><strong>相关文章</strong></p>
 <ul>
@@ -1667,7 +1690,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;</i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">46.9k</span>&nbsp;字
+                class="white-color">48.1k</span>&nbsp;字
             
             
             
