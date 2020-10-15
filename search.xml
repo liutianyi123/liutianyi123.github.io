@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>MySQL数据库(七)——存储过程和函数</title>
+      <link href="/posts/fcd2.html"/>
+      <url>/posts/fcd2.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MySQL数据库(六)——视图</title>
+      <link href="/posts/6f0e.html"/>
+      <url>/posts/6f0e.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MySQL数据库(五)——TCL语言</title>
       <link href="/posts/f3c0.html"/>
       <url>/posts/f3c0.html</url>
@@ -515,9 +565,9 @@
       
         <tags>
             
-            <tag> 基础语法 </tag>
-            
             <tag> python </tag>
+            
+            <tag> 基础语法 </tag>
             
         </tags>
       
@@ -594,9 +644,9 @@
       
         <tags>
             
-            <tag> java </tag>
-            
             <tag> 基础语法 </tag>
+            
+            <tag> java </tag>
             
         </tags>
       
