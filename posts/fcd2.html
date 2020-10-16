@@ -609,14 +609,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    120
+                    713
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -631,7 +631,96 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="如果有其他问题欢迎留言或邮件提问"><a href="#如果有其他问题欢迎留言或邮件提问" class="headerlink" title="如果有其他问题欢迎留言或邮件提问"></a>如果有其他问题欢迎留言或邮件提问</h2><p>QQ：1269112498</p>
+                <h2 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h2><p><strong>好处</strong></p>
+<pre><code>1.提高代码的重用性
+2.简化操作
+3.减少编译次数
+4.减少和数据库服务器的连接次数，提高效率</code></pre><p><strong>含义</strong></p>
+<blockquote>
+<p>一组预先编译好的SQL语句集合，理解成批处理语句</p>
+</blockquote>
+<h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><pre class=" language-sql"><code class="language-sql"><span class="token keyword">DELIMITER</span> 结束标志符
+<span class="token keyword">create</span> <span class="token keyword">procedure</span> 存储过程名<span class="token punctuation">(</span>参数模式 参数名 参数类型<span class="token punctuation">)</span>
+<span class="token keyword">begin</span>
+        存储过程体
+<span class="token keyword">end</span> 结束标志符</code></pre>
+<p><strong>注意</strong></p>
+<pre><code>1.参数列表包含三部分：参数模式,参数名,参数类型
+2.参数模式：
+IN:该参数可以作为输入，也就是该参数需要调用方传入值
+OUT:该参数可以作为输出，也就是该参数可以作为返回值
+INOUT:该参数既可以作为输入也可以作为输出，也就是该参数既需要传入值，又可以返回值
+3.如果存储过程只有一句话，begin end可以省略
+4.存储过程体的每一条sql语句都需要用分号结尾</code></pre><h3 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h3><pre class=" language-sql"><code class="language-sql"><span class="token keyword">call</span> 存储过程名<span class="token punctuation">(</span>实参列表<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h4 id="1-空参列表"><a href="#1-空参列表" class="headerlink" title="1.空参列表"></a>1.空参列表</h4><p><strong><em>案例1：插入到admin表中五条记录</em></strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">DELIMITER</span> $
+<span class="token keyword">create</span> <span class="token keyword">procedure</span>  mvp1<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">begin</span>
+    <span class="token keyword">insert</span> <span class="token keyword">into</span> admin<span class="token punctuation">(</span>username<span class="token punctuation">,</span><span class="token punctuation">`</span>password<span class="token punctuation">`</span><span class="token punctuation">)</span>  
+    <span class="token keyword">values</span>
+    <span class="token punctuation">(</span><span class="token string">'john1'</span><span class="token punctuation">,</span><span class="token string">'0000'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token string">'lily'</span><span class="token punctuation">,</span><span class="token string">'0000'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token string">'rose'</span><span class="token punctuation">,</span><span class="token string">'0000'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token string">'jack'</span><span class="token punctuation">,</span><span class="token string">'0000'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token string">'tom'</span><span class="token punctuation">,</span><span class="token string">'0000'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span> $
+
+<span class="token keyword">call</span> mvp1<span class="token punctuation">(</span><span class="token punctuation">)</span>$</code></pre>
+<h4 id="2-in模式的储存过程"><a href="#2-in模式的储存过程" class="headerlink" title="2.in模式的储存过程"></a>2.in模式的储存过程</h4><p><strong><em>案例1：根据女神名，查取对应的男神信息</em></strong></p>
+<pre class=" language-sql"><code class="language-sql"> <span class="token keyword">DELIMITER</span> $
+ <span class="token keyword">create</span> <span class="token keyword">procedure</span> mvp2<span class="token punctuation">(</span><span class="token operator">in</span> beautyname <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ <span class="token keyword">begin</span>
+    <span class="token keyword">select</span> bo<span class="token punctuation">.</span><span class="token operator">*</span><span class="token punctuation">,</span><span class="token number">b</span><span class="token punctuation">.</span><span class="token operator">*</span> <span class="token keyword">from</span> boys bo
+    <span class="token keyword">right</span> <span class="token keyword">join</span> beauty <span class="token number">b</span> 
+    <span class="token keyword">on</span> bo<span class="token punctuation">.</span>id<span class="token operator">=</span><span class="token number">b</span><span class="token punctuation">.</span>boyfriend_id
+    <span class="token keyword">where</span> <span class="token number">b</span><span class="token punctuation">.</span>name <span class="token operator">=</span> beautyname<span class="token punctuation">;</span>
+ <span class="token keyword">end</span> $
+
+ <span class="token keyword">call</span> mvp2<span class="token punctuation">(</span><span class="token string">'柳岩'</span><span class="token punctuation">)</span>$</code></pre>
+<p><strong><em>案例2：判断用户是否登陆成功</em></strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">DELIMITER</span> $
+ <span class="token keyword">create</span> <span class="token keyword">procedure</span> mvp3<span class="token punctuation">(</span><span class="token operator">in</span> username <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token operator">in</span> password <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ <span class="token keyword">begin</span> 
+    <span class="token comment" spellcheck="true"># 声明并初始化</span>
+    <span class="token keyword">declare</span> result <span class="token keyword">int</span> <span class="token keyword">default</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true"># 赋值</span>
+    <span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">into</span> result
+    <span class="token keyword">from</span> admin
+    <span class="token keyword">where</span> admin<span class="token punctuation">.</span>username <span class="token operator">=</span> username
+    <span class="token operator">and</span> admin<span class="token punctuation">.</span>password <span class="token operator">=</span> password<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true"># 使用</span>
+    <span class="token keyword">select</span> <span class="token keyword">if</span><span class="token punctuation">(</span>result<span class="token operator">></span><span class="token number">0</span><span class="token punctuation">,</span><span class="token string">'成功'</span><span class="token punctuation">,</span><span class="token string">'失败'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token keyword">end</span> $
+
+ <span class="token keyword">call</span> mvp3<span class="token punctuation">(</span><span class="token string">'张飞'</span><span class="token punctuation">,</span><span class="token string">'8888'</span><span class="token punctuation">)</span>$</code></pre>
+<h4 id="3-out模式的储存过程"><a href="#3-out模式的储存过程" class="headerlink" title="3.out模式的储存过程"></a>3.out模式的储存过程</h4><p><strong><em>案例1：根据女神名返回对应的男神名</em></strong></p>
+<pre class=" language-sql"><code class="language-sql"> <span class="token keyword">DELIMITER</span> $
+ <span class="token keyword">create</span> <span class="token keyword">procedure</span> mvp4 <span class="token punctuation">(</span><span class="token operator">in</span> beautyName <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token keyword">out</span> boyName <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ <span class="token keyword">begin</span>
+    <span class="token keyword">select</span> bo<span class="token punctuation">.</span>boyName <span class="token keyword">into</span> boyName
+    <span class="token keyword">from</span> boys bo
+    <span class="token keyword">inner</span> <span class="token keyword">join</span> beauty <span class="token number">b</span> <span class="token keyword">on</span> bo<span class="token punctuation">.</span>id<span class="token operator">=</span><span class="token number">b</span><span class="token punctuation">.</span>boyfriend_id
+    <span class="token keyword">where</span> <span class="token number">b</span><span class="token punctuation">.</span>name <span class="token operator">=</span> beautyName<span class="token punctuation">;</span>
+ <span class="token keyword">end</span> $
+
+
+ <span class="token keyword">call</span> mvp4<span class="token punctuation">(</span><span class="token string">'小昭'</span><span class="token punctuation">,</span><span class="token variable">@bName</span><span class="token punctuation">)</span>$
+ <span class="token keyword">select</span> <span class="token variable">@bName$</span></code></pre>
+<h4 id="4-inout模式的存储过程"><a href="#4-inout模式的存储过程" class="headerlink" title="4.inout模式的存储过程"></a>4.inout模式的存储过程</h4><p><strong><em>案例：传入a和b两个值，最终a，b都翻倍并返回</em></strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">DELIMITER</span> $
+<span class="token keyword">create</span> <span class="token keyword">procedure</span> mvp <span class="token punctuation">(</span><span class="token keyword">inout</span> <span class="token number">a</span> <span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">inout</span> <span class="token number">b</span> <span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">begin</span>
+    <span class="token keyword">set</span> <span class="token number">a</span><span class="token operator">=</span><span class="token number">a</span><span class="token operator">*</span><span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token keyword">set</span> <span class="token number">b</span><span class="token operator">=</span><span class="token number">b</span><span class="token operator">*</span><span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span> $
+
+<span class="token keyword">set</span> <span class="token variable">@m</span><span class="token operator">=</span><span class="token number">10</span>$
+<span class="token keyword">set</span> <span class="token variable">@n</span><span class="token operator">=</span><span class="token number">20</span>$
+<span class="token keyword">call</span> mvp <span class="token punctuation">(</span><span class="token variable">@m</span><span class="token punctuation">,</span><span class="token variable">@n</span><span class="token punctuation">)</span>$
+<span class="token keyword">select</span> <span class="token variable">@m</span><span class="token punctuation">,</span><span class="token variable">@n$</span></code></pre>
+<h3 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h3><pre class=" language-sql"><code class="language-sql"><span class="token keyword">show</span> <span class="token keyword">create</span> <span class="token keyword">procedure</span> 存储过程名<span class="token punctuation">;</span></code></pre>
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><pre class=" language-sql"><code class="language-sql"><span class="token keyword">drop</span> <span class="token keyword">procedure</span> 存储过程名<span class="token punctuation">;</span></code></pre>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="创建-1"><a href="#创建-1" class="headerlink" title="创建"></a>创建</h3><h3 id="调用-1"><a href="#调用-1" class="headerlink" title="调用"></a>调用</h3><h3 id="查看-1"><a href="#查看-1" class="headerlink" title="查看"></a>查看</h3><h3 id="删除-1"><a href="#删除-1" class="headerlink" title="删除"></a>删除</h3><h2 id="如果有其他问题欢迎留言或邮件提问"><a href="#如果有其他问题欢迎留言或邮件提问" class="headerlink" title="如果有其他问题欢迎留言或邮件提问"></a>如果有其他问题欢迎留言或邮件提问</h2><p>QQ：1269112498</p>
 <p>Email：<a href="mailto:1269112498@qq.com">1269112498@qq.com</a></p>
 <p><strong>相关文章</strong></p>
 <ul>
@@ -1382,7 +1471,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;</i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">49k</span>&nbsp;字
+                class="white-color">49.7k</span>&nbsp;字
             
             
             

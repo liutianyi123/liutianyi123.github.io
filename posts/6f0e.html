@@ -609,7 +609,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    562
+                    683
                 </div>
                 
 
@@ -710,7 +710,24 @@
 <h2 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h2><pre class=" language-sql"><code class="language-sql"><span class="token keyword">desc</span> 视图名<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true"># 或者</span>
 <span class="token keyword">show</span> <span class="token keyword">create</span> <span class="token keyword">view</span> 视图名<span class="token punctuation">;</span></code></pre>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h2 id="视图和表的对比"><a href="#视图和表的对比" class="headerlink" title="视图和表的对比"></a>视图和表的对比</h2><table>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre class=" language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token operator">or</span> replace <span class="token keyword">view</span> v
+<span class="token keyword">as</span> 
+<span class="token keyword">select</span> last_name<span class="token punctuation">,</span>email
+<span class="token keyword">from</span> employees<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true"># 插入</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> v <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token string">'张飞'</span><span class="token punctuation">,</span><span class="token string">'zf@qq.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true"># 修改</span>
+<span class="token keyword">update</span> v <span class="token keyword">set</span> last_name <span class="token operator">=</span> <span class="token string">'张无忌'</span> <span class="token keyword">where</span> last_name <span class="token operator">=</span> <span class="token string">'张飞'</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true"># 删除</span>
+<span class="token keyword">delete</span> <span class="token keyword">from</span> v <span class="token keyword">where</span> last_name <span class="token operator">=</span> <span class="token string">'张无忌'</span><span class="token punctuation">;</span></code></pre>
+<p><strong>注意：视图一般用于查询的，而不是更新的，所以具备以下特点的视图都不允许更新</strong></p>
+<pre><code>1.包含分组函数、group by、distinct、having、union、join
+2.常量视图
+3.where后的子查询用到了from中的表
+4.用到了不可更新的视图</code></pre><h2 id="视图和表的对比"><a href="#视图和表的对比" class="headerlink" title="视图和表的对比"></a>视图和表的对比</h2><table>
 <thead>
 <tr>
 <th></th>
@@ -1481,7 +1498,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;</i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">49k</span>&nbsp;字
+                class="white-color">49.7k</span>&nbsp;字
             
             
             
