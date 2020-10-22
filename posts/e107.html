@@ -1400,7 +1400,7 @@ limit 子句;</code></pre><p><strong><em>案例1：查询员工名，部门名</
 <span class="token keyword">group</span> <span class="token keyword">by</span> grade_level
 <span class="token keyword">having</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">></span><span class="token number">20</span>
 <span class="token keyword">order</span> <span class="token keyword">by</span> grade_level <span class="token keyword">desc</span>；</code></pre>
-<h5 id="自连接-1"><a href="#自连接-1" class="headerlink" title="自连接"></a>自连接</h5><p><strong><em>案例1：查询员工名含k的员工名和他上级的名称***</em></strong></p>
+<h5 id="自连接-1"><a href="#自连接-1" class="headerlink" title="自连接"></a>自连接</h5><p><strong><em>案例1：查询员工名含k的员工名和他上级的名称</em></strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token number">e</span><span class="token punctuation">.</span>employee_id<span class="token punctuation">,</span><span class="token number">e</span><span class="token punctuation">.</span>last_name<span class="token punctuation">,</span>m<span class="token punctuation">.</span>employee_id<span class="token punctuation">,</span>m<span class="token punctuation">.</span>last_name
 <span class="token keyword">from</span> employees <span class="token number">e</span>
 <span class="token keyword">inner</span> <span class="token keyword">join</span> employees m
@@ -2448,7 +2448,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;</i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">49.7k</span>&nbsp;字
+                class="white-color">50.3k</span>&nbsp;字
             
             
             
