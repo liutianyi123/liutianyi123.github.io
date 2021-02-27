@@ -609,14 +609,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    861
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -631,96 +631,150 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="线性表的定义和特点"><a href="#线性表的定义和特点" class="headerlink" title="线性表的定义和特点"></a>线性表的定义和特点</h2><p>线性表是具有<strong>相同特性</strong>的数据元素的一个有限<strong>序列</strong></p>
-<blockquote>
-<p>由 n≥0 个数据元素(结点)a<del>1</del>,a<del>2</del>,…a<del>n</del>组成的有限序列</p>
+                <h2 id="线性表的定义"><a href="#线性表的定义" class="headerlink" title="线性表的定义"></a>线性表的定义</h2><blockquote>
+<p>由<strong>零个</strong>或<strong>多个</strong>数据元素组成的有限序列</p>
 </blockquote>
+<p>注意：</p>
 <ul>
-<li>数据元素的个数n定义为表的长度</li>
-<li>当n=0时称为空表</li>
+<li>线性表是一个序列，也就是说元素之间有先后之分。</li>
+<li>第一个元素无前驱，最后一个元素无后继，其他元素都有且只有一个前驱和后继。</li>
+<li>线性表的元素是有限的。</li>
 </ul>
-<h2 id="线性的类型定义"><a href="#线性的类型定义" class="headerlink" title="线性的类型定义"></a>线性的类型定义</h2><h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><ul>
-<li><p>InitList(&amp;L)</p>
+<h2 id="线性表的分类"><a href="#线性表的分类" class="headerlink" title="线性表的分类"></a>线性表的分类</h2><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/liutianyi123/liutianyi123.github.io/images/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E4%B8%89-%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E8%A1%A8/01.png" alt></p>
+<h2 id="线性表的抽象数据类型"><a href="#线性表的抽象数据类型" class="headerlink" title="线性表的抽象数据类型"></a>线性表的抽象数据类型</h2><pre><code>ADT 线性表（List）
+Data
+   线性表的数据对象集合为{$a_1$,$a_2$,...,$a_n$},每个元素的类型均为DataType。
+Operation
+   InitList(*L):初始化操作，建立一个空的线性表L.
+   ListEmpty(L):判断线性表是否为空表，若线性表为空表，返回true，否则返回false
+   ClearList(*L):将线性表清空。
+   GetElem(L,i,*e):将线性表L中的第i个位置的元素返回给e。
+   LocateElem(L,e):在线性表L中查找与给定值e相等的元素，如果查找成功，返回该元素在表中序号表示成功；否则，返回0表示失败。
+   ListInsert(*L,i,e):在线性表L中第i个位置插入新元素e。
+   ListDelete(*L,i,*e):删除线性表L中第i个位置元素，并用e返回其值。
+   ListLength(L):返回线性表L的元素个数。
+endADT</code></pre><h2 id="线性表的顺序存储结构"><a href="#线性表的顺序存储结构" class="headerlink" title="线性表的顺序存储结构"></a>线性表的顺序存储结构</h2><p>线性表有两种物理存储结构：顺序存储结构和链式存储结构。</p>
+<p>顺序存储定义：用一段<strong>地址连续</strong>的存储单元依次存储线性表的数据元。</p>
+<p>线性表的顺序存储结构的结构代码：</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">define</span> MAXSIZE 20</span>
+<span class="token keyword">typedef</span> <span class="token keyword">int</span> ElemType<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span>
+<span class="token punctuation">{</span>
+    ElemType data<span class="token punctuation">[</span>MAXSIZE<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> length<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> SqList<span class="token punctuation">;</span></code></pre>
 <ul>
-<li>操作结果：构造一个空的线性表L。</li>
+<li>顺序存储结构封装需要的三个属性：<ul>
+<li>存储空间的起始位置：数组data。</li>
+<li>线性表的最大存储容量：数组的长度MAXSIZE。</li>
+<li>线性表的当前长度：length。</li>
 </ul>
 </li>
-<li><p>DestroyList(&amp;L)</p>
-<ul>
-<li><p>初始条件：线性表L已经存在。</p>
-</li>
-<li><p>操作结果：销毁线性表L。</p>
-</li>
-</ul>
-</li>
-<li><p>ClearList(&amp;L)</p>
-<ul>
-<li>初始条件：线性表L已经存在。</li>
-<li>操作结果：将线性表L重置为空表。</li>
-</ul>
-</li>
-<li><p>ListEmpty(L)</p>
-<ul>
-<li>初始条件：线性表L已经存在。</li>
-<li>操作结果：若线性表L为空表，则返回TURE;否则返回FALSE。</li>
-</ul>
-</li>
-<li><p>ListLength(L)</p>
-<ul>
-<li>初始条件：线性表L已经存在。</li>
-<li>操作结果：返回线性表L中的数据元素个数。</li>
-</ul>
-</li>
-<li><p>GetElem(L,i,&amp;e)</p>
-<ul>
-<li>初始条件：线性表L已经存在，1 &lt;= i &lt;= ListLength(L)。</li>
-<li>操作结果：用e返回线性表L中第 i 个数据元素的值。</li>
-</ul>
-</li>
-<li><p>LocateElem(L,e,compare())</p>
-<ul>
-<li>初始条件：线性表L已经存在，compare()是数据元素判定函数。</li>
-<li>操作结果：返回线性表L中第1个与e满足compare()的数据元素的位序，若这样的数据元素不存在则返回值为0。</li>
-</ul>
-</li>
-<li><p>PriorElem(L,cur_e,&amp;pre_e)</p>
-<ul>
-<li>初始条件：线性表L已经存在。</li>
-<li>操作结果：若cur_e是L的数据元素，且不是第一个，则用pre_e返回它的前驱，否则操作失败；pre_e无意义。</li>
-</ul>
-</li>
-<li><p>NextElem(L,cur_e,&amp;next_e)</p>
-<ul>
-<li>初始条件：线性表L已经存在。</li>
-<li>操作结果：若cur_e是L的数据元素，且不是最后第一个，则用next_e返回它的后继，否则操作失败；next_e无意义。</li>
-</ul>
-</li>
-<li><p>ListInsert(&amp;L,i,e)</p>
-<ul>
-<li>初始条件：线性表L已经存在，1 &lt;= i &lt;= ListLength(L)+1。</li>
-<li>操作结果：在L的第 i 个位置之前插入新的数据元素e，L长度加一。</li>
-</ul>
-</li>
-<li><p>ListDelete(&amp;L,i,&amp;e)</p>
-<ul>
-<li>初始条件：线性表L已经存在，1 &lt;= i &lt;= ListLength(L)。</li>
-<li>操作结果：删除L的第 i 个数据元素，并用e返回其值，L长度减一。</li>
-</ul>
-</li>
-<li><p>ListTraverse(&amp;L,visited())</p>
-<ul>
-<li>初始条件：线性表L已经存在。</li>
-<li>操作结果：依次对线性表中的每个元素调用visited().</li>
+<li>注意：<ul>
+<li>数组长度是存放线性表的存储空间的总长度，一般初始化后不变。</li>
+<li>线性表的当前长度是线性表中元素的个数，是会变化的。</li>
 </ul>
 </li>
 </ul>
-<h2 id="线性表的顺序表示和实现"><a href="#线性表的顺序表示和实现" class="headerlink" title="线性表的顺序表示和实现"></a>线性表的顺序表示和实现</h2><h3 id="线性表的顺序存储结构"><a href="#线性表的顺序存储结构" class="headerlink" title="线性表的顺序存储结构"></a>线性表的顺序存储结构</h3><p>定义：用一段<strong>地址连续</strong>的存储单元依次存储线性表的数据元。</p>
-<h3 id="存储位置公式"><a href="#存储位置公式" class="headerlink" title="存储位置公式"></a>存储位置公式</h3><blockquote>
+<p>存储位置公式：</p>
+<blockquote>
 <p>假设每个数据元素占用的是 c 个存储单元，那么对于线性表的第 i 个数据元素 ai 的存储位置都可以由 a1 推导算出：LOC(ai) = LOC(a1) + ( i-1 )*c</p>
 </blockquote>
-<h3 id="存取操作时间性能"><a href="#存取操作时间性能" class="headerlink" title="存取操作时间性能"></a>存取操作时间性能</h3><p>通过该公式，就可以随时算出线性表中任意位置的地址。不管是第一个还是最后一个，都是相同的时间，也即对于线性表每个位置的存入或者取出数据对于计算机来说都是相等的时间，也就是一个常数时间。因此，线性表的存取操作时间性能为 O(1)。</p>
-<h3 id="随机存储结构"><a href="#随机存储结构" class="headerlink" title="随机存储结构"></a>随机存储结构</h3><p>我们通常将存取操作具备常数性能 O(1) 的存储结构称为随机存储结构.</p>
-<h2 id="线性表的链式表示和实现"><a href="#线性表的链式表示和实现" class="headerlink" title="线性表的链式表示和实现"></a>线性表的链式表示和实现</h2><h2 id="顺序表和链表的比较"><a href="#顺序表和链表的比较" class="headerlink" title="顺序表和链表的比较"></a>顺序表和链表的比较</h2><h2 id="线性表的应用"><a href="#线性表的应用" class="headerlink" title="线性表的应用"></a>线性表的应用</h2>
+<p>存取操作时间性能：</p>
+<p>通过该公式，就可以随时算出线性表中任意位置的地址。不管是第一个还是最后一个，都是相同的时间，也即对于线性表每个位置的存入或者取出数据对于计算机来说都是相等的时间，也就是一个常数时间。因此，线性表的存取操作时间性能为 O(1)。</p>
+<p>随机存储结构：</p>
+<p>我们通常将存取操作具备常数性能 O(1) 的存储结构称为随机存储结构。</p>
+<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><p>操作中常用的预定义常量与类型</p>
+<pre class=" language-C"><code class="language-C">//函数结果状态代码
+#define True 1
+#define False 0
+#define OK 1
+#define ERROR 0
+#define INFEASIBLE -1
+#define OVERFLOW 2
+//Status 是函数的类型，其值是函数结果状态代码
+typedef int Status;
+typedef char ElemType;</code></pre>
+<p>获取一个元素：</p>
+<pre class=" language-C"><code class="language-C">#define OK 1
+#define ERROR 0
+#define TRUE 1
+#define FALSE 0
+
+typedef int Status;
+
+Status GetElem(SqList L, int i, ElemType *e)
+{
+    if( L.length==0 || i<1 || i>L.length )
+    {
+        return ERROR;
+    }
+    *e = L.data[i-1];
+    return OK;
+}</code></pre>
+<p>插入操作：</p>
+<blockquote>
+<ul>
+<li>如果插入位置不合理，抛出异常；</li>
+<li>如果线性表长度大于等于数组长度，则抛出异常。</li>
+<li>从最后一个元素开始向前表里到第i个位置，分别将他们都向后移动一个位置。</li>
+<li>将要插入元素填入位置 i 处；</li>
+<li>线性表长度加1</li>
+</ul>
+</blockquote>
+<pre class=" language-C"><code class="language-C">Status ListInsert(SqList *L, int i, ElemType e)
+{
+    int k;
+    if( L->length == MAXSIZE ){
+        return ERROR;
+    }
+    if ( i<1 || i>L->Length+1){
+        return ERROR;
+    }
+    if( i <= L->Length ) {
+        for( k=L->Length-1; k >= i-1; k-- ){
+            L->data[k+1] = L->data[k];
+        }
+    }
+
+    L->data[i-1] = e;
+    L->Length++;
+
+    return OK;
+}</code></pre>
+<p>删除操作：</p>
+<blockquote>
+<ul>
+<li>如果删除位置不合理，抛出异常</li>
+<li>取出删除元素</li>
+<li>从删除元素位置开始遍历到最后一个元素位置，分别将它们都向前移动一个位置；</li>
+<li>表长减一</li>
+</ul>
+</blockquote>
+<pre class=" language-C"><code class="language-C">Status ListDelete(SqList *L, int i, ElemType *e) {
+    int k;
+
+    if( L->length == 0){
+        return ERROR;
+    }
+    if( i < 1 || i > L->length){
+        return ERROR;
+    }
+
+    *e = L->data[i-1]; //e用于保存第i个位置的值，并返回
+    if( i < L->Length){
+        for( k=i; k < L->length; k++){
+            L->data[k-1]=L->data[k];
+        }
+    }
+
+    L->length--;
+
+    return OK;
+}</code></pre>
+<p>插入和删除的时间复杂度：</p>
+<p>最好的情况：插入和删除操作刚好要求在最后一个位置操作，因为不需要移动任何元素，所以此时的时间复杂度为O(1)<br>最坏的情况： 如果插入和删除的位置是第一个元素，那就意味着要移动所有的元素向后或者向前，所以这个时间复杂度为O(n)</p>
+
             </div>
             <hr/>
 
@@ -1454,7 +1508,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;</i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">51.8k</span>&nbsp;字
+                class="white-color">53k</span>&nbsp;字
             
             
             
