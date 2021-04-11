@@ -8,7 +8,7 @@
       <link href="/posts/541c.html"/>
       <url>/posts/541c.html</url>
       
-        <content type="html"><![CDATA[<p>1.计算机 - 计算机通信网络的核心技术是<strong>分组交换技术</strong></p><p>2.计算机网络的两大基本功能：<strong>数据处理</strong>和<strong>数据通信</strong></p><p>3.计算机网络的结构：负责数据处理的<strong>计算机终端</strong>和负责数据通信的<strong>通信控制处理机</strong>与<strong>通信线路</strong></p><p>4.计算机网络的组成：<strong>网络硬件系统</strong>和<strong>网络软件系统</strong></p><p>5.网络的硬件组成：服务器，工作站，<strong>网卡</strong></p><p>6.网络的软件组成：操作系统，应用服务系统</p><p>7.服务器和工作站均需要安装==网卡==，网卡也称作==网络适配器==，它是计算机和网络缆线之间的==物理接口==</p><p>8.网卡的基本功能是：==并行数据==和==串行信号==之间的转换</p><p>9.计算机网络中实现==通信功能==的设备称为==通信子网==</p><p>10.计算机网络中实现==资源共享==的设备称为==资源子网==</p><p>11.==资源子网负责信息处理，由主机和终端构成==</p><p>12.==通信子网负责信息传输，由通信链路和交换节点构成==</p><p>13.计算机网络可分为：==局域网==，广域网和城域网</p>]]></content>
+        <content type="html"><![CDATA[<p>1.计算机 - 计算机通信网络的核心技术是<strong>分组交换技术</strong></p><p>2.计算机网络的两大基本功能：<strong>数据处理</strong>和<strong>数据通信</strong></p><p>3.计算机网络的结构：负责数据处理的<strong>计算机终端</strong>和负责数据通信的<strong>通信控制处理机</strong>与<strong>通信线路</strong></p><p>4.计算机网络的组成：<strong>网络硬件系统</strong>和<strong>网络软件系统</strong></p><p>5.网络的硬件组成：服务器，工作站，<strong>网卡</strong></p><p>6.网络的软件组成：操作系统，应用服务系统</p><p>7.服务器和工作站均需要安装<strong><em>网卡</em></strong>，网卡也称作<strong><em>网络适配器</em></strong>，它是计算机和网络缆线之间的<strong><em>物理接口</em></strong></p><p>8.网卡的基本功能是：<strong><em>并行数据</em></strong>和<strong><em>串行信号</em></strong>之间的转换</p><p>9.计算机网络中实现<strong><em>通信功能</em></strong>的设备称为<strong><em>通信子网</em></strong></p><p>10.计算机网络中实现<strong><em>资源共享</em></strong>的设备称为<strong><em>资源子网</em></strong></p><p>11.<strong><em>资源子网负责信息处理，由主机和终端构成</em></strong></p><p>12.<strong><em>通信子网负责信息传输，由通信链路和交换节点构成</em></strong></p><p>13.计算机网络可分为：<em>局域网</em>，广域网和城域网</p>]]></content>
       
       
       <categories>
