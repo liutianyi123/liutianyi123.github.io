@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>计算机网络(二)——数据通信基础</title>
+      <link href="/posts/7e3f.html"/>
+      <url>/posts/7e3f.html</url>
+      
+        <content type="html"><![CDATA[<p>1.<strong><em>信源：信息的产生和发送端</em></strong></p><p>2.<strong><em>信宿：信息的接收和处理端</em></strong></p><p>3.<strong><em>信道：两者之间的通信线路</em></strong></p><p>4.数字调频技术：</p><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/liutianyi123/liutianyi123.github.io/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E4%BA%8C-%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80/001.png" alt></p><ul><li>调幅(ASK)：载波存在时(具有一定的幅度)，表示数字信号“1”；载波不存在时(幅度为0)，表示数字信号“0”<ul><li>优点：简单</li><li>缺点：效率低，坑干扰性能差</li></ul></li><li>调频(FSK)：高频表示数字信号“1”；低频表示数字信号“0”<ul><li>优点：抗干扰性能强</li><li>缺点：频带较宽</li></ul></li><li>调相(PSK)：当载波信号和前面信号同相(不产生相移)时，代表数字信号“0”；当载波信号和前面信号反相(产生180°相移)时，代表数字信号“1”<ul><li>优点：抗干扰性能好，传输效率高</li><li>缺点：技术复杂</li></ul></li></ul><p>5.二进制数据编码技术</p><ul><li>非归零编码：负电平代表“0”，正电平代表“1”</li><li>曼彻斯特编码：低电平跳到高电平(正跳变)代表“1”，高电平跳到低电平(负跳变)代表“0”</li><li>边界处有跳变代表“0”，无跳变代表“1”</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>计算机网络(一)——计算机网络基础</title>
       <link href="/posts/541c.html"/>
       <url>/posts/541c.html</url>
       
-        <content type="html"><![CDATA[<p>1.计算机 - 计算机通信网络的核心技术是<strong>分组交换技术</strong></p><p>2.计算机网络的两大基本功能：<strong>数据处理</strong>和<strong>数据通信</strong></p><p>3.计算机网络的结构：负责数据处理的<strong>计算机终端</strong>和负责数据通信的<strong>通信控制处理机</strong>与<strong>通信线路</strong></p><p>4.计算机网络的组成：<strong>网络硬件系统</strong>和<strong>网络软件系统</strong></p><p>5.网络的硬件组成：服务器，工作站，<strong>网卡</strong></p><p>6.网络的软件组成：操作系统，应用服务系统</p><p>7.服务器和工作站均需要安装<strong><em>网卡</em></strong>，网卡也称作<strong><em>网络适配器</em></strong>，它是计算机和网络缆线之间的<strong><em>物理接口</em></strong></p><p>8.网卡的基本功能是：<strong><em>并行数据</em></strong>和<strong><em>串行信号</em></strong>之间的转换</p><p>9.计算机网络中实现<strong><em>通信功能</em></strong>的设备称为<strong><em>通信子网</em></strong></p><p>10.计算机网络中实现<strong><em>资源共享</em></strong>的设备称为<strong><em>资源子网</em></strong></p><p>11.<strong><em>资源子网负责信息处理，由主机和终端构成</em></strong></p><p>12.<strong><em>通信子网负责信息传输，由通信链路和交换节点构成</em></strong></p><p>13.计算机网络可分为：<em>局域网</em>，广域网和城域网</p>]]></content>
+        <content type="html"><![CDATA[<p>1.计算机 - 计算机通信网络的核心技术是<strong>分组交换技术</strong></p><p>2.计算机网络的两大基本功能：<strong>数据处理</strong>和<strong>数据通信</strong></p><p>3.计算机网络的结构：负责数据处理的<strong>计算机终端</strong>和负责数据通信的<strong>通信控制处理机</strong>与<strong>通信线路</strong></p><p>4.计算机网络的组成：<strong>网络硬件系统</strong>和<strong>网络软件系统</strong></p><p>5.网络的硬件组成：服务器，工作站，<strong>网卡</strong></p><p>6.网络的软件组成：操作系统，应用服务系统</p><p>7.服务器和工作站均需要安装<strong><em>网卡</em></strong>，网卡也称作<strong><em>网络适配器</em></strong>，它是计算机和网络缆线之间的<strong><em>物理接口</em></strong></p><p>8.网卡的基本功能是：<strong><em>并行数据</em></strong>和<strong><em>串行信号</em></strong>之间的转换</p><p>9.计算机网络中实现<strong><em>通信功能</em></strong>的设备称为<strong><em>通信子网</em></strong></p><p>10.计算机网络中实现<strong><em>资源共享</em></strong>的设备称为<strong><em>资源子网</em></strong></p><p>11.<strong><em>资源子网负责信息处理，由主机和终端构成</em></strong></p><p>12.<strong><em>通信子网负责信息传输，由通信链路和交换节点构成</em></strong></p><p>13.计算机网络可分为：<strong><em>局域网</em></strong>，广域网和城域网</p><p>14.计算机网络的拓扑结构：总线型，星形，环形，星状总线型，网形</p>]]></content>
       
       
       <categories>
